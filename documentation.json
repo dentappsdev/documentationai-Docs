@@ -20,7 +20,9 @@
         "pages": [
           {
             "title": "Introduction",
-            "path": "introduction"
+            "path": "introduction",
+            "show-toc": false,
+            "show-parent-label": false
           },
           {
             "title": "Help Center",
