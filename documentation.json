@@ -17,48 +17,53 @@
       {
         "tab": "Help Center",
         "icon": "help-circle",
-        "pages": [
+        "groups": [
           {
-            "title": "Introduction",
-            "path": "introduction",
-            "show-toc": false,
-            "show-parent-label": false
-          },
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
-            "icon": "help-circle",
-            "expandable": false,
+            "group": "Getting Started",
             "pages": [
               {
-                "title": "Getting Started FAQ",
-                "path": "help-center/faq/getting-started"
-              }
-            ]
-          },
-          {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
+                "title": "Introduction",
+                "path": "introduction",
+                "show-toc": false,
+                "show-parent-label": false
+              },
               {
-                "title": "Cannot Invite User",
-                "path": "help-center/troubleshooting/can-not-invite-user"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
+                "title": "Help Center",
+                "path": "help-center",
+                "icon": "home"
+              },
               {
-                "title": "Create Project",
-                "path": "help-center/guides/create-project"
+                "group": "FAQs",
+                "icon": "help-circle",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Getting Started FAQ",
+                    "path": "help-center/faq/getting-started"
+                  }
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "icon": "alert-triangle",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Cannot Invite User",
+                    "path": "help-center/troubleshooting/can-not-invite-user"
+                  }
+                ]
+              },
+              {
+                "group": "Guides",
+                "icon": "book-open",
+                "expandable": false,
+                "pages": [
+                  {
+                    "title": "Create Project",
+                    "path": "help-center/guides/create-project"
+                  }
+                ]
               }
             ]
           }
@@ -66,6 +71,6 @@
       }
     ]
   },
-  "template": "atlas",
+  "template": "classic",
   "initialRoute": "introduction"
 }
