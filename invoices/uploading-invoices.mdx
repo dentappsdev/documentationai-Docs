@@ -1,0 +1,142 @@
+---
+title: Uploading Invoices
+description: Learn how to upload technician invoices to ChairPulse, what file types are accepted, and what fields AI extracts automatically.
+---
+
+## Uploading an invoice
+
+Invoices in ChairPulse are always attached to a specific equipment issue. When a technician completes a repair or service visit, you upload their invoice from the issue detail page.
+
+<Callout kind="alert" title="Professional tier only">
+Invoice uploads require the **Professional** plan. If you are on the Essential tier, you will not see the upload option. See [Billing & Subscription](/settings/billing-and-subscription) to upgrade.
+</Callout>
+
+<Steps>
+  <Step title="Open the issue">
+    Navigate to **Issues** from the sidebar and select the issue that the invoice relates to. This opens the issue detail page.
+  </Step>
+  <Step title="Open the Upload Invoice dialog">
+    On the issue detail page, look for the invoice upload option. Click it to open the **Upload Invoice** dialog.
+  </Step>
+  <Step title="Choose your upload method">
+    The dialog offers two options:
+
+    - **Take Photo** -- Opens your device camera to photograph a paper invoice. This is ideal for mobile use when you receive a physical invoice from a technician.
+    - **Upload File** -- Opens a file picker to select an existing file from your device.
+  </Step>
+  <Step title="Select or capture the file">
+    Choose your invoice file. The system validates the file type and size before uploading.
+  </Step>
+  <Step title="Wait for AI parsing">
+    After upload, ChairPulse processes the invoice in three stages:
+    1. **Uploading file** -- The file is stored securely.
+    2. **Creating invoice record** -- A database entry is created and linked to the issue.
+    3. **Parsing invoice with AI** -- The AI extracts all relevant data from the document.
+
+    A spinner with status text keeps you informed of progress.
+  </Step>
+  <Step title="Review the results">
+    Once parsing completes, the invoice card appears on the issue detail page showing the extracted data. If parsing fails, an error message is displayed and you can try uploading again.
+  </Step>
+</Steps>
+
+<!-- Screenshot needed: Upload Invoice dialog showing the Take Photo and Upload File buttons -->
+
+## Accepted file types
+
+| Format | MIME Type | Notes |
+|---|---|---|
+| **JPEG** | `image/jpeg` | Photos from cameras or scanned documents |
+| **PNG** | `image/png` | Screenshots or scanned documents |
+| **WebP** | `image/webp` | Modern image format |
+| **PDF** | `application/pdf` | Digital invoices sent by vendors |
+
+<Callout kind="info">
+The maximum file size is **10 MB**. If your file is larger, try reducing the image resolution or compressing the PDF before uploading.
+</Callout>
+
+<Callout kind="tip">
+Paper invoices work great -- just take a clear photo with your phone. The AI can extract details from photographed documents just as well as digital files.
+</Callout>
+
+## Fields extracted by AI
+
+When ChairPulse parses an invoice, it automatically extracts the following fields:
+
+| Field | Description |
+|---|---|
+| **Vendor Name** | The service company or technician's company name |
+| **Invoice Number** | The invoice reference number |
+| **Invoice Date** | The date printed on the invoice |
+| **Total Amount** | The total billed amount |
+| **Labor Cost** | The labor portion of the total |
+| **Parts Cost** | The parts/materials portion of the total |
+| **Tax Amount** | Any tax charged |
+| **Line Items** | Individual service items with description, quantity, unit price, and total |
+| **Payment Terms** | Payment conditions (e.g., "Net 30", "Due on receipt") |
+| **Warranty Terms** | Any warranty coverage on the repair work |
+
+## Invoice card display
+
+After successful parsing, each invoice appears as a card showing:
+
+- **Vendor name** as the card title
+- **Invoice number** and **date** in the header
+- **Total amount** prominently displayed with a breakdown of labor, parts, and tax
+- **Line items** (first three shown, with a count of additional items)
+- **Reconciliation status** comparing the invoice against your tech visit records
+- **Payment and warranty terms** when available
+
+## Invoice statuses
+
+Each invoice has both a parsing status and a reconciliation status:
+
+### Parsing statuses
+
+| Status | Description |
+|---|---|
+| **Processing** | The AI is currently extracting data from the file |
+| **Completed** | Parsing succeeded and all available fields have been extracted |
+| **Failed** | The AI could not parse the document; an error message is shown |
+
+### Reconciliation statuses
+
+| Status | Description |
+|---|---|
+| **Matched** | Invoice data matches your tech visit record |
+| **Partial Match** | Some fields match but others differ |
+| **Needs Review** | Significant discrepancies detected between the invoice and visit record |
+| **No Visit Record** | No corresponding tech visit was found for this issue |
+| **Pending** | Reconciliation has not yet been processed |
+| **Confirmed** | A team member has manually verified and confirmed the invoice |
+
+## Confirming an invoice
+
+After reviewing an invoice, you can confirm it to mark it as verified:
+
+<Steps>
+  <Step title="Review the invoice card">
+    Check that the extracted vendor name, amounts, and line items are accurate.
+  </Step>
+  <Step title="Click Confirm">
+    Click the **Confirm** button on the invoice card. This is only available for invoices with a parsing status of "completed" that have not already been confirmed.
+  </Step>
+</Steps>
+
+## Viewing invoice details
+
+Click **View Details** on any invoice card to open the **Invoice Details** modal. This side-by-side view shows:
+
+- **Left column** -- All extracted invoice data with an **Edit** button to correct any fields the AI may have misread.
+- **Right column** -- The corresponding **Tech Visit Record** with vendor name, technician, visit date, work summary, parts replaced, and repair warranty days.
+- **Reconciliation Summary** -- A field-by-field comparison showing match, partial match, or mismatch indicators for vendor, parts, and warranty.
+
+<Callout kind="tip">
+If the invoice identifies a new vendor that is not yet in your service providers list, ChairPulse will prompt you to **Add to Service Providers** directly from the invoice details modal.
+</Callout>
+
+## Related pages
+
+- [Invoices Overview](/invoices/overview) -- What Invoice Analytics does and how it fits your workflow.
+- [Invoice Analytics Dashboard](/invoices/invoice-analytics) -- Understanding the spending charts and metrics.
+- [Service Providers](/settings/service-providers) -- Managing your technician and vendor contacts.

@@ -1,0 +1,110 @@
+---
+title: Maintenance Overview
+description: Schedule, track, and manage recurring maintenance tasks for all your dental equipment from the Maintenance page.
+---
+
+## Keep your equipment running with scheduled maintenance
+
+The **Maintenance** module is your central hub for scheduling and tracking recurring maintenance across every piece of equipment in your practice. From daily autoclave cycles to annual compressor inspections, ChairPulse ensures nothing falls through the cracks by giving your team a clear picture of what is due, what is overdue, and what has been completed.
+
+Navigate to **Maintenance** from the main sidebar to open this page.
+
+<!-- Screenshot needed: Maintenance page header showing the "Add Maintenance Task", "Templates", and "Reassign" buttons -->
+
+## Page layout
+
+The Maintenance page is organized into three top-level tabs:
+
+| Tab | Icon | Description |
+|---|---|---|
+| **Active Schedules** | Calendar | All recurring maintenance schedules with calendar and room views |
+| **Recent Activity** | History | A log of completed and excused tasks over a selectable time period |
+| **Missed Tasks** | X-Circle | Tasks that were not completed by their due date, with options to excuse or add a reason |
+
+The page header includes three action buttons:
+
+- **Reassign** -- Opens the bulk reassign dialog to change task assignments across multiple schedules at once.
+- **Templates** -- Opens the [Task Template Library](/maintenance/task-templates) to quickly add pre-built maintenance tasks.
+- **Add Maintenance Task** -- Opens the schedule creation dialog where you choose equipment, set frequency, assign a team member, and optionally link an SOP.
+
+<Callout kind="info">
+To complete daily tasks, head to the **Dashboard**. The Maintenance page is for viewing and editing your schedules, not for day-to-day task completion.
+</Callout>
+
+## Viewing your schedules
+
+The **Active Schedules** tab offers five view modes, accessible from the segmented control in the card header:
+
+| View | Icon | Description |
+|---|---|---|
+| **Rooms** | Grid | Groups schedules by room and room category. Default view. |
+| **List** | List | A sortable, filterable table of all schedules |
+| **Day** | Calendar Day | Shows all tasks due on a single selected day |
+| **Week** | Calendar Range | Displays a 7-day grid with task cards for each day |
+| **Month** | Calendar | A full monthly calendar with task dots and previews |
+
+Your selected view mode is remembered across sessions.
+
+## Task statuses
+
+Each maintenance task has a status based on its next due date:
+
+| Status | Color | Meaning |
+|---|---|---|
+| **Overdue** | Red | The task's due date has passed without completion |
+| **Due today** | Amber | The task is due today |
+| **Due soon** | Amber | The task is due within the next 7 days |
+| **On track** | Green | The task is not due for more than 7 days |
+| **No history** | Gray | No due date or completion history exists for this schedule |
+
+## Frequency options
+
+When creating or editing a maintenance schedule, you can choose from these frequency options:
+
+| Frequency | Recurrence |
+|---|---|
+| **One-time** | Occurs once and does not repeat |
+| **Daily** | Repeats every day (with specific weekday selection) |
+| **Weekly** | Repeats every week on a chosen day |
+| **Bi-weekly** | Repeats every two weeks on a chosen day |
+| **Monthly** | Repeats monthly (day set by first due date) |
+| **Quarterly** | Repeats every 3 months |
+| **Semi-annually** | Repeats every 6 months |
+| **Annually** | Repeats every 12 months |
+| **Custom** | Repeats every N days (you specify the interval, 1--365) |
+
+<Callout kind="tip">
+For monthly, quarterly, semi-annual, and annual frequencies, the recurrence day is automatically set by your **first due date**. For example, if the first due date is March 15 with a monthly frequency, the task will recur on the 15th of each month.
+</Callout>
+
+## Filtering schedules
+
+The filter bar changes depending on the active view:
+
+- **Room view** shows frequency pill filters (All, Daily, Weekly, Monthly, Other).
+- **All other views** show a full filter bar with:
+  - **Search equipment** -- Filter by equipment name, manufacturer, or model
+  - **Location** -- Filter by room
+  - **Time of Day** -- Start of Day, Morning, Midday, End of Day
+  - **Status** -- Overdue, Due Today, Due Soon, On Track, No History
+  - **Frequency** -- Daily, Weekly, Bi-weekly, Monthly, Quarterly, Semi-annual, Annual+
+  - **Assignee** -- Filter by assigned team member or Unassigned
+
+Select **Clear filters** to reset all filters at once.
+
+## Related pages
+
+<Columns>
+  <Card title="Calendar View" icon="calendar" href="/maintenance/calendar-view">
+    Navigate tasks with Day, Week, and Month calendar views.
+  </Card>
+  <Card title="Room View" icon="layout-grid" href="/maintenance/room-view">
+    See maintenance schedules organized by room and category.
+  </Card>
+  <Card title="Task Templates" icon="book-open" href="/maintenance/task-templates">
+    Quickly set up tasks from the pre-built template library.
+  </Card>
+  <Card title="Completing Tasks" icon="check-circle" href="/maintenance/completing-maintenance-tasks">
+    Mark tasks complete, add notes, and manage task status.
+  </Card>
+</Columns>

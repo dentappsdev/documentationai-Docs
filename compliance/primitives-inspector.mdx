@@ -1,0 +1,64 @@
+---
+title: "Inspector Primitive -- Pass/Fail Inspection"
+description: "How to record pass/fail inspection results for compliance tasks like spore tests and equipment inspections."
+---
+
+## Overview
+
+The Inspector primitive is used for compliance tasks that require a binary pass or fail result. It is the standard completion type for inspections, tests, and quality checks where the outcome is either acceptable or not.
+
+## How It Works
+
+When you open a task that uses the Inspector primitive, the completion form displays:
+
+### Result Selection
+
+Two large buttons labeled **Pass** and **Fail**:
+
+- **Pass** -- Highlighted in green when selected. Indicates the inspection or test met the required standard.
+- **Fail** -- Highlighted in red when selected. Triggers a variance prompt requiring a remediation note.
+
+You must select one before you can submit.
+
+### Lot Number (Pass Only)
+
+When **Pass** is selected, an optional **Lot Number** field appears. This allows you to record the lot or batch number of the test indicator used (e.g., "LOT-2026-001"). This is useful for traceability in sterilization monitoring.
+
+### Remediation Note (Fail Only)
+
+When **Fail** is selected, a variance prompt appears with a required **Remediation Note** field. You must describe the corrective action taken or planned before the task can be submitted. The prompt shows a reason such as "Inspection failed" along with guidance text.
+
+The task cannot be saved with a "Fail" result until the remediation note is filled in.
+
+## Submission
+
+The footer button reads **Save Result**. After submission:
+
+- A **Pass** result sets the task status to **Completed**
+- A **Fail** result sets the task status to **Completed with Failure**, which triggers the failure protocol and is tracked as a compliance variance
+
+## Evidence Fields
+
+In addition to the pass/fail result, the task may require supporting evidence depending on its configuration:
+
+- **Notes** -- Additional context about the inspection
+- **Photo** -- A photo of the test result, equipment condition, or other visual evidence
+- **Documents** -- Supporting documents such as test strip printouts
+
+See [Uploading Evidence](/compliance/uploading-evidence) for details on evidence requirements.
+
+## Dental Practice Examples
+
+<ExpandableGroup>
+  <Expandable title="Weekly spore test results">
+    Each autoclave requires weekly biological monitoring (spore testing). After incubating the test vial or receiving mail-in results, record the outcome as Pass or Fail. Enter the lot number from the spore test indicator strip on a pass. If the test fails, document the remediation steps taken (e.g., "Autoclave taken out of service, maintenance called, retest scheduled").
+  </Expandable>
+  <Expandable title="Monthly equipment safety inspections">
+    Inspect emergency equipment such as AED units, oxygen tanks, or fire extinguishers. Record Pass if the equipment is functional and properly maintained. Record Fail if any issue is found and describe the corrective action.
+  </Expandable>
+  <Expandable title="Sterilization process monitoring">
+    Chemical indicator strip checks, mechanical gauge readings on autoclave cycles, and other sterilization verification steps can use the Inspector primitive when the outcome is simply pass or fail.
+  </Expandable>
+</ExpandableGroup>
+
+<!-- Screenshot needed: Inspector primitive showing Pass and Fail buttons with lot number field -->

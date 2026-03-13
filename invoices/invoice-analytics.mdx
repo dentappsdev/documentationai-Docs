@@ -1,0 +1,101 @@
+---
+title: Invoice Analytics Dashboard
+description: Understand spending trends, vendor comparisons, equipment costs, and reconciliation status through the Invoice Analytics dashboard.
+---
+
+## The Invoice Analytics dashboard
+
+The **Invoice Analytics** page provides a comprehensive view of your equipment service spending over the last six months. It pulls data from all parsed invoices linked to your equipment issues and presents it through summary statistics, interactive charts, and reconciliation tracking.
+
+Navigate to **Invoice Analytics** from the main sidebar.
+
+<Callout kind="alert" title="Professional tier only">
+Invoice Analytics requires the **Professional** plan. Essential tier users do not have access to invoice uploads or analytics. See [Billing & Subscription](/settings/billing-and-subscription) for plan details.
+</Callout>
+
+<!-- Screenshot needed: Full Invoice Analytics dashboard with all four summary stats and four charts populated with data -->
+
+## Summary statistics
+
+Four stat cards at the top of the page give you a snapshot of your spending:
+
+| Metric | Description |
+|---|---|
+| **Total Spend** | The sum of all invoice totals over the last six months, displayed in dollars |
+| **Avg per Invoice** | The average cost per invoice, calculated as total spend divided by number of invoices |
+| **Vendors** | The count of unique vendor names across all invoices |
+| **Invoices** | The total number of parsed invoices in the six-month window |
+
+## Charts and visualizations
+
+The dashboard includes four charts arranged in a two-column grid, plus a reconciliation summary section.
+
+### Monthly Spending Trend
+
+A **line chart** showing your total monthly spending over the last six months. Each data point represents the sum of all invoice totals for that month.
+
+Use this chart to:
+- Spot seasonal patterns in service costs
+- Identify months with unusually high spending
+- Track whether your maintenance investments are increasing or decreasing
+
+### Spending by Vendor
+
+A **horizontal bar chart** showing your top five vendors ranked by total spend. Vendor names are displayed on the Y-axis with dollar amounts on the X-axis.
+
+Use this chart to:
+- See which vendors account for the most spending
+- Compare pricing between competing service providers
+- Identify opportunities to consolidate vendors or negotiate rates
+
+### Spending by Equipment Type
+
+A **donut (pie) chart** showing how your service costs are distributed across equipment categories. A legend on the right lists up to five equipment types with their total spend.
+
+Use this chart to:
+- Determine which equipment categories are most expensive to maintain
+- Identify equipment types that may need replacement rather than continued repair
+- Justify budget allocations for specific equipment categories
+
+### Labor vs Parts Costs
+
+A **stacked bar chart** comparing labor and parts costs side by side for each month. Labor appears in one color and parts in another.
+
+Use this chart to:
+- Understand the ratio of labor to parts in your service costs
+- Identify if you are paying disproportionately for labor versus replacement parts
+- Negotiate with vendors by understanding cost breakdowns
+
+## Invoice Reconciliation Status
+
+Below the charts, a status summary section shows how your invoices match up with tech visit records. Four status cards display counts for:
+
+| Status | Description |
+|---|---|
+| **Matched** | Invoices where vendor, parts, and warranty data align with the tech visit record |
+| **Needs Review** | Invoices with discrepancies that require manual verification |
+| **Pending** | Invoices that have not yet been reconciled |
+| **No Visit Record** | Invoices where no corresponding tech visit was logged |
+
+<Callout kind="info">
+A high "Needs Review" count may indicate that tech visit records are not being filled out consistently. Ensure your team logs detailed visit information when technicians complete service calls.
+</Callout>
+
+## Empty state
+
+If no invoices have been uploaded yet, the Invoice Analytics page displays a helpful onboarding card with:
+
+- A description of what you can track: cost trends by equipment type, vendor pricing comparisons, and invoice-to-issue matching.
+- A button labeled **Upload Your First Invoice** that takes you to the Issues page where you can attach invoices to resolved issues.
+- A tip reminding you that you can take photos of paper invoices and the AI will extract the details.
+
+## Data range
+
+All analytics data covers a rolling **six-month window** from the current date. Only invoices with a parsing status of "completed" are included in the calculations. Draft or failed invoices do not affect your analytics.
+
+## Related pages
+
+- [Invoices Overview](/invoices/overview) -- How the invoicing system works.
+- [Uploading Invoices](/invoices/uploading-invoices) -- How to upload and process invoices.
+- [Service Providers](/settings/service-providers) -- Managing vendor contacts.
+- [Issues](/issues/overview) -- Where invoices are linked.

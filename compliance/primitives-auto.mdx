@@ -1,0 +1,68 @@
+---
+title: "Auto Primitive -- Auto-Tracked Tasks"
+description: "How auto-tracked compliance tasks work when connected equipment or process-based automation handles compliance verification."
+---
+
+## Overview
+
+The Auto primitive represents compliance tasks that are automatically managed -- no manual user action is required. These tasks are completed by the system based on signals from connected equipment or process-based automation rules.
+
+## How It Works
+
+When you view a task that uses the Auto primitive, the display shows a read-only confirmation screen:
+
+- A large green checkmark icon
+- The label **Auto-verified**
+- A description of the automation source (e.g., "via Statim G4" or "Automatically completed")
+- The timestamp of the last automatic completion (e.g., "at Mar 12, 2026 2:30 PM")
+
+There are no fields to fill in and no submit button. The system handles everything.
+
+## Auto-Compliance Reasons
+
+Each auto-tracked task has a reason explaining why it is automated. There are two source types:
+
+### Equipment-Based Automation
+
+When a piece of equipment has cloud connectivity or built-in compliance reporting capabilities, it can automatically satisfy certain compliance requirements. The auto-compliance reason includes:
+
+- **Source**: "equipment"
+- **Capability**: The specific equipment feature enabling automation
+- **Equipment Name**: The name of the connected equipment
+- **Equipment ID**: The identifier linking to your equipment record
+
+In the UI, this appears as: "Auto (Statim G4)" or similar, using the equipment name.
+
+### Process-Based Automation
+
+When your process answers from the [setup wizard](/compliance/setup-wizard) indicate that a task is handled by an automated workflow, the system marks it as auto-compliant. The auto-compliance reason includes:
+
+- **Source**: "process"
+- **Process Key**: The process configuration key (e.g., "cloud_connected")
+
+In the UI, this appears as: "Auto (cloud connected)" or similar.
+
+## Where Auto Tasks Appear
+
+Auto-tracked tasks appear in several places:
+
+- **Risk Summary Cards** -- Counted in the "Auto-Managed" card on the [compliance dashboard](/compliance/compliance-dashboard)
+- **Requirement Review** -- During [requirement review](/compliance/requirement-review), auto-compliant tasks are shown in a dedicated step where you acknowledge the automation
+- **Inspector View** -- Shown with an "Auto-Compliant" status badge in the [inspector view](/compliance/inspector-view)
+
+## Dental Practice Examples
+
+<ExpandableGroup>
+  <Expandable title="Cloud-connected autoclave cycle logging">
+    Modern cloud-connected autoclaves (e.g., Statim G4, BRAVO) automatically report each sterilization cycle to the manufacturer's cloud platform. ChairPulse detects this capability and marks the daily cycle verification task as auto-compliant, eliminating the need for manual logging.
+  </Expandable>
+  <Expandable title="Smart equipment monitoring">
+    Equipment with IoT sensors or connected monitoring platforms can automatically report operational data. When this data satisfies a compliance requirement (e.g., temperature logging, cycle counting), the corresponding task is auto-tracked.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip">
+  Auto-tracked tasks reduce your team's manual workload. During the setup wizard, the system automatically detects cloud-connected equipment and marks eligible tasks as auto-compliant. You can see the total count of auto-managed tasks on the dashboard's risk summary cards.
+</Callout>
+
+<!-- Screenshot needed: Auto primitive showing auto-verified status with equipment name and timestamp -->

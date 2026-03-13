@@ -1,0 +1,157 @@
+---
+title: AI SOP Generation
+description: Walk through the AI-guided wizard to generate comprehensive, structured SOPs automatically with step-by-step instructions, safety notes, and troubleshooting guidance.
+---
+
+## AI-powered SOP creation
+
+The AI SOP Generation wizard is the recommended way to create SOPs in ChairPulse. It guides you through a short series of steps, then uses AI to produce a complete, structured procedure with step-by-step instructions, safety considerations, pro tips, and troubleshooting guidance.
+
+To start, navigate to **Knowledge** > **SOP Library** > **Create New SOP** and select **AI-Assisted Generation**.
+
+<!-- Screenshot needed: AI-Assisted Generation card selected on the path selection screen -->
+
+## Wizard steps
+
+The AI wizard consists of four or five steps depending on your context. When creating SOPs from within a training path, an additional Topics step appears.
+
+<Steps>
+  <Step title="Context -- What are you creating today?">
+    The first step gathers information about your SOP to help the AI generate relevant content.
+
+    ### Description
+
+    In the **Tell us about your SOP** field, describe the procedure you want to document. Be specific about the equipment, process, or workflow. The description must be at least 20 characters long.
+
+    Examples:
+    - "Weekly cleaning procedure for the Midmark autoclave"
+    - "How to replace burs on the CEREC milling unit"
+    - "Patient intake and consent process for new patients"
+
+    <Callout kind="tip">
+      The more detail you provide in the description, the better the AI-generated content will be. Include specific equipment names, models, or procedure types when relevant.
+    </Callout>
+
+    ### SOP context type
+
+    Under **This SOP is about...**, select one of three options:
+
+    - **Existing Equipment** -- Select a piece of equipment from your inventory. The AI uses the equipment's manufacturer, model, and type to produce more accurate content.
+    - **Equipment Type (not in inventory)** -- Manually enter the equipment type, manufacturer, and model. Useful when the equipment has not been registered yet.
+    - **General Procedure** -- Select a category from the list (e.g., infection control, patient care, administrative procedures) for SOPs that are not equipment-specific.
+
+    Select **Continue** to proceed.
+  </Step>
+  <Step title="Topics -- Choose topics to generate (training path context only)">
+    <Callout kind="info">
+      This step only appears when creating SOPs from within a training path. In standalone SOP creation, the wizard skips directly to the Quality step.
+    </Callout>
+
+    The AI analyzes your description and suggests up to four SOP topics, each categorized as **Usage**, **Maintenance**, or **Other**. Topics are displayed as selectable cards.
+
+    ### Selecting topics
+
+    - Select one or more suggested topic cards. A checkmark appears on selected topics.
+    - The badge at the top shows how many topics you have selected (e.g., "2 topics selected").
+    - You can deselect a topic by selecting it again.
+
+    ### Adding a custom topic
+
+    Select **Add your own topic** to enter a custom SOP topic. Provide:
+
+    - **Topic Title** (required, minimum 10 characters) -- e.g., "How to Calibrate the X-Ray Sensor"
+    - **Brief Description** (optional) -- What the SOP should cover
+
+    Select **Add to Selection** to add your custom topic to the selection.
+
+    ### Selected topics summary
+
+    A summary panel at the bottom shows all selected topics as badges. Select the **x** on any badge to remove it from the selection.
+
+    You must select at least one topic to continue. The button label updates dynamically (e.g., "Continue with 2 Topics").
+
+    <Callout kind="tip">
+      Selecting multiple topics generates multiple SOPs in a batch. Single-topic selections generate and display the SOP immediately, while multi-topic selections generate SOPs in the background.
+    </Callout>
+  </Step>
+  <Step title="Quality -- Choose SOP detail level">
+    Select how comprehensive your generated SOP should be. Two quality levels are available:
+
+    ### Standard SOP
+
+    Available on all tiers. Takes approximately 45 seconds to generate.
+
+    Includes:
+    - Detailed step-by-step instructions
+    - Expert warnings and pro tips
+    - Troubleshooting guidance
+    - Verification checklists
+
+    ### Comprehensive SOP
+
+    **Professional tier only.** Takes approximately 2 minutes to generate.
+
+    Includes everything in Standard, plus:
+    - Real-time web search for accuracy
+    - Specific part numbers and interfaces (for equipment SOPs) or ADA, OSHA, and HIPAA guidelines (for general procedure SOPs)
+    - Video tutorials and articles or helpful resources and references
+    - Manufacturer-verified details or industry-verified best practices
+
+    <Callout kind="alert">
+      The Comprehensive SOP option requires the **Professional** tier. Essential tier users see it locked with a **Pro** badge. Upgrade to Professional for search-verified, manufacturer-accurate SOPs.
+    </Callout>
+
+    Select your preferred quality level, then select **Continue**.
+  </Step>
+  <Step title="Review & Generate">
+    The final step lets you review and refine your selections before generating.
+
+    ### Reviewing topics
+
+    Each topic is displayed in an editable card where you can:
+
+    - **Edit the title** -- Adjust the SOP title directly
+    - **Edit the description** -- Modify or add detail to the description
+    - **Add additional notes** -- Specify focus areas, protocols, or standards to include
+    - **Remove topics** -- Select the **x** button to remove a topic (when multiple topics are selected)
+
+    Equipment context is shown below the topic cards if applicable.
+
+    ### Single topic generation
+
+    When you have one topic, select **Generate SOP** to create the SOP immediately. The AI generates the content and saves it automatically. You then see a preview of the generated SOP with options to:
+
+    - **View SOP** -- Open the saved SOP detail page
+    - **Edit in Editor** -- Open the SOP in the manual editor for further refinement
+    - **Create Another** -- Start a new SOP creation
+
+    ### Multiple topic generation
+
+    When you have multiple topics, select **Generate [N] SOPs** to submit all topics for batch generation. SOPs are generated in the background -- you can continue using the app while they are being created.
+
+    After submission, a confirmation screen shows:
+
+    - The list of topics being generated with a loading indicator
+    - A note explaining where to find your SOPs once ready (SOP Library, or the training path if created from within one)
+    - A button to navigate to the **SOP Library** or **Back to Training Path**
+
+    <Callout kind="info">
+      Background generation typically takes a minute or two. Your new SOPs will appear in the SOP Library (and in the training path, if applicable) once complete.
+    </Callout>
+  </Step>
+</Steps>
+
+## Tier limits for AI generation
+
+| Tier | Generations per Month | Comprehensive SOPs |
+|---|---|---|
+| Essential | 25 | Not available |
+| Professional | Unlimited | Available |
+| Trial | Unlimited | Available |
+
+## Related pages
+
+- [Creating SOPs](/knowledge/creating-sops) -- Overview of all three creation methods
+- [SOP Library](/knowledge/sop-library) -- Browse your generated SOPs
+- [SOP Assistant](/knowledge/sop-assistant) -- AI chat for SOP questions
+- [Training Paths](/knowledge/training-paths) -- Structured learning sequences that use SOPs

@@ -1,0 +1,138 @@
+---
+title: Equipment Overview
+description: View and manage all your practice equipment from the Equipment list page, with filtering, sorting, and quick actions.
+---
+
+## Your equipment inventory at a glance
+
+The **Equipment** page is your central hub for viewing every piece of equipment registered in your practice. It displays a searchable, filterable table with real-time status indicators, criticality levels, room assignments, and warranty information.
+
+Navigate to **Equipment** from the main sidebar to open this page.
+
+<!-- Screenshot needed: Equipment list page showing the table with several items, filters, and the Add Equipment button -->
+
+## Page layout
+
+The Equipment page has three main sections:
+
+- **Page header** with the title "Equipment", the subtitle "Manage your practice equipment and devices", and the **Add Equipment** button.
+- **Filter and sort bar** directly below the header, with a search field, filter dropdowns, and a sort selector.
+- **Equipment table** showing all equipment that matches your current filters.
+
+A summary line above the table reads "Showing X of Y equipment" so you always know how many items are visible versus the total inventory.
+
+## Table columns
+
+The equipment table displays the following columns:
+
+| Column | Description | Visibility |
+|---|---|---|
+| **Equipment** | The equipment name (e.g., "Tuttnauer 3870EA") | Always visible |
+| **Manufacturer / Model** | Combined manufacturer and model, separated by " / " | Hidden on small screens (visible on medium+) |
+| **Status** | Color-coded badge showing the current operational status | Always visible |
+| **Criticality** | Badge showing the criticality level (Critical, High, Medium, Low) | Hidden on very small screens (visible on small+) |
+| **Room** | The room or location where the equipment is assigned | Hidden on small/medium screens (visible on large+) |
+| **Warranty** | Warranty expiry date, or "Expired" if past due | Hidden on smaller screens (visible on extra-large+) |
+| **Actions** | Three-dot menu with quick actions | Always visible |
+
+## Equipment statuses
+
+Each piece of equipment has one of the following statuses, displayed as a color-coded badge:
+
+| Status | Badge Color | Description |
+|---|---|---|
+| **OK** | Green | Equipment is functioning normally |
+| **Warning** | Yellow | Equipment needs attention but is still operational |
+| **Critical** | Red | Equipment has a serious issue requiring immediate attention |
+| **Maintenance Due** | Yellow | Scheduled maintenance is due or overdue |
+| **Under Repair** | Red | Equipment is currently being repaired |
+| **Decommissioned** | Gray | Equipment has been retired from service |
+
+<Callout kind="info">
+Decommissioned equipment is hidden from the list by default. To view decommissioned items, select **Decommissioned** from the Status filter dropdown.
+</Callout>
+
+## Criticality levels
+
+Criticality indicates how important a piece of equipment is to your practice operations:
+
+- **Critical** -- Equipment essential for patient care; downtime has immediate impact.
+- **High** -- Important equipment; downtime significantly affects operations.
+- **Medium** -- Standard equipment; downtime is manageable.
+- **Low** -- Non-essential equipment; downtime has minimal impact.
+
+## Warranty indicators
+
+The Warranty column provides at-a-glance information:
+
+- A standard date (e.g., "Jan 15, 2026") indicates an active warranty.
+- A date shown in a warning color means the warranty expires within 30 days.
+- A red **Expired** badge means the warranty has already lapsed.
+- A dash ("--") means no warranty information has been entered.
+
+## Filtering equipment
+
+Use the filter bar to narrow down your equipment list. You can combine multiple filters at once.
+
+### Search
+
+Type in the search field labeled **Search equipment...** to filter by:
+- Equipment name
+- Manufacturer name
+- Model name
+- Equipment type
+- Category
+
+### Filter dropdowns
+
+| Filter | Options |
+|---|---|
+| **Status** | All Statuses, OK, Warning, Critical, Maintenance Due, Under Repair, Decommissioned |
+| **Type** | All Types, plus all unique equipment types in your inventory |
+| **Category** | All Categories, plus all unique categories in your inventory |
+| **Criticality** | All Criticality, Critical, High, Medium, Low |
+| **Room** | All Rooms, plus all rooms configured for your office |
+
+When filters are active, badges appear below the filter bar showing which filters are applied. Select **Clear all** to reset all filters at once.
+
+## Sorting equipment
+
+Use the sort dropdown (on the right side of the filter bar) to change the table order:
+
+| Sort Option | Description |
+|---|---|
+| **Name (A-Z)** | Alphabetical order (default) |
+| **Name (Z-A)** | Reverse alphabetical order |
+| **Status (Best first)** | OK items first, Critical items last |
+| **Status (Worst first)** | Critical items first, OK items last |
+| **Criticality (High first)** | Critical items first, Low items last |
+| **Criticality (Low first)** | Low items first, Critical items last |
+| **Newest first** | Most recently added equipment first |
+| **Oldest first** | Oldest equipment first |
+
+## Quick actions
+
+Each row in the table has a three-dot menu with the following options:
+
+- **View Details** -- Opens the [equipment detail page](/equipment/equipment-detail-page) for the selected item.
+- **Report Issue** -- Navigates to the issue reporting form with the equipment pre-selected.
+
+You can also click anywhere on a row to navigate directly to its detail page.
+
+## Adding new equipment
+
+Select the **Add Equipment** button in the page header to start the equipment setup wizard. See [Adding Equipment](/equipment/adding-equipment) for a full walkthrough of the wizard flow.
+
+## Empty states
+
+If you have no equipment registered, the page displays an onboarding prompt to guide you through adding your first piece of equipment.
+
+If you have equipment but your current filters return no results, a message reads "No equipment matches your filters" with a **Clear Filters** button to reset.
+
+## Related pages
+
+- [Adding Equipment](/equipment/adding-equipment) -- Step-by-step guide to the equipment setup wizard
+- [Equipment Detail Page](/equipment/equipment-detail-page) -- Exploring all tabs on an individual equipment record
+- [Equipment Categories](/equipment/equipment-categories) -- Full list of 30 equipment categories
+- [Documents and Photos](/equipment/documents-and-photos) -- Managing files attached to equipment
+- [Rooms and Locations](/rooms-and-locations/overview) -- Managing the rooms your equipment is assigned to

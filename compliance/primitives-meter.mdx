@@ -1,0 +1,75 @@
+---
+title: "Meter Primitive -- Numeric Reading"
+description: "How to enter numeric measurements and compare them against compliance thresholds for tasks like waterline testing."
+---
+
+## Overview
+
+The Meter primitive is used for compliance tasks that require recording a numeric measurement and comparing it against a defined threshold. If the reading exceeds the allowed limit, the system flags a variance and requires a remediation note.
+
+## How It Works
+
+When you open a task that uses the Meter primitive, the completion form displays:
+
+### Threshold Display
+
+Above the input field, the system shows the threshold requirement in a human-readable format:
+
+> Must be < 500 CFU/mL
+
+The display combines the comparison operator, threshold value, and unit. The supported operators are:
+
+| Operator | Symbol | Meaning |
+|---|---|---|
+| `lt` | < | Less than |
+| `gt` | > | Greater than |
+| `lte` | &le; | Less than or equal to |
+| `gte` | &ge; | Greater than or equal to |
+| `eq` | = | Equal to |
+
+### Reading Input
+
+A numeric input field labeled **Reading** where you enter the measured value. The unit of measurement (e.g., "CFU/mL") is displayed next to the input field.
+
+As you type:
+- A **green checkmark** appears if the reading meets the threshold
+- A **red warning triangle** appears if the reading exceeds the threshold (variance detected)
+
+### Variance Handling
+
+If the reading triggers a variance (fails the threshold check), a remediation prompt appears with a required note field. You must describe the corrective action taken before the task can be submitted.
+
+The prompt shows a reason such as "Threshold breached" along with the actual value and the expected range.
+
+## Submission
+
+The footer button reads **Save Reading**. After submission:
+
+- A reading that **meets** the threshold sets the task status to **Completed**
+- A reading that **exceeds** the threshold sets the task status to **Completed with Failure** and the remediation note is recorded
+
+## Evidence Fields
+
+In addition to the numeric reading, the task may require supporting evidence:
+
+- **Notes** -- Additional context about the measurement conditions
+- **Photo** -- A photo of the test device, meter display, or lab results
+- **Documents** -- Lab reports or test certificates
+
+See [Uploading Evidence](/compliance/uploading-evidence) for details on evidence requirements.
+
+## Dental Practice Examples
+
+<ExpandableGroup>
+  <Expandable title="Dental unit waterline CFU/mL testing">
+    CDC guidelines recommend dental unit waterlines contain fewer than 500 CFU/mL of heterotrophic bacteria. After running an in-office paddle test or receiving mail-in lab results, enter the CFU/mL reading. If the reading is 500 or above, the system flags a variance and you must document your remediation plan (e.g., "Shocked waterlines with treatment solution, will retest in 48 hours").
+  </Expandable>
+  <Expandable title="Autoclave temperature verification">
+    Some compliance requirements involve verifying that sterilization equipment reaches the correct temperature. Enter the measured temperature and the system compares it to the required threshold.
+  </Expandable>
+  <Expandable title="Air compressor pressure readings">
+    Regular pressure gauge readings on dental air compressors can be tracked using the Meter primitive to ensure they remain within safe operating ranges.
+  </Expandable>
+</ExpandableGroup>
+
+<!-- Screenshot needed: Meter primitive showing reading input with threshold display and unit -->

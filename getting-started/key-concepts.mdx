@@ -1,0 +1,237 @@
+---
+title: Key Concepts
+description: Understand the core building blocks of ChairPulse, including equipment categories, room types, compliance primitives, subscription tiers, user roles, and task management.
+---
+
+## Overview
+
+ChairPulse organizes your dental practice around a set of core concepts. Understanding these will help you get the most out of the platform and configure it effectively for your team.
+
+## Equipment and categories
+
+Every piece of equipment in ChairPulse belongs to a **category** that determines which maintenance schedules, compliance rules, and SOPs are auto-generated. ChairPulse includes 30 built-in equipment categories covering the full range of dental practice equipment:
+
+<ExpandableGroup>
+  <Expandable title="View all 30 equipment categories">
+
+| Category | Examples |
+|---|---|
+| 3D Printers | In-office 3D printing systems |
+| Air Polishers | Prophy air polishing units |
+| Amalgam Separators | Mercury waste separation systems |
+| Amalgamators | Amalgam mixing devices |
+| Apex Locators | Electronic root canal length measurement |
+| Autoclaves & Sterilizers | Steam sterilization units (e.g., Midmark M11, Tuttnauer 3870EA) |
+| Compressors | Dental air compressors |
+| Curing Lights | LED and halogen curing units |
+| Dental Chairs & Delivery Units | Treatment chairs, delivery systems, and combined units |
+| Dental Lasers | Soft tissue, hard tissue, and combination lasers |
+| Dental Microscopes | Surgical and endodontic microscopes |
+| Digital Scanners & CAD/CAM | Intraoral scanners and milling systems |
+| Electric Handpiece Motors | Electric motor systems for handpieces |
+| Electrosurgery Units | Electrosurgical cutting and coagulation devices |
+| Endodontic Equipment | Rotary endo motors and obturation systems |
+| Handpieces | High-speed, low-speed, and surgical handpieces |
+| Implant Motors | Surgical implant placement motors |
+| Intraoral Cameras | Digital intraoral imaging cameras |
+| Lab Equipment | In-office lab devices (trimmers, lathes, articulators) |
+| Mixing Machines | Impression and cement mixing devices |
+| Nitrous Oxide Systems | N2O/O2 sedation delivery systems |
+| Operatory Lights | Overhead dental operatory lighting |
+| Patient Monitors | Vital signs monitoring equipment |
+| Prophy Jets | Air-powder polishing systems |
+| Suction Units | Chair-side and central suction systems |
+| Ultrasonic Cleaners | Instrument pre-cleaning baths |
+| Ultrasonic Scalers | Piezo and magnetostrictive scaling units |
+| Vacuum Systems | Central vacuum and dry vacuum systems |
+| X-Ray & Imaging | Digital sensors, panoramic, cephalometric, and CBCT units |
+| Other | Equipment that does not fit standard categories |
+
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="tip" title="Custom categories">
+
+If your equipment does not fit any built-in category, you can create a custom category during the equipment setup flow. Custom categories work just like built-in ones for room assignment and tracking, though they may not have pre-built maintenance templates or compliance rules.
+
+</Callout>
+
+### System equipment
+
+Some categories, such as **Dental Chairs & Delivery Units**, support a system/component hierarchy. A single system entry (for example, an A-Dec 500) can include sub-components:
+
+- **Dental Chair** -- The patient chair itself
+- **Delivery Unit** -- The instrument delivery system
+- **Chair & Delivery Unit (Combined)** -- A combined unit
+- **Operatory Light** -- The overhead light attached to the chair
+- **Assistant's Instrumentation** -- The assistant-side instruments
+
+This allows maintenance tasks to be scoped to specific components within a system rather than the system as a whole.
+
+## Rooms and locations
+
+Equipment in ChairPulse is assigned to **rooms**, which represent the physical locations in your practice. There are 9 room types:
+
+| Room Type | Description |
+|---|---|
+| **Operatory** | Treatment rooms where patient care is delivered |
+| **Sterilization** | Instrument processing and sterilization areas |
+| **Lab** | In-office laboratory spaces |
+| **X-Ray Room** | Dedicated imaging rooms |
+| **Mechanical Room** | Compressor, vacuum, and utility equipment rooms |
+| **Storage** | Equipment and supply storage areas |
+| **Reception** | Front desk and waiting areas |
+| **Office** | Administrative and staff office spaces |
+| **Other** | Any space that does not fit the above types |
+
+You can create multiple rooms of the same type (for example, "Operatory 1", "Operatory 2", "Operatory 3") and assign equipment to specific rooms. This helps organize maintenance tasks by location and makes it easy to see what equipment is in each room.
+
+Rooms are managed from **Rooms & Locations** in the Settings section of the sidebar.
+
+## Compliance primitives
+
+Compliance tasks in ChairPulse use one of six **primitive types** that define how a task is completed and what evidence is recorded. Each primitive determines the user interface and data captured when a team member completes a compliance task.
+
+| Primitive | Label | How it works |
+|---|---|---|
+| `inspector` | **Pass / Fail Inspection** | Record a pass or fail result each time the task is due. Used for biological monitoring, equipment inspections, and safety checks. |
+| `meter` | **Numeric Reading** | Record a measurement (such as CFU/mL for waterline testing) that is checked against a configured threshold. |
+| `clock` | **Expiration Tracker** | Confirm that an expiration date is still valid or enter a new one. Used for certifications, registrations, and dated supplies. |
+| `auto` | **Auto-Tracked** | Automatically managed by connected equipment or system integrations. No manual action is needed. |
+| `heartbeat` | **Confirmation** | A simple check-off confirming the task was completed. Used for routine operational tasks. |
+| `certificate` | **Certificate Upload** | Upload a certificate or proof of service when the task is completed. Used for third-party inspections, calibrations, and annual certifications. |
+
+<Callout kind="info" title="How primitives connect to your workflow">
+
+When ChairPulse generates compliance tasks for your equipment and jurisdiction, each task is assigned the appropriate primitive type. For example:
+
+- Weekly spore testing for your autoclave uses the **inspector** primitive (pass/fail)
+- Monthly waterline testing uses the **meter** primitive (CFU/mL reading against a threshold)
+- Annual X-ray tube registration uses the **clock** primitive (expiration date tracking)
+- Equipment with cloud-connected monitoring uses the **auto** primitive
+- Daily operatory preparation uses the **heartbeat** primitive (confirmation check-off)
+- Annual fire extinguisher inspection uses the **certificate** primitive (upload the service certificate)
+
+</Callout>
+
+### Compliance categories
+
+Compliance requirements are organized into 8 categories that map to regulatory areas:
+
+| Category | Covers |
+|---|---|
+| **Radiation Equipment** | X-ray machines, CBCT, panoramic units |
+| **Sterilization Equipment** | Autoclaves, sterilizers, instrument processing |
+| **Sedation Systems** | Nitrous oxide, anesthesia equipment |
+| **Water Systems** | Waterlines, filtration, treatment |
+| **Air & Vacuum Systems** | Compressors, vacuums, HVE |
+| **Safety Equipment** | Emergency equipment, protective gear |
+| **Waste Management** | Amalgam separators, sharps, biohazard |
+| **Other** | Miscellaneous equipment requirements |
+
+## Subscription tiers
+
+ChairPulse has two paid tiers and a trial period. Your tier determines AI feature limits, team size, and access to advanced features.
+
+| Feature | Essential ($99/mo) | Professional ($139/mo) |
+|---|---|---|
+| AI Diagnostic Chats | 15/month | Unlimited |
+| AI Diagnostic Reports | 5/month | 30/month |
+| AI SOP Generation | 25/month | Unlimited |
+| SOP Chat Messages | 1,000/month | 3,000/month |
+| Team Members | Up to 5 | Up to 25 |
+| Compliance Wizard | -- | Included |
+| County-Level Requirements | -- | Included |
+| Detailed SOPs | -- | Included |
+| Learning Paths | -- | Included |
+| Invoice Uploads | -- | Included |
+
+<Callout kind="info" title="Trial period">
+
+New accounts start with a free trial that includes all Professional features and limits. This gives you full access to evaluate capabilities like the Compliance Wizard, Learning Paths, and unlimited AI Diagnostic Chats before choosing a plan.
+
+</Callout>
+
+<Callout kind="tip" title="Annual savings">
+
+Both plans offer annual billing at a discount: Essential drops to **$82/mo** ($990/year) and Professional drops to **$115/mo** ($1,390/year).
+
+</Callout>
+
+## User roles
+
+ChairPulse uses four roles to control access and permissions across your practice:
+
+| Role | Description | Key permissions |
+|---|---|---|
+| **super_admin** | Platform administrator (ChairPulse internal) | Full platform access including admin dashboard, equipment enrichment, compliance rules management, usage analytics, AI diagnostics review, SOP quality review, organization management, and system health monitoring |
+| **admin** | Practice or organization administrator | Full access to all practice features, Organization settings, team management, and office configuration |
+| **manager** | Office or clinical manager | Access to equipment, maintenance, compliance, issues, and day-to-day operational features |
+| **staff** | Clinical or operational staff member | Access to assigned tasks, equipment viewing, issue reporting, and SOP reference |
+
+<Callout kind="info">
+
+The **Organization** settings page in the sidebar is only visible to users with the **admin** role. Super admins see an entirely separate admin sidebar with platform management tools.
+
+</Callout>
+
+## Task statuses
+
+Both maintenance and compliance tasks in ChairPulse move through a defined set of statuses:
+
+| Status | Meaning |
+|---|---|
+| **pending** | Task has been created and is waiting to be started |
+| **in_progress** | Someone has begun working on the task |
+| **completed** | Task was finished successfully |
+| **completed_with_failure** | Task was completed but the result was a failure (for example, a failed spore test) |
+| **overdue** | Task was not completed by its due date |
+| **skipped** | Task was intentionally skipped |
+| **awaiting_result** | Task has been performed but the result is pending (for example, mail-in spore test results) |
+| **missed** | Task was not completed and the window for completion has passed |
+
+## Task frequencies
+
+Tasks in ChairPulse can be scheduled at various intervals:
+
+| Frequency | Interval |
+|---|---|
+| **daily** | Every day |
+| **weekly** | Every week |
+| **monthly** | Every month |
+| **quarterly** | Every 3 months |
+| **semi_annual** | Every 6 months |
+| **annual** | Every year |
+| **biennial** | Every 2 years |
+| **triennial** | Every 3 years |
+| **every_3_years** | Every 3 years (alias) |
+| **every_4_years** | Every 4 years |
+| **every_5_years** | Every 5 years |
+| **one_time** | Single occurrence, no recurrence |
+| **as_needed** | No fixed schedule, completed when required |
+
+<Callout kind="tip">
+
+Most auto-generated maintenance tasks use **daily**, **weekly**, **monthly**, **quarterly**, or **annual** frequencies. Longer intervals like **biennial** or **every_5_years** are typically used for compliance tasks such as equipment registrations, major certifications, or regulatory renewal cycles.
+
+</Callout>
+
+## Next steps
+
+<Columns>
+  <Card title="Quickstart Guide" icon="zap" href="/getting-started/quickstart">
+    Walk through account creation, office setup, and adding your first equipment step by step.
+  </Card>
+
+  <Card title="Equipment Management" icon="wrench" href="/equipment/overview">
+    Dive into the full equipment management experience: adding, editing, and tracking your practice inventory.
+  </Card>
+
+  <Card title="Compliance Tracking" icon="clipboard-check" href="/compliance/overview">
+    Learn how to configure and complete compliance tasks for your jurisdiction and equipment.
+  </Card>
+
+  <Card title="Maintenance Scheduling" icon="calendar" href="/maintenance/overview">
+    Understand how auto-generated maintenance schedules work and how to manage tasks for your team.
+  </Card>
+</Columns>

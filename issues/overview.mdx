@@ -1,0 +1,114 @@
+---
+title: Issues Overview
+description: Track, diagnose, and resolve equipment problems with ChairPulse's Issues module -- from initial report through AI-assisted troubleshooting or technician service to final resolution.
+---
+
+## Track and resolve equipment problems
+
+The **Issues** module is your central place for logging, tracking, and resolving equipment problems across your practice. Whether a dental chair is making an unusual noise, an autoclave is throwing an error code, or an X-ray sensor has stopped working, Issues gives you a structured workflow to get equipment back in service as quickly as possible.
+
+Navigate to **Issues** from the main sidebar to open the issues list.
+
+<!-- Screenshot needed: Issues page showing the full list with filter tabs, search, and the Report Issue button -->
+
+## Page layout
+
+The Issues page has three main sections:
+
+- **Page header** with the title "Issues", the subtitle "Log and resolve equipment concerns -- from minor observations to urgent repairs", and the **Report Issue** button.
+- **Filter tabs and search bar** for narrowing down the issues list by status or keyword.
+- **Issues table** grouped by priority, showing all issues that match your current filters.
+
+## Issue statuses
+
+Every issue moves through a series of statuses as it progresses toward resolution:
+
+| Status | Badge Color | Description |
+|---|---|---|
+| **Open** | Blue | Issue has been reported but no action has been taken yet |
+| **In Progress** | Yellow | Active diagnosis or troubleshooting is underway |
+| **Awaiting Tech** | Purple | A technician service call has been scheduled |
+| **Resolved** | Green | The issue has been fixed and closed out |
+
+## Priority levels
+
+Each issue is assigned a priority that determines its visibility and sort order in the table:
+
+| Priority | Indicator | Description |
+|---|---|---|
+| **Critical** | Red with pulsing dot | Equipment unusable, stops patient care |
+| **High** | Orange | Significant impact, needs fix soon |
+| **Medium** | Gray (default) | Can work around it temporarily |
+| **Low** | Green | Minor issue, fix when convenient |
+
+Critical issues display an animated pulsing red dot in the table to draw immediate attention.
+
+## Filtering and searching
+
+The filter bar provides status tabs and a search field:
+
+- **Status tabs** -- **All**, **Open**, **In Progress**, **Awaiting Tech**, and **Resolved**. Each tab shows a count of matching issues in parentheses.
+- **Search** -- Type in the search box to filter by issue title, equipment name, or equipment type.
+
+Both filters work together. For example, you can select the **Open** tab and search for "autoclave" to see only open autoclave issues.
+
+## Issues table
+
+Active issues are grouped into priority sections (Critical, High, Medium, Low), each with a colored left border and a count of issues in that group. The table displays the following columns:
+
+| Column | Description |
+|---|---|
+| **Issue** | The issue title (truncated if long) |
+| **Equipment** | The equipment name associated with the issue |
+| **Reported** | Relative date (e.g., "Today", "3 days ago", or "Mar 5") |
+| **Priority** | Color-coded badge showing the priority level |
+| **Status** | Color-coded badge showing the current status |
+| **Action** | Dropdown button with context-sensitive actions |
+
+Click any row to open the [issue detail page](/issues/issue-detail-page).
+
+### Context-sensitive actions
+
+The action dropdown changes based on the issue status:
+
+- **Open** -- "Start AI Diagnosis", "Edit Issue", "Mark Resolved"
+- **In Progress** -- "Continue Diagnosis", "View Details", "Record Visit", "Mark Resolved"
+- **Awaiting Tech** -- "Record Visit", "View Details", "Mark Resolved"
+- **Resolved** -- "View Details"
+
+### Resolved issues
+
+Resolved issues appear in a collapsible **Resolved** section at the bottom of the page. Click the section header to expand or collapse it. Resolved issue rows are displayed with reduced opacity and strikethrough text to visually differentiate them from active issues.
+
+## Issue lifecycle
+
+Every issue follows a lifecycle from creation to resolution. There are two primary resolution paths:
+
+1. **Self-diagnose with AI** -- Use the AI diagnostic report and interactive chat to troubleshoot and potentially fix the issue yourself.
+2. **Schedule service** -- Skip diagnosis and bring in a technician to handle the repair.
+
+The typical lifecycle flow is:
+
+**Open** --> Self-diagnose with AI OR schedule service --> **In Progress** / **Awaiting Tech** --> **Resolved**
+
+You can switch between paths at any time. For example, if AI diagnosis does not resolve the issue, you can escalate to a technician directly from the diagnostic chat or report.
+
+## Explore the Issues module
+
+<Columns>
+  <Card title="Creating an Issue" icon="plus-circle" href="/issues/creating-an-issue">
+    Learn how to report a new equipment issue with photos, priority, and description.
+  </Card>
+  <Card title="Issue Detail Page" icon="file-text" href="/issues/issue-detail-page">
+    Understand the issue detail layout, tabs, timeline, and lifecycle progress tracker.
+  </Card>
+  <Card title="AI Diagnostic Chat" icon="message-square" href="/issues/ai-diagnostic-chat">
+    Get step-by-step AI-guided troubleshooting with real-time chat and photo analysis.
+  </Card>
+  <Card title="Diagnostic Reports" icon="clipboard-list" href="/issues/diagnostic-reports">
+    Review structured AI diagnostic reports with likely causes, recommended steps, and resources.
+  </Card>
+  <Card title="Resolving Issues" icon="check-circle" href="/issues/resolving-issues">
+    Mark issues as resolved, schedule technician service, or prepare for a tech visit.
+  </Card>
+</Columns>

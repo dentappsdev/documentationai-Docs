@@ -1,0 +1,80 @@
+---
+title: "Clock Primitive -- Expiration Tracker"
+description: "How to track expiration dates for licenses, certificates, and safety equipment with advance notice warnings."
+---
+
+## Overview
+
+The Clock primitive is used for compliance tasks that involve tracking expiration dates. It provides two modes: entering a new expiration date or quickly confirming that the current item has not expired. The system calculates advance notice warnings to help you plan replacements and renewals ahead of time.
+
+## How It Works
+
+When you open a task that uses the Clock primitive, the completion form displays two mode buttons at the top:
+
+### Enter Date Mode
+
+Click **Enter Date** to switch to date entry mode (this is the default). The form shows:
+
+- **Expiration Date** -- A date picker field where you enter or update the expiration date
+
+After entering a date, the system evaluates it and may show one of two warnings:
+
+**Expiring Soon Warning** (amber)
+> Expiring in 14 days -- plan replacement
+
+This appears when the expiration date is within the configured advance notice period (default: 30 days). The exact number of days is displayed.
+
+**Expired Warning** (red)
+> Expired 5 days ago
+
+This appears when the entered date is in the past, indicating the item has already expired.
+
+### Quick Confirm Mode
+
+Click **Quick Confirm** to switch to confirmation mode. The form shows:
+
+- A checkbox labeled **Confirmed Not Expired**
+
+Check the box to confirm that you have visually verified the item has not expired. This is useful for routine checks where the expiration date has not changed.
+
+## Advance Notice Configuration
+
+Each Clock task has an `advance_notice_days` setting that determines how far in advance the "expiring soon" warning appears. The default is 30 days. This value is configured per task based on the compliance requirement.
+
+## Submission
+
+The footer button reads **Save**. The task can be submitted when:
+
+- In **Enter Date** mode: an expiration date has been entered
+- In **Quick Confirm** mode: the "Confirmed Not Expired" checkbox is checked
+
+After submission, the task status is set to **Completed**. The expiration date or quick confirm status is recorded as evidence.
+
+## Evidence Fields
+
+In addition to the expiration tracking, the task may accept supporting evidence:
+
+- **Notes** -- Additional context about the item's condition
+- **Photo** -- A photo of the expiration label, sticker, or tag
+- **Documents** -- Renewal certificates or replacement receipts
+
+See [Uploading Evidence](/compliance/uploading-evidence) for details on evidence requirements.
+
+## Dental Practice Examples
+
+<ExpandableGroup>
+  <Expandable title="Fire extinguisher expiration">
+    Fire extinguishers require annual inspections and periodic recharging. Use the Clock primitive to track the expiration date on the inspection tag. When the date is approaching, the advance notice warning reminds you to schedule the next inspection.
+  </Expandable>
+  <Expandable title="DEA license renewal">
+    DEA registrations for controlled substances (e.g., sedation drugs) expire on a set schedule. Enter the expiration date and the system will warn you well in advance to begin the renewal process.
+  </Expandable>
+  <Expandable title="Radiation dosimetry badge exchange">
+    Dosimetry badges for radiation monitoring staff are exchanged on a regular cycle. Track when the current badge period expires and when the new badge is due.
+  </Expandable>
+  <Expandable title="Nitrous oxide system certification">
+    Nitrous oxide delivery systems may require periodic recertification. Track the certification expiration date and get advance notice to schedule the next recertification appointment.
+  </Expandable>
+</ExpandableGroup>
+
+<!-- Screenshot needed: Clock primitive showing Enter Date and Quick Confirm modes with expiring soon warning -->

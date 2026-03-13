@@ -1,0 +1,161 @@
+---
+title: Room Types
+description: Reference for all 9 room types in ChairPulse, with descriptions of how each type is typically used in a dental practice.
+---
+
+## Understanding room types
+
+Every room in ChairPulse is assigned a type that describes its primary function in your dental practice. Room types determine the room's icon and color in the interface, making it easy to visually identify different areas of your practice at a glance.
+
+You select the room type when [creating or editing a room](/rooms-and-locations/managing-rooms). The default type for new rooms is "Operatory."
+
+## All room types
+
+ChairPulse supports 9 room types:
+
+### Operatory
+
+**Icon color:** Blue
+
+The primary treatment rooms where patient care takes place. Each operatory typically contains a dental chair, delivery unit, operatory light, and various instruments. Most practices have multiple operatories numbered sequentially (e.g., Operatory 1, Operatory 2, Operatory 3).
+
+**Common equipment:** Dental chairs & delivery units, curing lights, intraoral cameras, ultrasonic scalers, operatory lights, handpieces, apex locators.
+
+---
+
+### Sterilization
+
+**Icon color:** Emerald/Green
+
+The room dedicated to instrument sterilization and infection control. This is where autoclaves, ultrasonic cleaners, and sterilization monitoring equipment are housed.
+
+**Common equipment:** Autoclaves & sterilizers, ultrasonic cleaners, handpiece maintenance systems, packaging and sealing equipment.
+
+<Callout kind="info">
+Equipment in the Sterilization room type often has compliance requirements related to spore testing, sterilization monitoring, and biological indicator tracking. ChairPulse can automatically generate these compliance tasks based on your jurisdiction.
+</Callout>
+
+---
+
+### Lab
+
+**Icon color:** Amber/Yellow
+
+The dental laboratory space used for fabricating or adjusting prosthetics, orthodontic appliances, and other dental devices. Not all practices have an in-house lab.
+
+**Common equipment:** Lab equipment, 3D printers, mixing machines, curing lights (lab-specific), model trimmers.
+
+---
+
+### X-Ray Room
+
+**Icon color:** Purple
+
+A dedicated room for radiographic imaging. Some practices have a separate panoramic or CBCT room, while others have X-ray units mounted in operatories.
+
+**Common equipment:** X-ray & imaging equipment (panoramic, CBCT, periapical units), lead aprons, thyroid collars, digital sensors.
+
+<Callout kind="info">
+X-Ray rooms typically have regulatory requirements for radiation safety inspections, equipment registration, and lead apron testing. ChairPulse tracks these through the compliance module.
+</Callout>
+
+---
+
+### Mechanical Room
+
+**Icon color:** Slate/Gray
+
+The utility room housing the practice's infrastructure equipment -- compressors, vacuum systems, and other mechanical systems that support operatory functions.
+
+**Common equipment:** Compressors, vacuum systems, suction units, amalgam separators, air/water filtration systems, nitrous oxide manifolds.
+
+---
+
+### Storage
+
+**Icon color:** Stone/Tan
+
+Supply storage areas for dental materials, spare parts, backup equipment, and inventory. May include climate-controlled storage for temperature-sensitive materials.
+
+**Common equipment:** Spare handpieces, backup instruments, supply inventory. Equipment stored here is typically not in active clinical use.
+
+---
+
+### Reception
+
+**Icon color:** Rose/Pink
+
+The front desk and patient reception area. While not typically associated with clinical equipment, some practices track reception-area devices such as patient check-in kiosks or air purifiers.
+
+**Common equipment:** Patient monitors (check-in systems), air purifiers, entertainment systems.
+
+---
+
+### Office
+
+**Icon color:** Indigo
+
+Administrative offices and private workspaces. Used for equipment like computers, printers, or other administrative devices that your practice wants to track.
+
+**Common equipment:** Computers, printers, office equipment that may be tracked for warranty or asset management purposes.
+
+---
+
+### Other
+
+**Icon color:** Cyan
+
+A catch-all type for rooms that do not fit the standard categories. Use this for unique spaces in your practice such as consultation rooms, conference rooms, break rooms, or hallways with mounted equipment.
+
+**Common equipment:** Any equipment that does not belong in the standard room types.
+
+## Room type icons and colors at a glance
+
+| Room Type | Icon | Color |
+|---|---|---|
+| Operatory | Building | Blue |
+| Sterilization | Sparkle | Emerald |
+| Lab | Flask | Amber |
+| X-Ray Room | Scan | Purple |
+| Mechanical Room | Wrench | Slate |
+| Storage | Archive | Stone |
+| Reception | People | Rose |
+| Office | Briefcase | Indigo |
+| Other | Help Circle | Cyan |
+
+## Choosing the right room type
+
+<ExpandableGroup>
+
+<Expandable title="My operatory has an X-ray unit mounted in it. Should I create an X-Ray Room?">
+
+No. If the X-ray unit is permanently installed in an operatory, assign it to that Operatory room. The **X-Ray Room** type is for dedicated imaging rooms that are separate from operatories. The equipment category (X-Ray & Imaging) and compliance requirements are determined by the equipment itself, not the room type.
+
+</Expandable>
+
+<Expandable title="I have a combined sterilization and lab area. Which type should I use?">
+
+Choose the type that best describes the room's primary function. If the room is mainly used for sterilization with a small lab bench, use **Sterilization**. If it is a dedicated lab with sterilization equipment, use **Lab**. You can add a description to note the dual purpose.
+
+</Expandable>
+
+<Expandable title="Can I change a room's type after creating it?">
+
+Yes. Edit the room and select a different type from the **Room Type** dropdown. The room's icon and color will update immediately. Changing the room type does not affect the equipment assigned to it or any compliance tasks.
+
+</Expandable>
+
+<Expandable title="Do room types affect compliance or maintenance tasks?">
+
+Room types are primarily for organizational and visual purposes. Compliance and maintenance tasks are driven by the equipment's category, not the room type. However, having accurate room types helps your team quickly identify where equipment is located.
+
+</Expandable>
+
+</ExpandableGroup>
+
+## Related pages
+
+- [Rooms & Locations Overview](/rooms-and-locations/overview) -- The main rooms management page
+- [Managing Rooms](/rooms-and-locations/managing-rooms) -- Creating, editing, and deleting rooms
+- [Equipment Categories](/equipment/equipment-categories) -- How equipment categories relate to compliance
+- [Adding Equipment](/equipment/adding-equipment) -- Assigning equipment to rooms during setup

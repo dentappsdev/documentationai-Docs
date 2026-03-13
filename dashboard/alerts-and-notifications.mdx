@@ -1,0 +1,188 @@
+---
+title: Alerts & Notifications
+description: >-
+  Learn about the different types of alerts and notifications on your ChairPulse
+  dashboard, including issue alerts, compliance warnings, invoice reminders, SOP
+  status updates, and the notification bell.
+---
+
+## How ChairPulse Keeps You Informed
+
+ChairPulse uses two complementary systems to surface important information:
+
+- **Dashboard alerts** -- color-coded banners and cards embedded directly in the dashboard, visible every time you open the app
+- **Notification bell** -- a dropdown in the dashboard header that collects individual notification messages over time
+
+Together, these ensure you never miss an overdue task, a pending invoice, or a compliance deadline.
+
+---
+
+## Dashboard Alert Bars
+
+Two prominent alert bars appear below the [Quick Stats Row](/dashboard/overview) whenever there are items that need your attention. Each bar is a clickable banner that navigates to the relevant section.
+
+### Issues Alert Bar
+
+<Callout kind="alert" title="Active issues need attention">
+  This red-tinted bar appears when you have open, in-progress, or awaiting-tech issues. It disappears automatically when all issues are resolved.
+</Callout>
+
+The issues alert bar displays:
+
+- **Count** -- the total number of active issues (statuses: open, in progress, awaiting tech)
+- **Breakdown** -- a secondary line showing how many issues are "awaiting tech" and how many are "open" (visible on desktop)
+- **Action** -- clicking anywhere on the bar or the **View Issues** link navigates to the [Issues](/issues/overview) page
+
+**Priority levels in the issues system:**
+
+| Priority | When assigned | Visual indicator |
+|----------|--------------|-----------------|
+| **Critical** | Equipment failure causing patient safety risk or complete workflow stoppage | Red background, counted in the dashboard header "urgent" total |
+| **High** | Significant impact on operations, needs prompt resolution | Red background, counted in the dashboard header "urgent" total |
+| **Medium** | Noticeable but does not block patient care | Amber background |
+| **Low** | Minor inconvenience, can be addressed at next opportunity | Muted background |
+
+Issues are sorted by priority on the dashboard, with critical and high-priority issues appearing first.
+
+### Compliance Alert Bar
+
+<Callout kind="info" title="Compliance tasks due">
+  This blue-tinted bar appears when compliance tasks are overdue or due today. It tracks regulatory and safety requirements for your equipment.
+</Callout>
+
+The compliance alert bar displays:
+
+- **Count** -- the total of overdue compliance tasks plus those due today
+- **Breakdown** -- how many are "overdue" and how many are due "today"
+- **Action** -- clicking the bar or the **View Compliance** link navigates to the [Compliance](/compliance/overview) page
+
+---
+
+## Invoice Review Alert
+
+When invoices are pending reconciliation, an amber-bordered card appears on the dashboard. This alert helps ensure service invoices are reviewed and matched to the correct issues.
+
+The card shows:
+
+- **Heading** -- "X invoices awaiting your review"
+- **Invoice list** -- up to three pending invoices, each showing the vendor name, associated equipment or issue title, and the invoice amount
+- **Individual Review buttons** -- clicking **Review** on any invoice navigates to the linked issue detail page
+- **Review All** -- a link at the top-right that navigates to the Invoice Analytics page
+
+<Callout kind="tip" title="Invoices are tied to issues">
+  Each invoice in ChairPulse is linked to an issue. Reviewing an invoice means navigating to the issue it belongs to, where you can reconcile the cost against the repair or service performed. See [Invoice Analytics](/invoices/invoice-analytics) for more.
+</Callout>
+
+This section is completely hidden when no invoices are pending review.
+
+---
+
+## Pending SOPs Indicator
+
+When the AI generates Standard Operating Procedures on your behalf, a status card appears on the dashboard to keep you informed. There are three possible states:
+
+### Generating
+
+A card with a spinning loader and the text **"X SOPs generating..."** along with "We're creating your procedures." Clicking this card navigates to the SOP Hub in the [Knowledge](/knowledge/overview) section. The indicator polls every 10 seconds to check for completion.
+
+### Ready
+
+Once generation is complete, the card updates to show **"Your SOP is ready!"** (for a single SOP) or **"X new SOPs ready!"** (for multiple). A "New" badge highlights the notification. Clicking navigates you directly to the completed SOP, or to the SOP Hub if multiple are ready.
+
+### Failed
+
+If SOP generation encounters an error, the card shows a red warning with **"SOP failed to generate."** Clicking navigates to the failed SOP where you can review the error and retry.
+
+<Callout kind="info" title="Auto-dismissal">
+  The Pending SOPs indicator automatically dismisses once you click through to view or acknowledge the SOP. It will not reappear for the same SOP.
+</Callout>
+
+---
+
+## AI Diagnostic Feedback Prompt
+
+If you used the AI Diagnostic Assistant within the last 24 hours for an issue that is still unresolved, a feedback card may appear asking:
+
+**"How was your AI Diagnostic experience?"**
+
+The card references the specific issue title and presents two options:
+
+<Steps>
+  <Step title="Rate your experience">
+    Choose **It was helpful** (thumbs up) or **Could be better** (thumbs down).
+  </Step>
+  <Step title="Provide details (optional)">
+    If you selected "Could be better," a text field appears where you can describe what could be improved. Click **Submit Feedback** to send, or **Cancel** to dismiss.
+  </Step>
+</Steps>
+
+Submitting either option dismisses the prompt and shows a confirmation: "Thanks for your feedback! Your input helps us improve the AI Assistant."
+
+This prompt only appears once per diagnostic conversation and does not show for issues that have already been resolved (resolved issues receive feedback through the resolution flow instead).
+
+---
+
+## Notification Bell
+
+The notification bell icon sits in the top-right corner of the dashboard header. It shows a red badge with the unread count when you have new notifications (displays "9+" when there are more than nine unread).
+
+### Viewing Notifications
+
+Click the bell icon to open a dropdown panel showing your most recent notifications (up to 10). Each notification includes:
+
+- **Type icon** -- color-coded by type:
+  - Green checkmark for **success** notifications
+  - Amber triangle for **warning** notifications
+  - Red X for **error** notifications
+  - Blue info circle for **informational** notifications
+- **Title** -- a brief summary of what happened
+- **Message** -- additional context (if available)
+- **Timestamp** -- relative time (e.g., "2 hours ago")
+- **Unread indicator** -- a blue dot for notifications you have not yet viewed
+
+### Acting on Notifications
+
+<Steps>
+  <Step title="Click a notification">
+    Clicking any notification marks it as read and navigates you to the relevant page (e.g., an issue detail, a compliance task, or an equipment page).
+  </Step>
+  <Step title="Mark all as read">
+    Click **Mark all as read** at the top of the dropdown to clear all unread indicators at once. A confirmation toast appears: "All notifications marked as read."
+  </Step>
+</Steps>
+
+When you have no notifications, the dropdown shows "No notifications."
+
+---
+
+## Attention Summary in the Header
+
+The dashboard header provides a consolidated attention count that sums up everything requiring action:
+
+- **"X items need attention"** (amber text) -- the total of overdue maintenance tasks + due-today maintenance tasks + active issues + invoices awaiting review
+- **"Y urgent"** (red text, only if > 0) -- the count of issues with high or critical priority
+
+This gives you a single number to gauge how much needs your attention before scrolling through the individual sections.
+
+---
+
+## Summary of Alert Types
+
+| Alert | Location | Trigger | Action |
+|-------|----------|---------|--------|
+| Issues Alert Bar | Dashboard, below quick stats | Any issues with status open, in_progress, or awaiting_tech | Click to view Issues page |
+| Compliance Alert Bar | Dashboard, below quick stats | Any compliance tasks overdue or due today | Click to view Compliance page |
+| Invoice Review Alert | Dashboard, below alert bars | Invoices with "pending" reconciliation status | Click individual invoice to review, or Review All |
+| Pending SOPs | Dashboard, below invoice alert | SOPs being generated, recently completed, or failed | Click to view SOP or SOP Hub |
+| AI Feedback Prompt | Dashboard, below pending SOPs | Recent AI diagnostic conversation without feedback | Rate helpful/not helpful |
+| Notification Bell | Dashboard header, top-right | System-generated notifications | Click to navigate to related item |
+
+---
+
+## Related Pages
+
+- [Dashboard Overview](/dashboard/overview) -- full layout and section guide
+- [Navigating the Interface](/dashboard/navigating-the-interface) -- sidebar, search, and navigation controls
+- [Issues Overview](/issues/overview) -- managing and resolving equipment issues
+- [Compliance Overview](/compliance/overview) -- compliance task tracking and completion
+- [Invoice Analytics](/invoices/invoice-analytics) -- reviewing and reconciling invoices

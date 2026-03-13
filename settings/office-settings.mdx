@@ -1,0 +1,91 @@
+---
+title: Office Settings
+description: Configure your office profile including name, address, state, timezone, practice type, and specialties.
+---
+
+## Managing your office profile
+
+**Office Settings** is where you configure the details about your physical office location and practice type. This information is used throughout ChairPulse for compliance reports, AI-generated recommendations, and state-specific regulatory requirements.
+
+Navigate to **Office Settings** from the Settings section in the sidebar.
+
+<!-- Screenshot needed: Office Settings page showing the Details tab with Location Details and Practice Profile cards -->
+
+## Page tabs
+
+The Office Settings page is organized into six tabs:
+
+| Tab | Description |
+|---|---|
+| **Details** | Office name, address, timezone, and practice type |
+| **Team** | Team members assigned to this office (see [Team Management](/settings/team-management)) |
+| **Assignments** | Room-to-staff assignment configuration |
+| **Usage** | AI feature usage statistics for this office |
+| **Maintenance** | Operating days and office closures (see [Operating Days](/settings/operating-days)) |
+| **Service Technicians** | Manage service providers and vendors (see [Service Providers](/settings/service-providers)) |
+
+## Location Details
+
+The Location Details card contains the following fields:
+
+<Steps>
+  <Step title="Office Name">
+    Enter a descriptive name for your office (e.g., "Main Office", "Downtown Location"). This name appears in the sidebar office switcher and in multi-office reports.
+  </Step>
+  <Step title="Timezone">
+    Select your timezone from the dropdown. Available options are:
+    - New York (Eastern)
+    - Chicago (Central)
+    - Denver (Mountain)
+    - Los Angeles (Pacific)
+    - Anchorage (Alaska)
+    - Honolulu (Hawaii)
+  </Step>
+  <Step title="Street Address">
+    Enter the full street address of your office.
+  </Step>
+  <Step title="City, State, and ZIP Code">
+    Enter your city, select your state from the dropdown (all 50 US states), and enter your ZIP code.
+  </Step>
+  <Step title="Country">
+    Currently fixed to **USA**. International locations are not yet supported.
+  </Step>
+</Steps>
+
+<Callout kind="alert" title="Compliance impact">
+Changing your **state** or **city** affects which compliance requirements apply to your office. If you change either of these fields, ChairPulse will prompt you to either update your compliance requirements (which resets your compliance setup) or keep your current requirements unchanged.
+</Callout>
+
+## Practice Profile
+
+The Practice Profile card lets you configure your practice type and specialties. Your practice type determines which compliance requirements are generated for your office.
+
+Available practice types include options such as General Dentistry, Orthodontics, Oral Surgery, Pediatric Dentistry, Periodontics, Endodontics, Prosthodontics, and more. You can also select multiple specialties.
+
+<Callout kind="alert" title="Compliance reset warning">
+Changing your practice type triggers a compliance update dialog. You have two choices:
+- **Update Requirements** -- Resets your compliance setup and deletes existing compliance tasks so you can run the compliance wizard again with the new practice type. This requires a digital signature for the audit trail.
+- **Keep Current Requirements** -- Saves the practice type change but leaves your existing compliance tasks intact.
+</Callout>
+
+## Saving changes
+
+Click **Save Changes** at the bottom of the Details tab to apply your updates. If your changes affect compliance-relevant fields (state, city, or practice type), the Compliance Update Confirm dialog will appear before the save completes.
+
+## Multi-office management
+
+If you are an admin or DSO admin viewing a specific office from the [Organization Settings](/settings/organization-settings) page, you will see:
+
+- A breadcrumb trail: Settings > Organization > [Office Name]
+- A back button to return to the Organization Settings page
+- The same six tabs available for any office in your organization
+
+This allows administrators to configure any office in their organization without switching their active office context.
+
+## Related pages
+
+- [Organization Settings](/settings/organization-settings) -- Manage all offices, admins, and billing at the organization level.
+- [Team Management](/settings/team-management) -- Invite and manage team members.
+- [Service Providers](/settings/service-providers) -- Manage technician and vendor contacts.
+- [Operating Days](/settings/operating-days) -- Configure which days your office is open.
+- [Rooms & Locations](/rooms-and-locations/overview) -- Manage the rooms within your office.

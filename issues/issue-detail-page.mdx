@@ -1,0 +1,153 @@
+---
+title: Issue Detail Page
+description: View and manage all aspects of an equipment issue -- from the overview and lifecycle progress to AI diagnostics, service history, and timeline.
+---
+
+## Understanding the issue detail page
+
+The issue detail page is the central hub for managing a specific equipment issue. It brings together the issue description, AI diagnostics, service history, invoices, and a complete timeline of events in one place.
+
+Navigate to an issue detail page by clicking any issue row in the [Issues list](/issues/overview), or by following a direct link.
+
+<!-- Screenshot needed: Issue detail page showing the hero section with title, badges, and equipment link, plus the tabbed content area -->
+
+## Hero section
+
+The top of the page displays key information at a glance:
+
+- **Issue title** -- The title you entered when creating the issue (e.g., "Chair won't recline past 45 degrees").
+- **Status badge** -- Color-coded badge showing the current status (Open, In Progress, Awaiting Tech, or Resolved).
+- **Priority badge** -- Shown when the priority is not Medium. Displays Critical, High, or Low with the appropriate color.
+- **Equipment link** -- Clickable text showing the equipment name, type, and manufacturer. Click to navigate to the equipment detail page.
+- **Timestamps** -- When the issue was reported and when it was last updated.
+- **Edit button** -- Opens the issue editing form.
+
+## Tabs
+
+The detail page is organized into five tabs:
+
+| Tab | Icon | Content |
+|---|---|---|
+| **Overview** | Layout icon | Issue progress, diagnostics summary, equipment details, service/invoice summary, and timeline snapshot |
+| **Timeline** | Clock icon | Complete chronological history of all events |
+| **Details** | Document icon | Full issue description, timestamps, and equipment specifications |
+| **Diagnostics** | Brain icon | AI diagnostic conversations and the option to start new chats |
+| **Service** | Wrench icon | Active service links, technician visits, and invoices |
+
+## Overview tab
+
+The Overview tab provides a dashboard-style view of the issue with several cards:
+
+### Photo gallery
+
+If photos were uploaded during issue creation, they appear in a gallery at the top of the overview. Click any photo to view it at full size.
+
+### Issue Progress card
+
+The **Issue Progress** card displays a visual lifecycle stepper showing where the issue stands in the resolution process. The stages are:
+
+- **Logged** -- Issue has been created
+- **Diagnosing** -- AI diagnostic session or report is active
+- **Service Scheduled** -- A technician visit has been scheduled
+- **Technician Visited** -- A service provider has completed a visit
+- **Invoiced** -- An invoice has been uploaded for the service
+- **Resolved** -- The issue has been closed
+
+Below the stepper, a guidance box with a lightbulb icon provides context-sensitive recommendations and action buttons. The available actions change based on the current stage:
+
+- **Logged stage** -- "Start AI Diagnosis", "Schedule Service", "Mark Resolved"
+- **Diagnosing stage** -- "Continue Diagnosis", "Schedule Service", "Record Visit", "Mark Resolved"
+- **Service Scheduled stage** -- "Record Technician Visit", "Mark Resolved"
+- **Technician Visited / Invoiced stage** -- "Mark Resolved"
+- **Resolved stage** -- Shows "This issue has been resolved" with a green check.
+
+### Resolution Summary card
+
+When an issue is resolved, a Resolution Summary card appears at the top of the overview showing how the issue was resolved, who resolved it, when, and any resolution notes, root cause analysis, or preventive actions recorded.
+
+### Diagnostics card
+
+Shows the number of AI diagnostic sessions, the date of the last session, whether a diagnostic report exists, and quick-action buttons to start a new diagnosis or view the report.
+
+### Equipment Summary card
+
+Displays the associated equipment's name, type, manufacturer, model, location, and serial number with a **View Equipment Details** button.
+
+### Service and Invoices card
+
+Summarizes technician visits and uploaded invoices with counts and quick actions.
+
+### Issue Details card
+
+Shows the full issue description, reported date, last updated date, and expected service date (if set).
+
+### Timeline Snapshot card
+
+Displays the most recent timeline events as a compact summary with a link to view the full timeline.
+
+## Timeline tab
+
+The **Timeline** tab shows a complete, chronological history of every event associated with the issue. Events are grouped by date with dividers showing the full date (e.g., "March 5, 2026").
+
+Event types that appear in the timeline:
+
+| Event | Description |
+|---|---|
+| **Issue Created** | When the issue was first reported, including title and description |
+| **Photos Added** | Number of photos uploaded at creation |
+| **AI Diagnostic Report** | When a diagnostic report was generated, with its status |
+| **AI Diagnostic Session** | Each diagnostic chat conversation, with message count |
+| **Escalated to Technician** | When the issue was escalated for professional service |
+| **Technician Visit** | Details of each service visit including vendor and tech name |
+| **Invoice Uploaded** | When an invoice was attached, with vendor and amount |
+| **Invoice Confirmed** | When an uploaded invoice was confirmed/approved |
+| **Issue Resolved** | When and how the issue was resolved |
+
+Events are sorted newest-first so the most recent activity is always at the top.
+
+## Details tab
+
+The Details tab shows two side-by-side cards:
+
+- **Issue Information** -- Full description, reported date and time, last updated date and time, and escalation date (if applicable).
+- **Equipment Details** -- Equipment name, type, manufacturer, model, and location with a **View Equipment Details** button linking to the equipment page.
+
+## Diagnostics tab
+
+The Diagnostics tab shows all **AI Diagnostic Conversations** for this issue. Each conversation card displays:
+
+- Status badge (active or completed)
+- Creation date and time
+- Message count and a preview of the last AI message
+
+Click any conversation to continue or review it in the [AI diagnostic chat](/issues/ai-diagnostic-chat).
+
+The **New Chat** button in the top-right starts a new diagnostic conversation. If no conversations exist yet, an empty state with a **Start First Chat** button is shown.
+
+## Service tab
+
+The Service tab contains three sections:
+
+### Active Service Links
+
+If a technician access link (QR code) has been generated for this issue, it appears here. Service links allow technicians to access issue details and submit visit reports without needing a ChairPulse account. See [Resolving Issues](/issues/resolving-issues) for details.
+
+### Technician Visits
+
+A list of all recorded technician visits for this issue. Each visit card shows the vendor name, technician name, work summary, and warranty information. Click **Record Visit** to document a new visit.
+
+### Invoices
+
+The invoice section allows you to upload and manage invoices related to this issue. See [Resolving Issues](/issues/resolving-issues) for details on the service workflow.
+
+## Choose Your Path dialog
+
+When you first create an issue (and chose "Just log the issue" during creation), or when you click **Start AI Diagnosis** from the overview, you may encounter the Choose Your Path dialog. This presents three options:
+
+- **Get AI Help** (recommended) -- Starts AI-powered diagnosis. The AI analyzes your photos and description, creates a step-by-step troubleshooting plan, and can escalate to a technician at any time.
+- **Call a Technician** -- Opens the [Schedule a Service Call dialog](/issues/resolving-issues) to arrange professional service.
+- **Just Log It** -- Saves the issue for later action.
+
+<Callout kind="tip">
+You do not have to pick a path immediately. Issues can sit in **Open** status indefinitely, and you can start diagnosis or schedule service from the issue detail page whenever you are ready.
+</Callout>

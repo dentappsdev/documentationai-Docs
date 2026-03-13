@@ -1,0 +1,102 @@
+---
+title: SOP Assistant
+description: Chat with an AI assistant that has access to all your standard operating procedures and can answer questions about your workflows and protocols.
+---
+
+## Your AI-powered SOP expert
+
+The **SOP Assistant** is an AI chat interface that has access to all the standard operating procedures in your organization. You can ask it questions about your workflows, protocols, safety procedures, and more -- and it will answer based on the actual content of your SOPs.
+
+Navigate to the SOP Assistant by selecting **Ask SOP Assistant** from the Knowledge page header, or from the SOP Library page.
+
+<!-- Screenshot needed: SOP Assistant page showing the empty state with the prompt starters -->
+
+## How it works
+
+The SOP Assistant reads all your uploaded and generated SOPs, then uses AI to answer questions by referencing the relevant procedures. Answers are grounded in your actual SOP content, not generic information.
+
+<Callout kind="info">
+Answers are based on your uploaded SOPs. The assistant can only reference procedures that exist in your SOP library. If you ask about a topic that is not covered by any SOP, the assistant will let you know.
+</Callout>
+
+## Chat interface
+
+The SOP Assistant page has three sections:
+
+- **Header** -- Displays "SOP Assistant" with a sparkle icon and a back button to return to the previous page.
+- **Chat area** -- The main conversation area where messages appear.
+- **Input area** -- A text field at the bottom where you type your questions.
+
+### Empty state
+
+When you first open the SOP Assistant, you see a welcome screen with the heading **What can I help you with?** and the message "I have access to all your standard operating procedures. Ask me anything about your workflows and protocols."
+
+Four prompt starters are displayed as clickable buttons to help you get started:
+
+- "How do I clean the autoclave?"
+- "What's the sterilization protocol?"
+- "Daily maintenance checklist"
+- "Safety procedures overview"
+
+Select any prompt starter to send it as your first message.
+
+### Sending messages
+
+Type your question in the text field labeled **Ask about your SOPs...** and press **Enter** to send. Press **Shift+Enter** to add a new line without sending.
+
+The text field automatically expands as you type longer messages, up to a maximum height.
+
+### Reading responses
+
+Assistant responses appear on the left side of the chat with a **SOP Assistant** label. Responses are formatted with Markdown, so they can include headings, lists, bold text, and other formatting.
+
+Each response includes:
+
+- **Formatted content** -- The AI's answer with proper structure and formatting.
+- **Source references** -- If the assistant referenced specific SOPs, a collapsible **sources referenced** section appears below the response. Expand it to see links to the referenced SOPs, and select any SOP title to navigate to it.
+- **Copy button** -- Hover over any response to reveal a **Copy** button that copies the response text to your clipboard.
+
+<Callout kind="tip">
+The SOP Assistant links directly to the SOPs it references. If you need more detail, select a source link to open the full SOP.
+</Callout>
+
+### Unverified references
+
+Occasionally, the AI may reference a procedure that cannot be verified against your SOP library. When this happens, an amber warning banner appears below the response: "Some referenced procedures could not be verified against your SOP library."
+
+References that cannot be verified are marked as *(unverified)* in the response text.
+
+## Types of questions you can ask
+
+The SOP Assistant is designed to answer questions about your practice's documented procedures. Examples include:
+
+- **How-to questions** -- "How do I clean the autoclave?" or "What's the process for replacing X-ray film?"
+- **Protocol lookups** -- "What's the sterilization protocol?" or "What are the steps for patient intake?"
+- **Checklist requests** -- "What's the daily maintenance checklist?" or "What do I need to check before opening?"
+- **Safety information** -- "What are the safety procedures for the nitrous oxide system?" or "What PPE is required for sterilization?"
+- **Troubleshooting** -- "The autoclave isn't reaching temperature. What should I do?"
+- **Compliance questions** -- "What are the OSHA requirements for our sterilization room?"
+
+## Error handling
+
+If a response fails to load, an error message appears with a **Retry** button. Select **Retry** to resend your last question.
+
+## Tier limits
+
+The SOP Assistant has monthly message limits that vary by subscription tier:
+
+| Tier | SOP Chat Messages per Month |
+|---|---|
+| Essential | 1,000 |
+| Professional | 3,000 |
+| Trial | 3,000 |
+
+<Callout kind="info">
+Each message you send counts toward your monthly limit. Assistant responses do not count separately -- only your sent messages are counted.
+</Callout>
+
+## Related pages
+
+- [SOP Library](/knowledge/sop-library) -- Browse and manage your SOPs
+- [Creating SOPs](/knowledge/creating-sops) -- Create new SOPs to expand the assistant's knowledge
+- [Knowledge & Training Overview](/knowledge/overview) -- The central Knowledge hub

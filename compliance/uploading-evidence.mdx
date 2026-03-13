@@ -1,0 +1,113 @@
+---
+title: "Uploading Evidence"
+description: "How to attach photos, documents, and notes as evidence when completing compliance tasks."
+---
+
+## Overview
+
+When completing a compliance task, you can attach evidence to support the completion record. Evidence creates an audit trail that demonstrates compliance during regulatory inspections. Depending on the task's configuration, some evidence types may be required.
+
+## Evidence Types
+
+There are three types of evidence you can attach to a task completion:
+
+### Photo Evidence
+
+A photo captured from your device's camera or uploaded from your files. Accepted formats are JPEG, PNG, and GIF. Photos are useful for:
+
+- Documenting the condition of equipment
+- Capturing test result displays
+- Recording physical inspection findings
+- Photographing expiration labels or tags
+
+In the task completion modal, click the **Add Photo** button to capture or upload a photo. Once attached, the file name is displayed with an option to remove it.
+
+### Document Evidence
+
+One or more documents uploaded as supporting evidence. You can attach multiple documents to a single task completion. Documents are useful for:
+
+- Lab reports and test results
+- Certificates and inspection reports
+- Manufacturer compliance letters
+- Maintenance service records
+
+The document upload section appears below the photo button. Click to add documents, and each uploaded file is listed with its type.
+
+### Notes
+
+Free-text notes entered in the **Notes** text area. Notes are useful for:
+
+- Recording observations during an inspection
+- Describing remediation steps taken
+- Adding context about unusual circumstances
+- Documenting follow-up actions planned
+
+## Evidence Requirements Configuration
+
+Each compliance task can be configured with specific evidence requirements. These requirements are set per-task based on the compliance regulation and are stored in the task's evidence configuration.
+
+The three configurable requirements are:
+
+| Requirement | Field Label | Effect |
+|---|---|---|
+| `require_photo` | "Add Photo *" | Photo must be attached before submission |
+| `require_document` | "Document Upload *" (marked as required) | At least one document must be uploaded before submission |
+| `require_notes` | "Notes *" | Notes field must contain text before submission |
+
+When a requirement is active, the corresponding field label shows an asterisk (*). The task completion modal will not allow submission until all required evidence is provided. If you attempt to submit with missing required evidence, an error toast appears listing the missing items (e.g., "Required evidence missing: photo, document").
+
+<Callout kind="info">
+  Evidence requirements are configured per-task during compliance plan generation. You cannot change them from the completion modal. If you believe a requirement is incorrect, contact your practice administrator.
+</Callout>
+
+## Evidence by Primitive Type
+
+Different primitive types interact with evidence in different ways:
+
+### Heartbeat
+
+- Notes and document upload are shown
+- No photo upload option is available
+- Evidence requirements can still apply (notes, documents)
+
+### Inspector
+
+- All three evidence types are available (notes, photo, documents)
+- The pass/fail result, lot number, and remediation note are recorded as structured evidence automatically
+- Photo evidence is common for documenting test strip results
+
+### Meter
+
+- All three evidence types are available
+- The numeric reading is recorded as structured evidence automatically
+- Photo evidence is common for documenting meter displays
+
+### Clock
+
+- All three evidence types are available
+- The expiration date or quick confirm status is recorded as structured evidence automatically
+- Photo evidence is common for documenting expiration labels
+
+### Certificate
+
+- All three evidence types are available
+- The certificate upload is the primary evidence (handled by the primitive itself)
+- Date of service, provider name, and next due date are recorded as structured evidence
+- Additional notes and photos supplement the uploaded certificate
+
+### Auto
+
+- No evidence collection -- tasks are completed automatically by connected equipment
+- No user interaction is needed
+
+## Viewing Evidence After Completion
+
+Evidence attached to completed tasks can be viewed in several places:
+
+- **Task Completion Modal** -- Expand "Previous completions" to see evidence from past completion cycles
+- **[Compliance History](/compliance/compliance-history)** -- Click the eye icon on any completed task to view the full evidence detail dialog, including all attached notes, photos, and documents
+- **[Inspector View](/compliance/inspector-view)** -- Evidence counts are shown in the requirements table
+
+Documents stored in evidence can be downloaded from the history detail view using the download button next to each evidence item.
+
+<!-- Screenshot needed: Task completion modal showing notes field, photo upload button, and document upload area -->

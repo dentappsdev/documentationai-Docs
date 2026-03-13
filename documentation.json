@@ -1,76 +1,164 @@
 {
   "name": "ChairPulse",
+  "initialRoute": "getting-started/introduction",
   "colors": {
     "light": {
-      "brand": "#5D7298",
-      "heading": "undefined",
-      "text": "undefined"
+      "brand": "#2E75B6",
+      "heading": "#1a1a1a",
+      "text": "#374151"
     },
     "dark": {
-      "brand": "#829BC9",
-      "heading": "undefined",
-      "text": "undefined"
+      "brand": "#85a1ff",
+      "heading": "#f2f2f2",
+      "text": "#d1d5db"
     }
   },
+  "template": "classic",
   "navigation": {
     "tabs": [
       {
-        "tab": "Help Center",
-        "icon": "help-circle",
+        "tab": "Documentation",
+        "icon": "book",
         "groups": [
           {
             "group": "Getting Started",
+            "icon": "rocket",
             "pages": [
-              {
-                "title": "Introduction",
-                "path": "introduction",
-                "show-toc": false,
-                "show-parent-label": false
-              },
-              {
-                "title": "Help Center",
-                "path": "help-center",
-                "icon": "home"
-              },
-              {
-                "group": "FAQs",
-                "icon": "help-circle",
-                "expandable": false,
-                "pages": [
-                  {
-                    "title": "Getting Started FAQ",
-                    "path": "help-center/faq/getting-started"
-                  }
-                ]
-              },
-              {
-                "group": "Troubleshooting",
-                "icon": "alert-triangle",
-                "expandable": false,
-                "pages": [
-                  {
-                    "title": "Cannot Invite User",
-                    "path": "help-center/troubleshooting/can-not-invite-user"
-                  }
-                ]
-              },
-              {
-                "group": "Guides",
-                "icon": "book-open",
-                "expandable": false,
-                "pages": [
-                  {
-                    "title": "Create Project",
-                    "path": "help-center/guides/create-project"
-                  }
-                ]
-              }
+              { "title": "Introduction", "path": "getting-started/introduction", "icon": "star" },
+              { "title": "Quickstart", "path": "getting-started/quickstart", "icon": "zap" },
+              { "title": "Key Concepts", "path": "getting-started/key-concepts", "icon": "lightbulb" }
+            ]
+          },
+          {
+            "group": "Dashboard",
+            "icon": "layout-dashboard",
+            "pages": [
+              { "title": "Overview", "path": "dashboard/overview" },
+              { "title": "Alerts & Notifications", "path": "dashboard/alerts-and-notifications" },
+              { "title": "Navigating the Interface", "path": "dashboard/navigating-the-interface" }
+            ]
+          },
+          {
+            "group": "Equipment",
+            "icon": "wrench",
+            "pages": [
+              { "title": "Overview", "path": "equipment/overview" },
+              { "title": "Adding Equipment", "path": "equipment/adding-equipment" },
+              { "title": "Equipment Detail Page", "path": "equipment/equipment-detail-page" },
+              { "title": "Equipment Categories", "path": "equipment/equipment-categories" },
+              { "title": "Documents & Photos", "path": "equipment/documents-and-photos" }
+            ]
+          },
+          {
+            "group": "Rooms & Locations",
+            "icon": "building-2",
+            "pages": [
+              { "title": "Overview", "path": "rooms-and-locations/overview" },
+              { "title": "Managing Rooms", "path": "rooms-and-locations/managing-rooms" },
+              { "title": "Room Types", "path": "rooms-and-locations/room-types" }
+            ]
+          },
+          {
+            "group": "Compliance",
+            "icon": "clipboard-check",
+            "pages": [
+              { "title": "Overview", "path": "compliance/overview" },
+              { "title": "Setup Wizard", "path": "compliance/setup-wizard" },
+              { "title": "Compliance Dashboard", "path": "compliance/compliance-dashboard" },
+              { "title": "Completing Tasks", "path": "compliance/completing-tasks" },
+              { "title": "Pass/Fail Inspection", "path": "compliance/primitives-inspector" },
+              { "title": "Numeric Reading", "path": "compliance/primitives-meter" },
+              { "title": "Confirmation", "path": "compliance/primitives-heartbeat" },
+              { "title": "Expiration Tracker", "path": "compliance/primitives-clock" },
+              { "title": "Certificate Upload", "path": "compliance/primitives-certificate" },
+              { "title": "Auto-Tracked", "path": "compliance/primitives-auto" },
+              { "title": "Requirement Review", "path": "compliance/requirement-review" },
+              { "title": "Uploading Evidence", "path": "compliance/uploading-evidence" },
+              { "title": "Compliance History", "path": "compliance/compliance-history" },
+              { "title": "Inspector View", "path": "compliance/inspector-view" }
+            ]
+          },
+          {
+            "group": "Maintenance",
+            "icon": "calendar",
+            "pages": [
+              { "title": "Overview", "path": "maintenance/overview" },
+              { "title": "Calendar View", "path": "maintenance/calendar-view" },
+              { "title": "Room View", "path": "maintenance/room-view" },
+              { "title": "Task Templates", "path": "maintenance/task-templates" },
+              { "title": "Completing Tasks", "path": "maintenance/completing-maintenance-tasks" }
+            ]
+          },
+          {
+            "group": "Issues & Diagnostics",
+            "icon": "alert-circle",
+            "pages": [
+              { "title": "Overview", "path": "issues/overview" },
+              { "title": "Creating an Issue", "path": "issues/creating-an-issue" },
+              { "title": "Issue Detail Page", "path": "issues/issue-detail-page" },
+              { "title": "AI Diagnostic Chat", "path": "issues/ai-diagnostic-chat" },
+              { "title": "Diagnostic Reports", "path": "issues/diagnostic-reports" },
+              { "title": "Resolving Issues", "path": "issues/resolving-issues" }
+            ]
+          },
+          {
+            "group": "Knowledge",
+            "icon": "book-open",
+            "pages": [
+              { "title": "Overview", "path": "knowledge/overview" },
+              { "title": "SOP Library", "path": "knowledge/sop-library" },
+              { "title": "Creating SOPs", "path": "knowledge/creating-sops" },
+              { "title": "AI SOP Generation", "path": "knowledge/ai-sop-generation" },
+              { "title": "SOP Assistant", "path": "knowledge/sop-assistant" },
+              { "title": "Training Paths", "path": "knowledge/training-paths" },
+              { "title": "Creating Training Paths", "path": "knowledge/creating-training-paths" }
+            ]
+          },
+          {
+            "group": "Invoices",
+            "icon": "receipt",
+            "pages": [
+              { "title": "Overview", "path": "invoices/overview" },
+              { "title": "Uploading Invoices", "path": "invoices/uploading-invoices" },
+              { "title": "Invoice Analytics", "path": "invoices/invoice-analytics" }
+            ]
+          },
+          {
+            "group": "Checklists",
+            "icon": "list-checks",
+            "pages": [
+              { "title": "Overview", "path": "checklists/overview" }
+            ]
+          },
+          {
+            "group": "Reports",
+            "icon": "bar-chart-3",
+            "pages": [
+              { "title": "Overview", "path": "reports/overview" }
+            ]
+          },
+          {
+            "group": "Settings",
+            "icon": "settings",
+            "pages": [
+              { "title": "Office Settings", "path": "settings/office-settings" },
+              { "title": "Organization Settings", "path": "settings/organization-settings" },
+              { "title": "Team Management", "path": "settings/team-management" },
+              { "title": "Service Providers", "path": "settings/service-providers" },
+              { "title": "Operating Days", "path": "settings/operating-days" },
+              { "title": "Billing & Subscription", "path": "settings/billing-and-subscription" }
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "icon": "help-circle",
+            "pages": [
+              { "title": "Common Issues", "path": "troubleshooting/common-issues" },
+              { "title": "Getting Help", "path": "troubleshooting/getting-help" }
             ]
           }
         ]
       }
     ]
-  },
-  "template": "classic",
-  "initialRoute": "introduction"
+  }
 }

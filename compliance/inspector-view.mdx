@@ -1,0 +1,82 @@
+---
+title: "Inspector View"
+description: "Present your compliance status in an inspector-friendly format during regulatory inspections and audits."
+---
+
+## Overview
+
+The Inspector View provides a clean, organized view of your compliance status designed to be shown during regulatory inspections. It groups requirements by inspector type and shows compliance status, evidence counts, and last completion dates in a table format.
+
+Access the Inspector View from the [compliance dashboard](/compliance/compliance-dashboard) by clicking the three-dot menu and selecting **Inspector View**, or navigate directly to `/compliance/inspector`.
+
+## Inspector Type Selector
+
+At the top of the page, a row of buttons lets you switch between different inspector types. Each inspector type represents a category of regulatory inspection. Click a button to filter the requirements table to show only the requirements relevant to that inspector type.
+
+The available inspector types are pre-configured based on common dental regulatory inspection categories.
+
+## Summary Bar
+
+Below the inspector type selector, a summary card shows:
+
+- **Description** of the selected inspector type
+- **Requirement counts**: Total requirements, compliant count, non-compliant count, and not-tracked count
+- **Compliance rate**: A large percentage number with color coding:
+  - **Green (100%)** -- Fully compliant
+  - **Amber (80-99%)** -- Mostly compliant with some gaps
+  - **Red (below 80%)** -- Significant compliance gaps
+- **Progress bar**: A visual representation of the compliance rate
+
+## Requirements Table
+
+The main content area is a table listing all requirements for the selected inspector type:
+
+| Column | Description |
+|---|---|
+| **Requirement** | The requirement name and regulatory code (e.g., regulatory body and code number) |
+| **Category** | The compliance category with an icon badge |
+| **Status** | A color-coded status badge |
+| **Last Completed** | The date of the most recent completion |
+| **Evidence** | Count of evidence items on file |
+| **Actions** | Link to the associated SOP (if one exists) |
+
+### Status Badges
+
+Each requirement displays one of four status badges:
+
+| Status | Badge | Meaning |
+|---|---|---|
+| **Compliant** | Green with checkmark | The requirement is current -- the latest task instance has been completed on time |
+| **Non-Compliant** | Red with X icon | The requirement has an overdue or failed task instance |
+| **Auto-Compliant** | Blue with lightning bolt | The requirement is automatically managed by connected equipment |
+| **Not Tracked** | Gray with dash | The requirement exists in the master list but is not being tracked for this office |
+
+## Using Inspector View During Inspections
+
+<Steps>
+  <Step title="Open Inspector View">
+    Navigate to the Inspector View before the inspector arrives. You can bookmark the URL for quick access.
+  </Step>
+  <Step title="Select the inspector type">
+    Choose the type that matches the inspector visiting your office (e.g., radiation, infection control, general safety).
+  </Step>
+  <Step title="Review the summary">
+    The compliance rate percentage gives an immediate overview. Review any non-compliant items before the inspection begins.
+  </Step>
+  <Step title="Walk through requirements">
+    Click any requirement row to view its full details, including completion history and evidence. The inspector can see the regulatory code, last completion date, and evidence count at a glance.
+  </Step>
+  <Step title="View SOPs">
+    If a Standard Operating Procedure is linked to a requirement, click the **SOP** button to show the inspector your documented procedures.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Prepare for inspections by reviewing the Inspector View a few days in advance. Address any non-compliant items before the inspector arrives. The compliance rate percentage is a quick way to gauge your readiness.
+</Callout>
+
+## Navigating Back
+
+Click **Back to Dashboard** in the page header to return to the [compliance dashboard](/compliance/compliance-dashboard).
+
+<!-- Screenshot needed: Inspector View showing summary bar with compliance percentage and requirements table with status badges -->

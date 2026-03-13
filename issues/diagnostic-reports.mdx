@@ -1,0 +1,177 @@
+---
+title: Diagnostic Reports
+description: AI-generated diagnostic reports provide structured troubleshooting plans with likely causes, recommended steps, safety notes, and helpful resources for equipment issues.
+---
+
+## Structured AI diagnostic reports
+
+A diagnostic report is an AI-generated document that analyzes your equipment issue and produces a structured troubleshooting plan. Unlike the [AI diagnostic chat](/issues/ai-diagnostic-chat) which is conversational, the diagnostic report provides a complete, actionable plan you can work through at your own pace.
+
+Reports are generated automatically when you select **Generate AI Diagnostic Report** during [issue creation](/issues/creating-an-issue), or when you click **Start AI Diagnosis** from the [issue detail page](/issues/issue-detail-page).
+
+<!-- Screenshot needed: Diagnostic Report page showing the Analysis Summary, Likely Causes, and Recommended Steps sections -->
+
+## Accessing a diagnostic report
+
+You can access a diagnostic report from:
+
+- The **issue detail page** -- Click **View Report** in the Diagnostics card on the Overview tab, or navigate via the issue URL with `/diagnostic` appended.
+- The **Diagnostics** tab -- If a report exists, it is referenced alongside diagnostic conversations.
+- **After issue creation** -- If you selected AI diagnostic report during issue creation, you are taken directly to the report page.
+
+A back button at the top-left returns you to the issue detail page.
+
+## Report generation process
+
+When a report is requested, the system goes through up to three states:
+
+<Steps>
+  <Step title="Generating">
+    The AI analyzes the issue title, description, photos, prior troubleshooting attempts, and equipment details. A loading state with the equipment name and issue title is shown while the report generates. This typically takes a few seconds.
+  </Step>
+  <Step title="Follow-up questions (if needed)">
+    If the AI needs more information to produce an accurate report, it presents follow-up questions. Answer them in the provided form and click submit to continue generation. You can also click **Skip** to proceed without answering, though the report may be less precise.
+  </Step>
+  <Step title="Report ready">
+    The completed report is displayed with all sections described below. You can now work through the recommended steps.
+  </Step>
+</Steps>
+
+## Report sections
+
+A completed diagnostic report contains the following sections:
+
+### AI Diagnostic Report header
+
+The report title "AI Diagnostic Report" appears with a sparkle icon. If the AI has assigned a confidence level, a **Confidence Badge** is displayed next to the title showing High, Medium, or Low confidence with a colored dot indicator.
+
+### Analysis Summary
+
+A card titled **Analysis Summary** provides a narrative overview of the issue based on the AI's analysis. This summary considers the reported symptoms, equipment type, manufacturer, and any photos or prior attempts. The equipment name appears as a badge below the summary text.
+
+### What You've Already Tried
+
+If you described prior troubleshooting attempts when creating the issue, they are listed here so the AI avoids recommending steps you have already taken.
+
+### Likely Causes
+
+The **Likely Causes** section lists the most probable root causes of the issue, each with:
+
+- **Cause name** -- A concise description of the potential problem
+- **Likelihood level** -- High, Medium, or Low
+- **Explanation** -- Why this cause is suspected based on the symptoms
+
+Causes are ranked by likelihood to help you focus on the most probable issues first.
+
+### Safety Considerations
+
+If there are safety concerns related to the issue or the recommended troubleshooting steps, they appear in an amber-highlighted card with warning icons. These might include electrical hazards, infection control concerns, or situations requiring personal protective equipment.
+
+<Callout kind="danger">
+Always follow the safety considerations listed in the report. If a step requires a technician, do not attempt it yourself unless you have the proper training and tools.
+</Callout>
+
+### Recommended Steps
+
+The core of the report is a numbered list of troubleshooting steps. Each step is displayed as an expandable card with:
+
+- **Step number and total** -- "Step 1 of 5"
+- **Estimated time** -- How long the step should take (e.g., "2 min")
+- **Safety badge** -- Either **Staff Safe** (green shield, safe for your team to perform) or **Tech Only** (red shield, should only be performed by a qualified technician)
+- **Title** -- What the step involves
+- **Detailed instructions** -- Expanded view with full guidance text
+- **Warning** (if applicable) -- Amber or red alert box with specific cautions
+- **Pro Tip** (if applicable) -- A lightbulb-highlighted hint to make the step easier
+
+Each pending step has three action buttons:
+
+- **Tried it -- Next step** -- Mark the step as completed and move to the next one
+- **Skip this step** -- Skip without completing (the AI notes this for context)
+- **Ask AI** -- Open a help chat specifically about this step for clarification
+
+A progress badge at the top shows completion (e.g., "2 / 5 complete").
+
+When a step resolves your issue, click the **This resolved it** button (shown with a celebration icon). This marks the issue as resolved and triggers a confetti celebration.
+
+### Next actions
+
+After the recommended steps, the report shows contextual next-action options:
+
+**While steps are in progress:**
+- **Chat with AI** / **Continue Chat** -- Open or resume a diagnostic chat for more interactive help. If you have an existing chat, it shows the message count.
+- **Schedule Service** -- Open the service scheduling dialog to bring in a technician.
+
+**After all steps are completed without resolution:**
+- A "Still Not Resolved?" card appears with options to **Chat with AI**, **Schedule Technician**, or **Mark as Resolved**.
+
+### Videos and Articles
+
+If relevant resources are available, they appear at the bottom of the report:
+
+- **Video tutorials** -- Linked videos with title, source, and duration
+- **Articles** -- Documentation links with title and source
+
+These resources are specific to the equipment type and issue described.
+
+## Working through steps from a report
+
+The intended workflow for a diagnostic report is:
+
+<Steps>
+  <Step title="Read the analysis summary and likely causes">
+    Understand what the AI thinks is wrong and why. This gives you context for the troubleshooting steps.
+  </Step>
+  <Step title="Review safety considerations">
+    Check if any steps require a technician or special precautions before you begin.
+  </Step>
+  <Step title="Work through recommended steps in order">
+    Expand each step, follow the instructions, and mark it as completed or skipped. If a step resolves the issue, click "This resolved it".
+  </Step>
+  <Step title="Escalate if needed">
+    If the steps do not resolve the issue, use the **Chat with AI** button for interactive help or **Schedule Service** to bring in a technician.
+  </Step>
+</Steps>
+
+## Connecting to diagnostic chat
+
+You can start an [AI diagnostic chat](/issues/ai-diagnostic-chat) directly from a report by clicking **Chat with AI**. When you do, the chat inherits the report context -- the AI knows which steps you completed, which you skipped, and the report's analysis. This makes the chat continuation more efficient because the AI does not repeat already-covered ground.
+
+If you already have an active chat for this report, the button reads **Continue Chat** with the message count displayed.
+
+## Sharing with technicians
+
+When you escalate from a diagnostic report to scheduling a technician, the report summary is automatically included in the service preparation. The technician receives:
+
+- The AI analysis summary
+- Likely causes identified
+- Steps that were completed and their outcomes
+- Steps that were skipped
+- Prior troubleshooting attempts
+
+This ensures the technician arrives with full context of what has already been tried, reducing repeat diagnostics and speeding up resolution.
+
+## Tier limits
+
+<Callout kind="alert" title="Plan limits apply">
+Diagnostic reports are subject to monthly usage limits based on your subscription tier:
+
+- **Essential plan** -- 5 diagnostic reports per month
+- **Professional plan** -- 30 diagnostic reports per month
+- **Trial** -- Same limits as Professional
+
+When you reach your monthly limit, a message appears showing your usage, the number of days until your limit resets, and an option to upgrade your plan. You can still use the [AI diagnostic chat](/issues/ai-diagnostic-chat) (subject to its own limits) and schedule service manually.
+
+Navigate to **Settings > Organization > Billing** to view your current usage or upgrade your plan.
+</Callout>
+
+<ExpandableGroup>
+  <Expandable title="How accurate are diagnostic reports?">
+    Diagnostic reports are generated by AI based on the information you provide. The confidence badge indicates how certain the AI is about its analysis. Reports with High confidence are generally very reliable for common issues. For uncommon or complex problems, consider using the report as a starting point and supplementing with a diagnostic chat or professional technician.
+  </Expandable>
+  <Expandable title="Can I regenerate a report?">
+    Reports are generated once per issue. If you need a fresh analysis, you can start a new [AI diagnostic chat](/issues/ai-diagnostic-chat) which will take the report context into account and provide updated guidance.
+  </Expandable>
+  <Expandable title="What if the AI asks follow-up questions?">
+    Answer them as specifically as possible. The more detail you provide, the more accurate the generated report will be. If you are unsure, you can skip the questions, but the report may have lower confidence or miss important context.
+  </Expandable>
+</ExpandableGroup>

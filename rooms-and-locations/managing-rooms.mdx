@@ -1,0 +1,169 @@
+---
+title: Managing Rooms
+description: Create, edit, and delete rooms in your dental practice to organize equipment locations and streamline maintenance tracking.
+---
+
+## Set up your practice rooms
+
+Rooms are the physical locations in your practice where equipment is installed. Every piece of equipment must be assigned to a room, so setting up rooms is typically one of the first things you do in ChairPulse.
+
+Navigate to **Rooms & Locations** from the Settings section in the sidebar.
+
+## Creating a room
+
+You can create rooms in two ways: individually through the Add Room dialog, or in bulk using the Quick Setup Wizard.
+
+### Add a single room
+
+<Steps>
+
+<Step title="Open the Add Room dialog">
+
+Select the **Add Room** button in the top-right corner of the Rooms & Locations page. This opens the **Add New Room** dialog.
+
+</Step>
+
+<Step title="Fill in the room details">
+
+Complete the following fields:
+
+| Field | Required | Description |
+|---|---|---|
+| **Room Name** | Yes | A descriptive name for the room (e.g., "Operatory 1", "Main Sterilization Room"). |
+| **Room Type** | No | Select from the 9 available [room types](/rooms-and-locations/room-types). Defaults to "Operatory". |
+| **Floor** | No | The floor or level where the room is located (e.g., "1st Floor", "Ground Floor", "Suite 200"). |
+| **Description** | No | A brief description of the room (e.g., "Primary treatment room with A-Dec 500 setup"). |
+
+</Step>
+
+<Step title="Save the room">
+
+Select **Create Room** to save. A success notification confirms "Room created successfully." The new room appears immediately in the room grid.
+
+</Step>
+
+</Steps>
+
+### Bulk room creation with Quick Setup
+
+If you are setting up your practice for the first time, the [Quick Office Setup wizard](/rooms-and-locations/overview) offers a faster approach. It lets you create multiple rooms at once using common dental practice presets with adjustable quantities.
+
+<Callout kind="tip">
+Use the Quick Setup Wizard when you first start with ChairPulse to create all your rooms at once. You can fine-tune names and details afterward by editing individual rooms.
+</Callout>
+
+## Editing a room
+
+<Steps>
+
+<Step title="Find the room to edit">
+
+On the Rooms & Locations page, hover over the room card you want to modify. Two action buttons appear in the top-right corner of the card.
+
+</Step>
+
+<Step title="Open the edit dialog">
+
+Select the **pencil** icon button. This opens the **Edit Room** dialog pre-filled with the room's current details.
+
+</Step>
+
+<Step title="Update the room details">
+
+Modify any of the following fields:
+
+- **Room Name** -- Change the display name.
+- **Room Type** -- Change the room type (this updates the room's icon and color on the card).
+- **Floor** -- Add, change, or remove the floor designation.
+- **Description** -- Add, change, or remove the description.
+
+</Step>
+
+<Step title="Save changes">
+
+Select **Update Room** to save your changes. A success notification confirms "Room updated successfully."
+
+</Step>
+
+</Steps>
+
+## Deleting a room
+
+<Steps>
+
+<Step title="Find the room to delete">
+
+On the Rooms & Locations page, hover over the room card you want to remove.
+
+</Step>
+
+<Step title="Delete the room">
+
+Select the **trash** icon button. The room is immediately deleted.
+
+A success notification confirms "Room deleted successfully."
+
+</Step>
+
+</Steps>
+
+<Callout kind="danger">
+Room deletion is immediate and permanent. There is no confirmation dialog. Before deleting a room:
+
+- Check if any equipment is assigned to it by expanding the equipment list on the room card.
+- Reassign any equipment to another room first by editing the equipment record.
+- Equipment assigned to a deleted room will lose its room assignment but will not be deleted.
+</Callout>
+
+## Room naming conventions
+
+While you can name rooms however you like, here are common patterns used in dental practices:
+
+<ExpandableGroup>
+
+<Expandable title="Operatories">
+
+Use sequential numbering for treatment rooms:
+- Operatory 1, Operatory 2, Operatory 3
+- Op 1, Op 2, Op 3
+- Treatment Room A, Treatment Room B
+
+</Expandable>
+
+<Expandable title="Specialized rooms">
+
+Use descriptive names for non-treatment spaces:
+- Main Sterilization, Sterilization Room
+- Panoramic X-Ray Room, CBCT Room
+- Front Desk, Reception Area
+- Lab, Dental Lab
+- Supply Closet, Main Storage
+
+</Expandable>
+
+<Expandable title="Multi-floor practices">
+
+Include floor or suite information:
+- 2nd Floor - Operatory 1
+- Suite 200 - Sterilization
+- Or use the **Floor** field to separate the floor from the room name.
+
+</Expandable>
+
+</ExpandableGroup>
+
+## How rooms connect to equipment
+
+Rooms serve several important functions in ChairPulse:
+
+- **Equipment assignment** -- Every piece of equipment is assigned to a room during [equipment setup](/equipment/adding-equipment) or through the equipment edit dialog. The Room / Location field is required.
+- **Equipment filtering** -- On the [Equipment list](/equipment/overview), you can filter equipment by room to see what is installed in a specific location.
+- **Equipment duplication** -- When [copying equipment](/equipment/adding-equipment), you select a different room for the new unit to distinguish it from the source.
+- **Maintenance context** -- Room assignments help maintenance staff locate equipment quickly when performing scheduled tasks.
+
+## Related pages
+
+- [Rooms & Locations Overview](/rooms-and-locations/overview) -- The main rooms management page
+- [Room Types](/rooms-and-locations/room-types) -- Reference for all 9 room types and their uses
+- [Equipment Overview](/equipment/overview) -- Filtering equipment by room
+- [Adding Equipment](/equipment/adding-equipment) -- Assigning equipment to rooms

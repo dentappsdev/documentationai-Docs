@@ -1,0 +1,116 @@
+---
+title: "Compliance Setup Wizard"
+description: "Step-by-step guide to the compliance setup wizard that generates a personalized compliance plan for your dental practice."
+---
+
+## Overview
+
+The Compliance Setup Wizard guides you through generating a compliance plan tailored to your office. It analyzes your state regulations, practice type, equipment inventory, and workflow preferences to create a set of compliance tasks with appropriate frequencies and deadlines.
+
+<Callout kind="alert">
+  The Compliance Setup Wizard is a **Professional tier** feature. You must be on the Professional plan to access it.
+</Callout>
+
+<Callout kind="info">
+  Before starting the wizard, make sure your office profile has a **state** and **practice type** configured in Office Settings. The wizard requires both to generate accurate compliance requirements.
+</Callout>
+
+## Wizard Steps
+
+The wizard consists of five steps with a visual progress indicator at the top showing your current position.
+
+<Steps>
+  <Step title="Welcome">
+    The welcome screen introduces the compliance engine and explains the three-phase process:
+
+    1. **Confirm your location and practice type** -- Select your state, choose your practice type, and the system matches regulations to your area.
+    2. **Review your equipment** -- See equipment-linked requirements for sterilizers, X-rays, nitrous, and more.
+    3. **Generate your plan** -- Get a personalized compliance checklist with tasks, schedules, and deadlines tailored to your state and equipment.
+
+    Click **Let's get started** to begin.
+  </Step>
+
+  <Step title="Location -- Confirm Your Practice Profile">
+    This step displays your office location, practice type, and any practice specialties (e.g., Sedation / Nitrous Oxide, CBCT / 3D Imaging, Dental Lasers, Oral Surgery) pulled from your office settings.
+
+    You must confirm each item by checking the corresponding checkbox:
+
+    - **Office location** -- City, state, and county
+    - **Practice type** -- e.g., General Dentistry
+    - **Specialties** -- Any specialty services your office provides
+
+    All items must be confirmed before you can proceed. If anything is incorrect, click **Edit office settings** to navigate to Office Settings and make changes.
+
+    <Callout kind="info">
+      A state is required. If your office does not have a state set, the wizard will block you from proceeding until you add one.
+    </Callout>
+  </Step>
+
+  <Step title="Equipment -- Review Your Equipment">
+    The wizard scans your equipment inventory and groups items by compliance-relevant categories (Autoclaves/Sterilizers, X-ray machines, Compressors, etc.). For each category, you see:
+
+    - How many items are in your inventory
+    - Whether the category is **required** or **optional** based on your practice type
+    - Whether any equipment is **cloud-connected** (which may allow auto-managed tasks)
+
+    If a required equipment category is missing, the wizard blocks you from continuing and provides a link to the Equipment page to add the missing items.
+
+    The button at the bottom shows how many categories will be included, e.g., **Continue with 5 Categories**.
+
+    <Callout kind="tip">
+      Each unit of equipment gets its own compliance tasks. If you have two autoclaves, make sure both are added in Equipment before running the wizard -- each one will receive its own set of sterilization compliance tasks.
+    </Callout>
+  </Step>
+
+  <Step title="Process Questions -- Answer Practice-Specific Questions">
+    Based on the equipment categories detected in the previous step, the wizard asks targeted questions about your workflows. These questions are shown one at a time with a dot-based progress indicator.
+
+    Questions may be **auto-answered** if the system can determine the answer from your equipment metadata. When this happens, you see a banner like "2 questions auto-answered by your equipment -- fewer steps for you."
+
+    The possible questions are:
+
+    **Spore Testing Method** (shown when sterilizers are detected)
+    - **In-office incubator** -- Results in 24 hours
+    - **Mail-in service** -- Results in 5-7 days
+
+    **Sterilization Logging** (shown when sterilizers are detected)
+    - **Cloud-connected autoclave** -- Auto-verified via equipment
+    - **Manual paper/digital logs** -- Staff records each cycle
+    - **Mixed (cloud + manual)** -- Some auto-verified, some manual
+
+    If you have a mix of cloud-connected and manual autoclaves, the wizard may show a per-equipment selection screen where you classify each unit individually.
+
+    **Waterline Testing Method** (shown when dental chairs/delivery units are detected)
+    - **In-office test paddles** -- Results in 48 hours
+    - **Mail-in lab test** -- Results in 10-14 days
+
+    **Compressor Permit Status** (shown when compressors are detected)
+    - **No permit needed** -- Compressor is below state size/pressure threshold
+    - **Permit is required** -- Compressor exceeds state threshold
+
+    If you are unsure about any question, click **Not sure? We'll use the conservative default** to proceed with a safe default value.
+  </Step>
+
+  <Step title="Generation -- System Generates Compliance Plan">
+    The system generates your compliance plan automatically. A progress checklist shows each phase:
+
+    1. Loading dental board requirements for your state
+    2. Loading federal CDC guidelines
+    3. Mapping requirements to your equipment
+    4. Creating your compliance plan
+
+    A progress bar tracks overall completion. When finished, you see a summary like "42 compliance tasks created for your practice."
+
+    If generation fails, an error message is displayed with a **Retry** button.
+
+    After successful generation, the system automatically transitions to [requirement review](/compliance/requirement-review) mode where you can confirm or dismiss each generated task.
+  </Step>
+</Steps>
+
+## Resuming the Wizard
+
+The wizard saves your progress. If you leave and come back, it restores your position (capped at the Equipment step, since later steps require transient state from earlier steps). You may need to re-select equipment and re-answer process questions.
+
+## After the Wizard
+
+Once the wizard completes generation, your compliance setup status changes to **review_pending**. You are taken to the [Requirement Review](/compliance/requirement-review) screen where you confirm or dismiss each generated task before the compliance dashboard activates.

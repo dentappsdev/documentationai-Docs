@@ -1,0 +1,189 @@
+---
+title: Resolving Issues
+description: Close out equipment issues by marking them as resolved after self-diagnosis, scheduling a technician service call, or recording a tech visit with QR-code-based access.
+---
+
+## Paths to resolution
+
+ChairPulse provides multiple ways to resolve an equipment issue, depending on how the problem was fixed. You can resolve an issue after self-diagnosis, schedule and document a professional service call, or simply mark it as resolved from the issues list.
+
+## Resolving after self-diagnosis
+
+When you fix an issue yourself -- either by following the [AI diagnostic report](/issues/diagnostic-reports) steps or through the [AI diagnostic chat](/issues/ai-diagnostic-chat) -- you can mark it as resolved.
+
+### From a diagnostic report step
+
+If a specific troubleshooting step in the diagnostic report fixes the problem, click the **This resolved it** button on that step card. The system automatically:
+
+1. Marks the step as completed
+2. Updates the issue status to **Resolved**
+3. Records the resolution type as "self_resolved" with a note about which step fixed it
+4. Updates the equipment status back to operational (if no other open issues exist)
+5. Triggers a confetti celebration
+
+### From the diagnostic chat
+
+If you tell the AI in the chat that the issue is fixed (e.g., "It worked!" or "That resolved it"), the system marks the issue as resolved automatically with a celebration animation.
+
+### From the Mark Resolved dialog
+
+You can also manually resolve an issue by clicking **Mark Resolved** from the issues table action menu, the issue detail overview, or the lifecycle progress card. This opens the **Mark Issue as Resolved** dialog.
+
+<Steps>
+  <Step title="Select how it was resolved">
+    Choose one of the following resolution types:
+
+    - **We fixed it ourselves** -- A team member resolved the issue in-house
+    - **Technician fixed it** -- An external service provider repaired the equipment
+    - **Issue resolved on its own** -- The problem went away without intervention
+    - **Logged in error / Not an issue** -- This was a false alarm or misdiagnosis
+    - **Other** -- A different resolution not listed above
+
+    This field is required.
+  </Step>
+  <Step title="Select who resolved it (optional)">
+    If staff members are configured in your account, you can select the person who resolved the issue from a dropdown.
+  </Step>
+  <Step title="Set the resolution date">
+    The date defaults to today. Use the calendar picker to select a different date if the issue was resolved earlier.
+  </Step>
+  <Step title="Add resolution notes">
+    Describe how the issue was resolved, what was done, and any parts replaced. This information is stored in the issue timeline for future reference.
+  </Step>
+  <Step title="Add additional details (optional)">
+    Click **Additional details** to expand optional fields:
+
+    - **Root cause** -- What caused the issue (e.g., "worn gasket", "power surge", "user error")
+    - **Preventive action** -- Steps to prevent recurrence (e.g., "schedule regular maintenance", "install surge protector")
+  </Step>
+  <Step title="Confirm resolution">
+    Click **Mark Resolved** to close the issue. The issue status changes to **Resolved**, the equipment status is updated to operational (if no other open issues exist), and a success notification appears.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Recording root cause and preventive action helps build institutional knowledge. Over time, this data helps identify patterns across your equipment and practice.
+</Callout>
+
+## Scheduling a service call
+
+When an issue requires professional attention, you can schedule a service call from the **Schedule a Service Call** dialog. This dialog opens when you:
+
+- Click **Call a Technician** on the Choose Your Path screen after creating an issue
+- Click **Schedule Service** from the issue detail overview or lifecycle progress card
+- Click **Schedule Service** from a diagnostic report or chat
+
+<Steps>
+  <Step title="Review the issue summary">
+    The dialog shows a summary card with:
+
+    - Issue title and reported date
+    - Issue description
+    - Equipment details (name, manufacturer, model, serial number, location)
+    - AI Diagnosis summary (if a diagnostic report or chat has been completed)
+    - Number of photos attached
+  </Step>
+  <Step title="Select a service provider">
+    Choose a saved service provider from the dropdown. The list shows provider names with company names and preferred-provider stars.
+
+    If your provider is not listed, select **Add new technician** to add one inline. The add form includes:
+
+    - Technician Name (required)
+    - Company Name
+    - Phone
+    - Email
+    - Specialty (e.g., "Dental Chairs", "X-Ray")
+    - Notes
+    - Preferred Provider toggle
+
+    Once added, the new provider is automatically selected.
+  </Step>
+  <Step title="Contact the technician">
+    Use the action buttons to reach out to the provider:
+
+    - **Copy Summary** -- Copies the full issue summary to your clipboard for pasting into a call or message
+    - **Email Summary** -- Opens your email client with a pre-filled message containing the issue details and equipment information
+    - **Call** -- Opens the phone dialer with the provider's phone number (if available)
+  </Step>
+  <Step title="Set an expected service date (optional)">
+    Use the calendar picker to set when the technician is expected to arrive. This helps track whether service is on schedule. Only future dates can be selected.
+  </Step>
+  <Step title="Confirm scheduling">
+    Click **I've Scheduled Service** to update the issue status to **Awaiting Tech** and record the escalation timestamp. If you set an expected date, it is displayed in the issue details.
+  </Step>
+</Steps>
+
+## Recording a technician visit
+
+When a technician arrives and completes their work, you record the visit from the **Record Technician Visit** dialog. This dialog opens when you click **Record Visit** from the Service tab, the lifecycle progress card, or the issues table action menu.
+
+<Steps>
+  <Step title="Select the service provider">
+    Choose the provider who performed the service, or select **Skip - enter details later** if you want to document the visit without specifying a provider.
+
+    You can also select **Add new technician** to add a new provider on the spot.
+  </Step>
+  <Step title="Choose how the visit is documented">
+    Select one of two documentation methods:
+
+    - **Send Link to Technician** (recommended) -- Generates a unique link and QR code that the technician can use to fill out the visit report on their mobile device. Benefits:
+      - No app download required
+      - Technician fills the form at their convenience
+      - Automatically linked to the issue
+    - **I'll Fill It Out** -- You document the visit details yourself after the technician completes their work.
+  </Step>
+  <Step title="Review the issue summary">
+    The dialog shows an **Issue Summary for Technician** card with equipment details, serial number, location, issue description, and AI diagnosis (if available). Use the **Copy Summary** or **Email Summary** buttons to share this information.
+  </Step>
+  <Step title="Complete the recording">
+    Click **Record Technician Visit** to finalize. If you chose "Send Link to Technician", a QR code screen appears (see below). If you chose "I'll Fill It Out", the dialog closes and you can document details from the Service tab later.
+  </Step>
+</Steps>
+
+## QR code for technician access
+
+When you select **Send Link to Technician**, ChairPulse generates a secure, time-limited access token. The resulting screen shows:
+
+- A **QR code** that the technician can scan with their phone camera
+- A **shareable link** that can be copied, texted, or emailed
+- The **expiration time** for the link
+- Options to share via the technician's phone or email on file
+
+The technician opens the link in their browser (no app or account needed) and sees a form pre-filled with the issue and equipment details. They can add their work summary, parts replaced, warranty information, and photos directly from their phone.
+
+Active service links for an issue are visible in the **Active Service Links** section of the Service tab on the issue detail page.
+
+<Callout kind="info">
+Service links expire after a set period for security. If a link expires before the technician uses it, you can generate a new one from the Service tab.
+</Callout>
+
+## Closing an issue
+
+An issue is considered closed when its status is set to **Resolved**. This can happen through:
+
+1. **Self-resolution** -- Clicking "This resolved it" on a diagnostic report step, confirming resolution in the AI chat, or using the Mark Resolved dialog.
+2. **After a tech visit** -- Using the Mark Resolved dialog after recording a technician visit.
+3. **Direct resolution** -- Using the Mark Resolved action from the issues table without going through diagnosis or service.
+
+When an issue is resolved:
+
+- The issue status badge changes to **Resolved** (green)
+- The equipment status is automatically updated to operational if no other open issues exist for that equipment
+- A resolution event is added to the issue timeline
+- The issue moves to the collapsible **Resolved** section in the issues table
+
+<Callout kind="tip">
+Resolved issues are never deleted. They remain in the system for historical reference, reporting, and pattern analysis. You can always find them by selecting the **Resolved** filter tab on the Issues page or expanding the Resolved section in the table.
+</Callout>
+
+<ExpandableGroup>
+  <Expandable title="Can I reopen a resolved issue?">
+    Currently, you can edit a resolved issue from the issue detail page. If the problem recurs, the recommended approach is to create a new issue linked to the same equipment. This preserves the resolution history of the original issue.
+  </Expandable>
+  <Expandable title="What happens to the equipment status when I resolve an issue?">
+    ChairPulse automatically checks whether the equipment has any other open issues. If no other open issues exist, the equipment status is updated to operational. If there are still other open issues, the equipment status remains unchanged.
+  </Expandable>
+  <Expandable title="Can the technician access my full ChairPulse account through the QR code link?">
+    No. The QR code link provides access only to the specific issue and a visit documentation form. The technician cannot see your other equipment, issues, or account settings. The link is time-limited and can only be used once.
+  </Expandable>
+</ExpandableGroup>

@@ -1,0 +1,92 @@
+---
+title: Service Providers
+description: Manage your preferred technicians, repair companies, and service vendors within ChairPulse.
+---
+
+## Managing service providers
+
+Service providers are the technicians, repair companies, and service vendors that your practice works with for equipment maintenance and repairs. Keeping an up-to-date list of service providers in ChairPulse makes it easy to reference their contact information when logging tech visits and resolving issues.
+
+Access the service providers list from the **Service Technicians** tab in [Office Settings](/settings/office-settings).
+
+<!-- Screenshot needed: Service Providers table showing several providers with names, companies, specialties, and contact icons -->
+
+## The service providers table
+
+The **Service Providers** card displays all providers for your current office in a table with the following columns:
+
+| Column | Description |
+|---|---|
+| **Name** | The technician's name, with a "Preferred" badge (gold star) if marked as preferred |
+| **Company** | The service company name |
+| **Specialty** | The provider's area of expertise (e.g., "Dental Chairs", "X-Ray") |
+| **Contact** | Quick-action icons for calling (phone), emailing (mail), or visiting their website (globe) |
+| **Actions** | Three-dot menu with Edit and Remove options |
+
+Providers marked as **Preferred** are sorted to the top of the list.
+
+## Adding a service provider
+
+<Steps>
+  <Step title="Click Add Provider">
+    Click the **Add Provider** button in the top right of the Service Providers card. This opens the Add Service Provider dialog.
+  </Step>
+  <Step title="Enter the technician's name">
+    The **Technician Name** field is required. Enter the individual technician's name (e.g., "John Smith").
+  </Step>
+  <Step title="Enter the company name">
+    Optionally enter the **Company Name** (e.g., "ABC Dental Services").
+  </Step>
+  <Step title="Add contact information">
+    Fill in any of the optional contact fields:
+    - **Phone** -- The technician's phone number
+    - **Email** -- Their email address
+    - **Website** -- Their company website URL
+  </Step>
+  <Step title="Set a specialty">
+    Optionally enter their **Specialty** (e.g., "Dental Chairs", "X-Ray", "Autoclaves").
+  </Step>
+  <Step title="Add notes">
+    Use the **Notes** field for any additional information about this provider (e.g., "Available weekends", "Prefers email contact").
+  </Step>
+  <Step title="Mark as preferred (optional)">
+    Toggle the **Preferred Provider** switch to mark this provider as a go-to contact. Preferred providers appear at the top of the list.
+  </Step>
+  <Step title="Click Add Provider">
+    Click **Add Provider** to save. The provider immediately appears in the table.
+  </Step>
+</Steps>
+
+## Editing a service provider
+
+Click the three-dot menu on any provider row and select **Edit**. The same dialog opens with all fields pre-filled. Make your changes and click **Save Changes**.
+
+## Removing a service provider
+
+Click the three-dot menu on any provider row and select **Remove**. The provider is deleted immediately.
+
+<Callout kind="info">
+Removing a service provider does not affect existing tech visit records or invoice data that reference that provider. Historical data is preserved.
+</Callout>
+
+## Auto-suggested providers from invoices
+
+When you upload an invoice that identifies a new vendor not yet in your service providers list, ChairPulse can automatically suggest adding them. In the [Invoice Details](/invoices/uploading-invoices) modal, you will see a prompt:
+
+> "Save this vendor as a service provider? Add [Vendor Name] to your contacts for easy access next time."
+
+Click **Add to Service Providers** to create the provider entry automatically with the name, phone, and email extracted from the invoice.
+
+## How service providers connect to issues
+
+Service providers are referenced in several places throughout ChairPulse:
+
+- **Tech visit records** -- When logging a technician visit on an issue, you can select from your service providers list.
+- **Invoice reconciliation** -- ChairPulse compares the vendor name on invoices against your service providers and tech visit records.
+- **Issue resolution** -- Knowing which providers specialize in which equipment helps you assign the right technician for the job.
+
+## Related pages
+
+- [Office Settings](/settings/office-settings) -- The parent page containing the Service Technicians tab.
+- [Uploading Invoices](/invoices/uploading-invoices) -- How invoices can auto-suggest new service providers.
+- [Issues](/issues/overview) -- Where tech visits and service provider references are logged.

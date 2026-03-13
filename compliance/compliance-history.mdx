@@ -1,0 +1,115 @@
+---
+title: "Compliance History"
+description: "View completed compliance tasks, filter by date and category, review evidence, and export audit trails."
+---
+
+## Overview
+
+The Compliance History page provides a complete record of all completed compliance tasks. It serves as your audit trail, showing who completed each task, when it was done, whether it was on time, and what evidence was collected.
+
+Navigate to the history page by clicking **History** in the [compliance dashboard](/compliance/compliance-dashboard) header.
+
+## Page Layout
+
+The page displays:
+
+- **Breadcrumb navigation**: Compliance > History
+- **Page title**: "Compliance History" with subtitle "View all completed compliance tasks and evidence"
+- **Export CSV button**: Download the filtered results as a CSV file
+
+## Filters
+
+A filter card at the top provides four ways to narrow the results:
+
+### Search
+
+A text search field that filters by:
+- Task title
+- Performer name
+- Equipment name
+- Remediation notes
+
+### Status Filter
+
+A dropdown with options:
+- **All Status** -- Show all completions
+- **On Time** -- Tasks completed by their due date with a passing result
+- **Late** -- Tasks completed after their due date
+- **Failed** -- Tasks completed with a failure result (e.g., failed inspection, exceeded threshold)
+
+### Category Filter
+
+A dropdown listing all compliance categories that have completed tasks (e.g., Sterilization, Radiation, Water Systems). Select a category to show only tasks in that category.
+
+### Date Range Filter
+
+A dropdown with options:
+- **All Time** -- Show all completions
+- **Last 7 Days** -- Completions within the past week
+- **Last 30 Days** -- Completions within the past month
+- **Last 90 Days** -- Completions within the past quarter
+
+A **Clear** button appears when any filter is active, allowing you to reset all filters at once.
+
+## Results Table
+
+The main results area is a table with the following columns:
+
+| Column | Description |
+|---|---|
+| **Task** | The compliance task title |
+| **Category** | The compliance category badge |
+| **Equipment** | The equipment name (if the task is equipment-specific) |
+| **Performer** | The name of the person who completed the task |
+| **Completed** | The completion date |
+| **Status** | A badge showing On Time (green), Late (amber), or Failed (red) |
+| **Evidence** | An icon with a count of evidence items attached |
+| **Actions** | An eye icon to view full details |
+
+Results are sorted by completion date (most recent first) and paginated at 20 items per page. Pagination controls appear at the bottom when there are more than 20 results.
+
+## Completion Detail Dialog
+
+Click the eye icon on any row to open the **Completion Details** dialog. This dialog shows:
+
+### Task Information
+- Task title
+- Category badge
+- Status badge (On Time, Late, or Failed)
+
+### Completion Information
+- **Completed By** -- Name of the performer
+- **Completed At** -- Date and time of completion
+- **Due Date** -- The original due date
+- **Equipment** -- The equipment name (if applicable)
+
+### Remediation Note
+If the task was completed with a failure or variance, the remediation note is displayed in a highlighted section.
+
+### Evidence Collected
+A list of all evidence items attached to this completion. Each item shows:
+- **Field name** -- The type of evidence (e.g., "result", "lot number", "notes", "reading", "photo")
+- **Value** -- The recorded value or file name
+
+For document evidence (files stored in cloud storage), a download button appears allowing you to download the original file.
+
+## Exporting Data
+
+Click **Export CSV** to download the currently filtered results as a CSV file. The export includes:
+
+- Task title
+- Category
+- Equipment name
+- Performer name
+- Completion date
+- Status
+- Late flag (Yes/No)
+- Remediation notes
+
+The file is named `compliance-history-YYYY-MM-DD.csv` using the current date.
+
+<Callout kind="tip">
+  Use the CSV export to prepare for regulatory inspections or to provide documentation to your dental board. Apply date range and category filters first to export only the relevant records.
+</Callout>
+
+<!-- Screenshot needed: Compliance history page showing filter card and results table with status badges -->

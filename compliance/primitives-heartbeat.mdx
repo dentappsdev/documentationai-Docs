@@ -1,0 +1,52 @@
+---
+title: "Heartbeat Primitive -- Confirmation"
+description: "How to use the simple confirmation primitive to check off routine compliance tasks like daily warmups and weekly flushes."
+---
+
+## Overview
+
+The Heartbeat primitive is the simplest completion type. It is used for routine tasks where the only requirement is to confirm that the task was performed. There is no data to enter beyond optional notes and documents.
+
+## How It Works
+
+When you open a task that uses the Heartbeat primitive, the completion form displays a brief message:
+
+> Confirm that this task has been completed.
+
+In standalone mode (outside the dashboard modal), a large green **Mark as Complete** button is shown. In the dashboard modal, the confirmation is handled by the modal's footer button.
+
+The Heartbeat primitive is always considered "ready" to submit -- there are no required fields to fill in beyond selecting a staff member in the "Completed by" dropdown.
+
+## Submission
+
+The footer button reads **Mark as Complete**. After submission, the task status is set to **Completed**.
+
+## Evidence Fields
+
+Even though no data entry is required for the heartbeat itself, the task may still accept or require supporting evidence:
+
+- **Notes** -- Optional text field for recording any relevant observations
+- **Documents** -- Optional document uploads for supporting records
+
+<Callout kind="info">
+  The Heartbeat primitive does not show a photo upload option. If you need to attach photo evidence, the task should use a different primitive type. Notes and document uploads are available.
+</Callout>
+
+## Dental Practice Examples
+
+<ExpandableGroup>
+  <Expandable title="Daily sterilizer warmup cycle">
+    Each morning, staff runs a warmup cycle on the autoclave before processing instruments. This task appears daily on the compliance timeline. A team member confirms it was done and optionally adds a note about any observations.
+  </Expandable>
+  <Expandable title="Weekly waterline flush">
+    At the start of each week, waterlines are flushed for a specified duration. The task requires a simple confirmation that the flush was performed on all operatory units.
+  </Expandable>
+  <Expandable title="Daily operatory wipe-down verification">
+    End-of-day surface disinfection of all operatory rooms. Staff confirms that all surfaces were wiped down according to protocol.
+  </Expandable>
+  <Expandable title="Monthly emergency equipment check">
+    A quick check that emergency supplies (oxygen, AED, first aid kit) are present and accessible. Confirmed with a simple check-off.
+  </Expandable>
+</ExpandableGroup>
+
+<!-- Screenshot needed: Heartbeat primitive showing confirmation message and Mark as Complete button -->

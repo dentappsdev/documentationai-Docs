@@ -1,0 +1,188 @@
+---
+title: Completing Maintenance Tasks
+description: Learn how to mark maintenance tasks as complete, add notes and photos, record who performed the work, and manage missed tasks.
+---
+
+## Mark tasks complete and track your maintenance history
+
+When a maintenance task is due, your team needs to record its completion. ChairPulse provides several ways to do this depending on your workflow -- from quick completions on the calendar to detailed logging with notes, performer tracking, and photo evidence.
+
+## Where to complete tasks
+
+You can complete maintenance tasks from multiple locations in ChairPulse:
+
+| Location | How to access | Best for |
+|---|---|---|
+| **Day view** | Maintenance > Day view > **Mark Complete** button on task card | Completing today's tasks one by one |
+| **Week view** | Click a day header to open Day Details Sheet > **Mark Complete** | Reviewing the week and catching up |
+| **Month view** | Click a day cell to open Day Details Sheet > **Mark Complete** | Finding and completing a specific date's tasks |
+| **Task Details Sheet** | Click a task in List view > **Mark as Complete** button | Viewing full task details before completing |
+| **Record Maintenance dialog** | Maintenance page > for manual logging | Recording past maintenance with full details |
+
+## Completing a task from the calendar
+
+<Steps>
+<Step title="Navigate to the task">
+Open the **Maintenance** page and switch to **Day**, **Week**, or **Month** view. Find the task you want to complete. In Day view, tasks are listed directly. In Week and Month views, click the day to open the Day Details Sheet.
+</Step>
+<Step title="Click Mark Complete">
+On the task card, select the **Mark Complete** button (green button with a checkmark icon). The button text reads "Mark Complete" in the Day view and Day Details Sheet.
+</Step>
+<Step title="Confirm completion">
+The task completion dialog opens, allowing you to select who performed the task, enter notes, and add photo evidence. Fill in the required fields and confirm.
+
+After completion, a confetti animation plays and a success toast notification appears: "Maintenance event recorded successfully".
+</Step>
+</Steps>
+
+## Task Details Sheet
+
+Clicking a task in the **List** view opens the **Task Details Sheet** -- a slide-out panel on the right side of the screen that shows comprehensive information about a maintenance schedule.
+
+### Information displayed
+
+The Task Details Sheet contains:
+
+- **Equipment name** (or "General Task") as the sheet title
+- **Status badge** -- Color-coded badge showing Overdue, Due today, Due soon, On track, or No history
+- **Task description** -- The maintenance task to be performed
+- **Metadata grid** with:
+  - **Frequency** -- How often the task repeats (e.g., "Weekly")
+  - **Room** -- Where the equipment is located
+  - **Next Due** -- The next due date (e.g., "Mar 15, 2026")
+  - **Assigned To** -- The team member responsible for this task
+
+### Available actions
+
+| Button | Description |
+|---|---|
+| **Mark as Complete** | Green button to complete the task. Opens the completion flow. |
+| **Edit Schedule** | Opens the schedule editing dialog to change frequency, assignee, or other settings |
+| **View Linked SOP** | Navigates to the linked Standard Operating Procedure (only shown if an SOP is linked) |
+| **Edit icon** (pencil) | Quick access to the edit dialog from the top-right corner |
+
+<!-- Screenshot needed: Task Details Sheet showing status badge, metadata grid, and Mark as Complete button -->
+
+## Recording maintenance with full details
+
+For more detailed logging (especially useful for recording past maintenance or external technician work), use the **Record Maintenance Event** dialog:
+
+<Steps>
+<Step title="Open the Record Maintenance dialog">
+This dialog can be accessed from the maintenance completion flow.
+</Step>
+<Step title="Select Equipment">
+Choose the equipment from the **Equipment** dropdown. The list shows all equipment with their room locations.
+</Step>
+<Step title="Select Maintenance Task">
+After choosing equipment, a **Maintenance Task** dropdown appears showing all active schedules for that equipment. Select the task that was completed.
+</Step>
+<Step title="Set the Performed Date">
+Enter the date the maintenance was actually performed. Defaults to today.
+</Step>
+<Step title="Identify who performed the maintenance">
+Choose between:
+- **Team member** -- Select from your staff list
+- **External technician** -- Enter the technician's name manually
+</Step>
+<Step title="Identify who is logging this">
+Select the team member who is recording this maintenance event.
+</Step>
+<Step title="Add notes (optional)">
+Enter any relevant notes about what was done, findings, or issues discovered.
+</Step>
+<Step title="Click Record Maintenance">
+Select **Record Maintenance** to save. A success notification confirms the event was recorded.
+</Step>
+</Steps>
+
+## Task status transitions
+
+Maintenance tasks move through statuses based on their due dates and completion state:
+
+```
+pending --> due_soon --> due_today --> overdue
+                                        |
+         completed <--------------------+
+                                        |
+         missed -----> excused ---------+
+```
+
+| Status | Meaning |
+|---|---|
+| **Pending** | The task exists but is not yet due |
+| **Due soon** | The task is due within the next 7 days |
+| **Due today** | The task is due today |
+| **Overdue** | The due date has passed without completion |
+| **Completed** | The task was marked as complete (may be flagged as "Late" if completed after the due date) |
+| **Missed** | The task was not completed and the due date has passed; appears in the Missed Tasks tab |
+| **Excused** | An admin or manager marked a missed task as excused with a reason |
+
+<Callout kind="info">
+When a task is completed late (after its due date), it is flagged with a **Late** badge in the activity history. The task is still recorded as completed, but the late flag helps you track on-time performance.
+</Callout>
+
+## Managing missed tasks
+
+Tasks that pass their due date without being completed appear in the **Missed Tasks** tab on the Maintenance page.
+
+### Excusing a missed task
+
+Admins and managers can excuse a missed task to acknowledge it was intentionally skipped:
+
+<Steps>
+<Step title="Go to the Missed Tasks tab">
+Open **Maintenance** and select the **Missed Tasks** tab. The tab shows a count badge with the number of outstanding missed tasks.
+</Step>
+<Step title="Add a reason or excuse the task">
+For each missed task, you can:
+- **Add a reason** -- Explain why the task was missed (e.g., "Office closed for holiday")
+- **Excuse the task** -- Mark it as excused, which removes it from the missed count
+</Step>
+</Steps>
+
+<Callout kind="alert">
+Only users with the **admin** or **manager** role can excuse missed tasks. Staff members can add reasons but cannot excuse tasks.
+</Callout>
+
+### Bulk excusing
+
+You can excuse multiple missed tasks at once:
+
+<Steps>
+<Step title="Select missed tasks">
+Use the checkboxes next to each missed task to select the ones you want to excuse.
+</Step>
+<Step title="Enter a reason and confirm">
+Enter a reason that applies to all selected tasks, then confirm the bulk excuse action.
+</Step>
+</Steps>
+
+## Activity history
+
+The **Recent Activity** tab on the Maintenance page shows a log of completed and excused tasks. You can filter by:
+
+- **Time period** -- Last 7 days, Last 30 days, Last 90 days, or This year
+- **Equipment** -- Filter to a specific piece of equipment
+- **Status** -- All, Completed only, or Excused only
+
+Click any activity row to open the **Activity Detail Sheet**, which shows:
+
+- Task description and status badge (Completed or Excused)
+- Equipment name and location
+- Due date and completion/excused date
+- Timing indicator (On time, or how many days late)
+- Who completed or excused the task
+- Notes or reason
+- Completion photos (if any were attached)
+
+<Callout kind="tip">
+Use the Recent Activity tab to audit your team's maintenance completion rate. Filter by the last 30 days and review the timing indicators to identify tasks that are consistently completed late.
+</Callout>
+
+## Related pages
+
+- [Maintenance Overview](/maintenance/overview) -- Full overview of the Maintenance module
+- [Calendar View](/maintenance/calendar-view) -- Navigating tasks with Day, Week, and Month views
+- [Room View](/maintenance/room-view) -- Viewing schedules organized by room
+- [Task Templates](/maintenance/task-templates) -- Setting up tasks from pre-built templates

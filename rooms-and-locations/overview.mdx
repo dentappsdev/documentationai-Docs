@@ -1,0 +1,106 @@
+---
+title: Rooms & Locations Overview
+description: Manage your office layout by creating rooms and locations, viewing assigned equipment, and organizing your practice's physical spaces.
+---
+
+## Organize your practice layout
+
+The **Rooms & Locations** page lets you define the physical spaces in your dental practice and see which equipment is assigned to each room. Every piece of equipment in ChairPulse must be assigned to a room, making this a foundational part of your practice setup.
+
+Navigate to **Rooms & Locations** from the Settings section in the sidebar.
+
+<!-- Screenshot needed: Rooms & Locations page showing a grid of room cards with equipment counts -->
+
+## Page layout
+
+The page header displays:
+
+- **Title:** "Rooms & Locations"
+- **Subtitle:** "Manage your office layout and equipment locations"
+- **Add Room** button to create new rooms
+
+Below the header, rooms are displayed as a responsive card grid (two columns on medium screens, three columns on large screens).
+
+## Room cards
+
+Each room appears as a card with the following information:
+
+- **Room icon** -- A color-coded icon based on the [room type](/rooms-and-locations/room-types) (e.g., blue building icon for Operatory, green sparkle icon for Sterilization).
+- **Room name** -- The display name you assigned (e.g., "Operatory 1", "Sterilization Room").
+- **Room type** -- Shown in small uppercase text below the name (e.g., "OPERATORY", "STERILIZATION").
+- **Floor** -- If a floor was specified, it appears next to the room type, separated by a dot (e.g., "OPERATORY - 1st Floor").
+- **Description** -- If a description was added, it appears below the type label.
+- **Equipment count** -- At the bottom of each card, an expandable section shows how many pieces of equipment are assigned to the room.
+
+### Viewing equipment in a room
+
+If a room has equipment assigned:
+
+- The card footer shows the equipment count (e.g., "3 equipment") with a **View** / **Hide** toggle.
+- Expanding the equipment list shows each item with:
+  - A colored status dot (green for operational, yellow for maintenance due, red for down, gray for retired)
+  - The equipment name
+  - The equipment type
+  - A chevron that links to the [equipment detail page](/equipment/equipment-detail-page)
+
+If a room has no equipment:
+
+- The card footer shows "No equipment assigned" with an **+ Add** link that navigates to the [Add Equipment](/equipment/adding-equipment) wizard.
+
+### Room card actions
+
+Hovering over a room card reveals two action buttons:
+
+- **Edit** (pencil icon) -- Opens the edit dialog to modify the room's name, type, floor, or description.
+- **Delete** (trash icon) -- Permanently deletes the room.
+
+<Callout kind="danger">
+Deleting a room is permanent. If equipment is assigned to the room, you should reassign it to another room first. Deleting a room does not delete its equipment, but the equipment will no longer have a room assignment.
+</Callout>
+
+## Quick Room Setup Wizard
+
+When you visit the Rooms & Locations page for the first time and no rooms exist, ChairPulse automatically opens the **Quick Office Setup** wizard. This wizard lets you rapidly create multiple rooms using common dental practice room presets.
+
+The wizard presents preset room types with adjustable quantities:
+
+| Preset | Default Count | Description |
+|---|---|---|
+| Operatories | 3 | Treatment rooms |
+| Sterilization | 1 | Equipment sterilization |
+| X-Ray Room | 1 | Imaging area |
+| Lab | 0 | Laboratory space |
+| Storage | 1 | Supply storage |
+| Reception | 1 | Front desk area |
+
+Adjust the count for each room type using the **+** and **-** buttons (maximum 10 of each type). You can also add custom room types by selecting **Add another room type** and entering a name.
+
+The wizard shows a summary (e.g., "7 rooms will be created") before you select **Create Rooms**.
+
+<Callout kind="tip">
+The Quick Setup Wizard is the fastest way to get started. It automatically names rooms with sequential numbers when you create multiples (e.g., "Operatory 1", "Operatory 2", "Operatory 3"). You can always rename them later.
+</Callout>
+
+## Empty state
+
+If no rooms are configured and you dismiss the Quick Setup Wizard, the page shows:
+
+- A message: "No rooms configured"
+- The subtitle: "Set up your office layout by adding rooms and locations to organize your equipment"
+- An **Add Your First Room** button
+
+## Multi-office support
+
+If you manage multiple offices, the Rooms & Locations page respects your current office selection:
+
+- When viewing a specific office, only rooms for that office are shown.
+- When viewing "All Offices", rooms from all offices are displayed.
+
+Rooms are always created under the currently selected office.
+
+## Related pages
+
+- [Managing Rooms](/rooms-and-locations/managing-rooms) -- How to create, edit, and delete rooms
+- [Room Types](/rooms-and-locations/room-types) -- Reference for all 9 room types
+- [Equipment Overview](/equipment/overview) -- Viewing and filtering equipment by room
+- [Adding Equipment](/equipment/adding-equipment) -- Assigning equipment to rooms during setup

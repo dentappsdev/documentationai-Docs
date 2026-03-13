@@ -1,0 +1,132 @@
+---
+title: Checklists Overview
+description: Create and manage recurring office checklists for daily tasks, sterilization routines, opening and closing procedures, and more.
+---
+
+## What are checklists?
+
+**Checklists** are recurring office tasks and routines that are not tied to a specific piece of equipment. While [Maintenance](/maintenance/overview) tracks equipment-specific schedules (e.g., "Replace autoclave filters every 6 months"), checklists cover everything else your practice needs to do regularly -- from opening and closing procedures to sterilization logs, supply restocking, and facility cleaning.
+
+Navigate to **Checklists** from the main sidebar.
+
+<!-- Screenshot needed: Checklists page showing the room view with several tasks across different rooms -->
+
+## How checklists differ from maintenance tasks
+
+| Aspect | Maintenance Tasks | Checklists |
+|---|---|---|
+| **Tied to** | A specific piece of equipment | A room or the entire office |
+| **Examples** | Replace compressor filters, Calibrate X-ray sensor | Turn on computers, Check voicemail, Restock supplies |
+| **Created from** | Equipment detail page or Maintenance page | Checklists page or Task Template Library |
+| **Category** | Equipment Maintenance | Sterilization, Facility, Supply Management, Safety, Opening/Closing, and more |
+
+## Page layout
+
+The Checklists page is organized into three tabs:
+
+### Schedules tab
+
+The primary view showing all active checklist schedules. You can switch between multiple view modes:
+
+- **Room** -- Groups tasks by room, making it easy to see what needs to be done in each location. Tasks are further grouped by frequency (Daily, Weekly, Monthly, etc.) using frequency pills.
+- **List** -- A sortable table view showing all schedules with columns for location, task description, category, frequency, next due date, status, and assigned staff member.
+- **Day / Week / Month** -- Calendar views that show which tasks are due on specific dates, with the ability to click into any day for details.
+
+### Activity tab
+
+Shows the history of completed and excused tasks. You can filter by time period (last 7, 30, or 90 days) and by status (completed or excused). Click any activity entry to see details including who completed it, when, and any notes or photos attached.
+
+### Missed tab
+
+Displays tasks that were not completed by their due date. From this tab you can:
+
+- Add a reason for why a task was missed
+- Excuse individual missed tasks (admin and manager roles only)
+- Select multiple missed tasks and excuse them in bulk with a shared reason
+- Toggle to show or hide previously excused tasks
+
+## Creating a checklist
+
+Click the **Add Checklist** button (or select a template from the **Task Template Library**) to open the Add Checklist dialog.
+
+<Steps>
+  <Step title="Enter a task description">
+    Describe what needs to be done, e.g., "Turn on computers and check voicemail" or "Wipe down countertops in sterilization room."
+  </Step>
+  <Step title="Select a location">
+    Choose a specific room from the dropdown, or leave it as **Office-wide** for tasks that apply to the entire practice.
+  </Step>
+  <Step title="Choose a category">
+    Select from built-in categories such as Sterilization / Infection Control, Facility / Cleaning, Supply Management, Safety / Compliance, Opening / Closing, Patient Experience, Staff & Admin, Lab & Cases, or Technology / IT. You can also create a custom category by selecting **Add new category**.
+  </Step>
+  <Step title="Set time of day (optional)">
+    Choose when the task should be done: Any time, Start of Day, Morning, Midday, or End of Day.
+  </Step>
+  <Step title="Configure the frequency">
+    Set how often the task repeats: Daily (with specific days of the week), Weekly, Bi-weekly, Monthly, Quarterly, Semi-annually, Annually, One-time, or Custom (every N days).
+  </Step>
+  <Step title="Set the first due date">
+    The system suggests a date based on your frequency selection. You can override it manually. For monthly or longer frequencies, the task repeats on the same day of the month as the first due date.
+  </Step>
+  <Step title="Link an SOP (optional)">
+    Attach a standard operating procedure from your [Knowledge Base](/knowledge/overview) to provide step-by-step instructions for completing the task.
+  </Step>
+  <Step title="Assign a team member (optional)">
+    Choose a default assignee. If left unassigned, the task uses the room's default assignee (if configured) or appears as unassigned.
+  </Step>
+  <Step title="Set evidence requirements (optional)">
+    Toggle **Requires Notes** and/or **Requires Photo** if you want team members to provide documentation when completing the task.
+  </Step>
+  <Step title="Click Create Checklist">
+    The system creates the schedule and generates upcoming task instances automatically.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+If you select an operatory room and your office has multiple operatories, you will see a scope selector allowing you to create the checklist for **This room only** or **All operatories** at once.
+</Callout>
+
+## Task Template Library
+
+The **Task Template Library** provides pre-built checklist templates based on dental industry best practices. Click the template library icon to browse available templates, then select one to pre-fill the Add Checklist dialog with recommended settings.
+
+## Filtering and sorting
+
+The Checklists page offers several filters to help you focus:
+
+- **Category** -- Filter by task category (Sterilization, Facility, Safety, etc.)
+- **Room** -- Filter by specific room or office-wide tasks
+- **Time of Day** -- Filter by when tasks are scheduled
+- **Status** -- Filter by due status (overdue, due today, due soon, on track)
+- **Frequency** -- Filter by repetition frequency (daily, weekly, monthly, etc.)
+- **Assignee** -- Filter by assigned team member or show unassigned tasks
+
+In the Room view, frequency pills let you quickly toggle between Daily, Weekly, Monthly, and other frequency groupings.
+
+## Task statuses
+
+Each checklist task instance has one of the following statuses:
+
+| Status | Badge | Description |
+|---|---|---|
+| **Overdue** | Red | The task was not completed by its due date |
+| **Due today** | Blue | The task is due today |
+| **Due soon** | Blue | The task is due within the next 7 days |
+| **On track** | Gray | The task is due more than 7 days from now |
+| **Completed** | Green | The task has been marked as done |
+| **Missed** | Red | The due date passed without completion and the task has been flagged |
+
+## Bulk operations
+
+For teams managing many tasks, ChairPulse provides several bulk operations:
+
+- **Bulk Reassign** -- Reassign multiple schedules to a different team member at once.
+- **Assign Across Dates** -- Set different assignees for specific future dates on a single schedule.
+- **Batch Assignment** -- Select multiple tasks and assign them together.
+
+## Related pages
+
+- [Maintenance](/maintenance/overview) -- Equipment-specific recurring schedules.
+- [Reports](/reports/overview) -- View task completion rates and staff performance metrics.
+- [Office Settings](/settings/office-settings) -- Configure rooms and staff members referenced by checklists.
+- [Operating Days](/settings/operating-days) -- Set which days your office operates; tasks are not generated on non-operating days.

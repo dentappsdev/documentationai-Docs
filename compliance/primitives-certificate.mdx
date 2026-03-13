@@ -1,0 +1,73 @@
+---
+title: "Certificate Primitive -- Certificate Upload"
+description: "How to upload compliance certificates with service details for annual inspections, calibrations, and professional certifications."
+---
+
+## Overview
+
+The Certificate primitive is used for compliance tasks that require uploading a certificate or official document as proof of completion. This is common for tasks performed by third-party service providers where you receive a certificate, report, or letter as evidence.
+
+## How It Works
+
+When you open a task that uses the Certificate primitive, the completion form displays four fields:
+
+### Document Upload (Required)
+
+A file upload area labeled **Document Upload** with a drag-and-drop style interface. Click the area or drag a file to upload. Accepted formats are:
+
+- PDF files (`.pdf`)
+- Image files (`.png`, `.jpg`, `.jpeg`)
+
+Maximum file size is **25 MB**. Files exceeding this limit are rejected with an error message.
+
+After uploading, the file name is displayed with an option to remove it and upload a different file.
+
+### Date of Service (Required)
+
+A date picker labeled **Date of Service** where you enter the date the service or inspection was performed. This field is required.
+
+### Provider / Company Name (Optional)
+
+A text field labeled **Provider / Company Name** where you enter the name of the company or professional who performed the service (e.g., "Acme Dental Services").
+
+### Next Due Date (Optional)
+
+A date picker labeled **Next Due Date** where you can record when the next service or inspection is due. This helps the system schedule the next occurrence of this task.
+
+## Submission
+
+The footer button reads **Save Certificate**. The task can be submitted when:
+
+- A document file has been uploaded
+- The date of service has been entered
+
+After submission, the task status is set to **Completed**. The uploaded certificate, date of service, provider name, and next due date are all recorded as evidence.
+
+## Evidence Fields
+
+The Certificate primitive inherently collects a document as its primary evidence. In addition, the common evidence fields are available:
+
+- **Notes** -- Additional context about the service performed
+- **Photo** -- An optional photo (e.g., of the service provider's work or equipment labels)
+- **Additional Documents** -- Additional supporting documents beyond the primary certificate
+
+See [Uploading Evidence](/compliance/uploading-evidence) for details on evidence requirements.
+
+## Dental Practice Examples
+
+<ExpandableGroup>
+  <Expandable title="Annual X-ray equipment inspection certificate">
+    State dental boards typically require annual inspection of X-ray equipment by a qualified radiation physicist or equipment inspector. Upload the certificate or report received after the inspection, enter the date of service and the inspector's company name, and note when the next annual inspection is due.
+  </Expandable>
+  <Expandable title="Autoclave calibration certificate">
+    Autoclaves may require periodic calibration verification by a certified technician. Upload the calibration report showing temperature, pressure, and cycle time verification results.
+  </Expandable>
+  <Expandable title="Amalgam separator compliance certificate">
+    EPA regulations require dental offices to install and maintain amalgam separators. Upload the annual certification from your separator manufacturer or service provider confirming proper function and maintenance.
+  </Expandable>
+  <Expandable title="Nitrous oxide system inspection report">
+    Annual or biennial inspection of nitrous oxide delivery systems and fail-safe mechanisms. Upload the inspection report from the certified technician.
+  </Expandable>
+</ExpandableGroup>
+
+<!-- Screenshot needed: Certificate primitive showing file upload area, date of service, provider name, and next due date fields -->

@@ -1,0 +1,131 @@
+---
+title: "Completing Tasks"
+description: "How to complete compliance tasks using the task completion modal, including evidence collection and staff assignment."
+---
+
+## Overview
+
+When a compliance task is due, you complete it through the **Complete Task** modal. This modal adapts its form based on the task's primitive type (heartbeat, inspector, meter, clock, or certificate) and collects any required evidence before saving the completion.
+
+## Opening the Task Completion Modal
+
+You can open the task completion modal from several places:
+
+- Click the completion button on any task row in the [Compliance Dashboard](/compliance/compliance-dashboard) timeline
+- Click a task in the calendar view
+
+The modal opens with the task title "Complete Task" and a green checkmark icon.
+
+## Modal Layout
+
+The completion modal contains the following sections from top to bottom:
+
+### Task Information
+
+A summary card shows:
+
+- **Task title** and description
+- **Category** badge (e.g., Sterilization, Radiation)
+- **Due date** (e.g., "Due Mar 12")
+- **Frequency** (e.g., Weekly, Monthly) -- shown for recurring tasks
+- **View SOP** link -- if a Standard Operating Procedure is linked to the task
+
+### Completed By Selector
+
+A required dropdown labeled **Completed by** where you select the staff member who performed the task. This must be set before the completion can be submitted.
+
+<Callout kind="info">
+  The "Completed by" field is pre-populated with the staff member assigned to the task. You can change it if a different person performed the work.
+</Callout>
+
+### Primitive-Specific Form
+
+The main form area renders the appropriate completion form based on the task's primitive type:
+
+- **[Heartbeat](/compliance/primitives-heartbeat)** -- Simple confirmation
+- **[Inspector](/compliance/primitives-inspector)** -- Pass/Fail selection with lot number
+- **[Meter](/compliance/primitives-meter)** -- Numeric reading with threshold comparison
+- **[Clock](/compliance/primitives-clock)** -- Expiration date entry or quick confirmation
+- **[Certificate](/compliance/primitives-certificate)** -- File upload with service details
+- **[Auto](/compliance/primitives-auto)** -- Read-only auto-verified display
+
+### Common Evidence Fields
+
+For all non-heartbeat primitives, the modal shows common evidence collection fields above the primitive form:
+
+- **Notes** -- A text area for additional notes (optional unless required by the task's evidence configuration)
+- **Add Photo** -- A camera button to capture or upload a photo (optional unless required)
+- **Document Upload** -- Upload supporting documents (optional unless required)
+
+For heartbeat primitives, only the notes field and document upload are shown (no photo option).
+
+<Callout kind="tip">
+  When a field is required by the task's evidence configuration, it is marked with an asterisk (*) in its label. The modal will not let you submit until all required evidence is provided.
+</Callout>
+
+### Schedule Follow-up
+
+An expandable section labeled **Schedule Follow-up** allows you to create a follow-up task instance:
+
+- **When?** -- Select a future date
+- **Why? (optional)** -- Describe the reason (e.g., "Verify correction was made")
+- Click **Add Follow-up** to schedule it
+
+### Previous Completions
+
+An expandable section labeled **Previous completions** shows the history of prior completions for this task, so you can see patterns and past results.
+
+## Submitting a Completion
+
+The footer of the modal contains two buttons:
+
+- **Cancel** -- Close the modal without saving
+- **Action button** -- The label changes based on the primitive type:
+  - Heartbeat: **Mark as Complete**
+  - Inspector: **Save Result**
+  - Meter: **Save Reading**
+  - Clock: **Save**
+  - Certificate: **Save Certificate**
+
+The action button is disabled until:
+1. A staff member is selected in the "Completed by" field
+2. The primitive form is in a valid state
+3. All required evidence has been provided
+
+## Group Completion
+
+When multiple equipment units share the same compliance requirement (e.g., weekly spore test for three autoclaves), the modal supports **group completion**. In this mode:
+
+- A checklist of equipment units appears at the top, each with a checkbox
+- All completable units are pre-selected
+- Already completed units appear greyed out with a "Completed" badge
+- Upcoming (not yet due) units appear greyed out with their due date
+
+You can select/deselect individual units and complete them all at once. A progress bar appears during submission showing "Completing... 2 of 3".
+
+The action button label adapts to show the unit count, e.g., **Save Result for 3 Units**.
+
+## Task Statuses After Completion
+
+Depending on the result, a completed task receives one of these statuses:
+
+| Status | When |
+|---|---|
+| **Completed** | Normal successful completion |
+| **Completed with Failure** | Inspector result is "Fail", or a meter reading triggers a variance |
+
+## Delayed Result Tasks
+
+Some tasks involve sending samples for off-site analysis (e.g., mail-in spore tests). These are "delayed result" tasks. The flow is:
+
+<Steps>
+  <Step title="Mark sample as sent">
+    When a delayed result task is due, the modal shows a **Confirm Sample Sent** button instead of the usual completion form. This records that the sample was mailed.
+  </Step>
+  <Step title="Awaiting results">
+    The task moves to "Awaiting Result" status and appears in the "Awaiting Results" section of the dashboard with the result due date shown.
+  </Step>
+  <Step title="Record the result">
+    When results arrive, open the task again. The modal now shows the appropriate primitive form (e.g., Inspector pass/fail) to record the actual result.
+  </Step>
+</Steps>

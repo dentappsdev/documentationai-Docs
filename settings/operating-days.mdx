@@ -1,0 +1,67 @@
+---
+title: Operating Days
+description: Configure which days your office operates so ChairPulse schedules tasks only on days you are open.
+---
+
+## What are operating days?
+
+Operating days tell ChairPulse which days of the week your office is open. The system uses this information to schedule maintenance tasks and checklists only on days you operate, so your team does not receive task assignments on days the office is closed.
+
+Access operating days from the **Maintenance** tab in [Office Settings](/settings/office-settings).
+
+<!-- Screenshot needed: Operating Days card showing day buttons with Mon-Fri selected (highlighted) and Sat-Sun deselected -->
+
+## Configuring operating days
+
+The **Operating Days** card displays seven day buttons arranged horizontally: Sun, Mon, Tue, Wed, Thu, Fri, Sat. Selected days appear highlighted with your primary color; unselected days appear muted.
+
+<Steps>
+  <Step title="Select or deselect days">
+    Click any day button to toggle it on or off. Selected days are highlighted; deselected days are dimmed.
+  </Step>
+  <Step title="Review your selection">
+    Ensure your operating days match your actual office schedule. Most dental practices operate Monday through Friday, but your schedule may differ.
+  </Step>
+  <Step title="Click Save Changes">
+    The **Save Changes** button appears when you have made changes. Click it to apply your new operating schedule.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+At least one operating day is required. You cannot deselect all seven days.
+</Callout>
+
+## Impact on existing tasks
+
+When you remove a day from your operating schedule, ChairPulse checks whether any upcoming maintenance or compliance tasks are scheduled on the removed day. If tasks exist on those days:
+
+1. A confirmation dialog appears titled **"Move tasks on removed days?"**
+2. The dialog shows how many upcoming tasks are affected and which days are being removed.
+3. You have two options:
+   - **Move Tasks & Save** -- Tasks scheduled on the removed days are automatically moved to the nearest open day.
+   - **Cancel** -- No changes are made.
+
+<Callout kind="info">
+This automatic rescheduling only affects future task instances. Completed and historical tasks are not modified.
+</Callout>
+
+## How operating days affect task generation
+
+Operating days influence task scheduling in several ways:
+
+- **Daily tasks** are only generated on operating days. If your office is closed on weekends, daily tasks will not appear on Saturday or Sunday.
+- **Weekly, monthly, and other frequencies** may have their due dates adjusted if the calculated due date falls on a non-operating day. The system moves the task to the nearest operating day.
+- **Calendar views** in the [Checklists](/checklists/overview) and [Maintenance](/maintenance/overview) pages reflect operating days, making it clear which days have scheduled work.
+
+## Office closures
+
+In addition to regular operating days, you can configure one-time office closures (e.g., holidays, staff training days, office renovations) from the same **Maintenance** tab. The **Closure Management** section below Operating Days allows you to:
+
+- Add specific dates when the office will be closed
+- Tasks on closure dates are handled similarly to non-operating days
+
+## Related pages
+
+- [Office Settings](/settings/office-settings) -- The parent page containing the Maintenance tab.
+- [Checklists](/checklists/overview) -- Checklist tasks respect operating days.
+- [Maintenance](/maintenance/overview) -- Equipment maintenance tasks respect operating days.

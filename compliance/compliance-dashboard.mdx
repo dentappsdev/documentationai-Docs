@@ -1,0 +1,103 @@
+---
+title: "Compliance Dashboard"
+description: "Monitor your compliance status, view risk summaries, and complete tasks from the prioritized task timeline."
+---
+
+## Overview
+
+The Compliance Dashboard is the central hub for managing your practice's compliance. It provides an at-a-glance view of your compliance posture with risk summary cards, a prioritized task timeline, and quick access to task completion.
+
+The dashboard appears automatically after you complete the [setup wizard](/compliance/setup-wizard) and [requirement review](/compliance/requirement-review) process.
+
+## Page Header
+
+The dashboard header shows:
+
+- **Title**: "Compliance"
+- **Tracking summary**: The number of requirements tracked out of the total applicable to your state, along with your office state and practice type
+- **Action buttons**:
+  - **Requirements** -- View the full requirements list
+  - **History** -- Navigate to the [compliance history](/compliance/compliance-history) page
+  - **Ask AI** -- Open the AI assistant panel for compliance questions
+  - **Add Task** -- Manually add a custom compliance task
+  - **More menu** (three-dot icon):
+    - **Inspector View** -- Open the [inspector-friendly view](/compliance/inspector-view)
+    - **Reconfigure...** -- Reset and restart the compliance setup (destructive action)
+
+## Risk Summary Cards
+
+The risk summary section displays three cards in a row when there are overdue tasks:
+
+| Card | Description |
+|---|---|
+| **At Risk** | Number of overdue task instances, broken down by compliance category (e.g., "3 Sterilization, 1 Radiation"). Pulsing red dot indicator. |
+| **On Track** | Number of requirements that are current and not overdue. |
+| **Auto-Managed** | Number of tasks automatically tracked by connected equipment. |
+
+When there are no overdue tasks, the three cards are replaced with a single compressed success banner showing the total on-track count and how many are auto-managed.
+
+## Prioritized Task Timeline
+
+The main body of the dashboard is the task timeline, which organizes tasks into priority sections:
+
+### Overdue
+
+Tasks that have passed their due date without being completed. These appear at the top with the highest visual priority.
+
+### Due Today
+
+Tasks due on the current date.
+
+### This Week
+
+Upcoming tasks due within the current week.
+
+### Next Week
+
+Tasks due in the following week.
+
+### Later
+
+Tasks due further in the future. This section initially shows a collapsed preview (5 items) with a button to expand and view all.
+
+### Awaiting Results
+
+Tasks that have been submitted (e.g., mail-in spore test sent) but are waiting for results to come back.
+
+Each task row in the timeline displays:
+
+- Task title and category badge
+- Due date
+- Assigned staff member (with an assignment dropdown to change)
+- A completion button to open the [task completion modal](/compliance/completing-tasks)
+
+For per-equipment tasks (e.g., the same requirement applied to multiple autoclaves), rows are grouped together. You can complete all units at once using the group completion button.
+
+## First-Visit Banner
+
+When you first access the dashboard after setup, a blue info banner appears:
+
+> "Your compliance plan is ready! You have X tasks across Y categories. Click any task to assign staff, adjust schedules, and start tracking."
+
+This banner can be dismissed by clicking the close button.
+
+## Completing Tasks from the Dashboard
+
+Click the completion button on any task row to open the [Task Completion Modal](/compliance/completing-tasks). The modal displays the appropriate completion form based on the task's primitive type (heartbeat, inspector, meter, clock, certificate, or auto).
+
+## Reconfiguring Compliance
+
+If you need to start over (e.g., your practice moved to a new state or changed practice type), use the **Reconfigure...** option from the more menu. This is a destructive action that:
+
+- Permanently deletes all compliance tasks
+- Removes all completion history and uploaded evidence
+- Removes your compliance setup configuration
+- Requires you to go through the full setup wizard again
+
+To confirm, you must type "RESET" and your full name as acknowledgment.
+
+<Callout kind="danger">
+  Reconfiguring compliance is permanent and cannot be undone. Consider editing individual tasks directly from the dashboard instead, unless your practice fundamentals have changed (new state, different practice type).
+</Callout>
+
+<!-- Screenshot needed: Compliance dashboard showing risk summary cards and prioritized task timeline -->

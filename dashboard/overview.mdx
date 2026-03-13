@@ -1,0 +1,202 @@
+---
+title: Dashboard Overview
+description: >-
+  Understand everything your ChairPulse dashboard shows at a glance, including
+  quick stats, alert bars, maintenance tasks, compliance checks, active issues,
+  and the onboarding experience for new users.
+---
+
+## What the Dashboard Shows
+
+The ChairPulse dashboard is your daily command center. When you sign in, it gives you an immediate picture of what needs attention across your practice: overdue maintenance, open issues, pending invoices, and upcoming compliance deadlines. Everything is scoped to the office you have selected in the [sidebar office switcher](/dashboard/navigating-the-interface), or you can view aggregated data across **All Offices** if you manage multiple locations.
+
+<!-- Screenshot needed: Full dashboard view with all sections visible -->
+
+The dashboard is organized into the following sections, from top to bottom:
+
+1. **Dashboard Header** -- office name, attention summary, search, and quick actions
+2. **Welcome Banner** -- greeting and tutorial link (first-time users only)
+3. **Quick Stats Row** -- four metric cards at a glance
+4. **Alert Bars** -- prominent banners for active issues and compliance tasks due
+5. **Invoice Review Alert** -- pending invoices awaiting reconciliation
+6. **Pending SOPs Indicator** -- AI-generated SOPs that are generating, ready, or failed
+7. **AI Diagnostic Feedback Prompt** -- quick feedback on recent AI Assistant usage
+8. **Today's Tasks** -- the main maintenance task section with room-based cards
+
+---
+
+## Dashboard Header
+
+The header appears at the top of every dashboard view and contains:
+
+- **Office name** -- displays the currently selected office name, or "All Offices" when viewing across locations.
+- **Attention summary** -- a line reading **"X items need attention"** in amber, with a separate **"Y urgent"** count in red if any high-priority or critical issues exist. The attention count is the sum of overdue maintenance, due-today maintenance, active issues, and invoices awaiting review.
+- **Global Search** -- a search bar to find equipment, issues, and other records across the platform.
+- **Quick action buttons** (desktop): **Add Equipment**, **Log Issue**, and **Ask SOP Assistant**. On mobile and tablet devices these condense into icon buttons with an overflow menu.
+- **Notification Bell** -- in the top-right corner, showing unread notification count. See [Alerts & Notifications](/dashboard/alerts-and-notifications) for details.
+
+<!-- Screenshot needed: Dashboard header on desktop showing attention count and quick action buttons -->
+
+---
+
+## Welcome Banner and Onboarding
+
+When you sign in to ChairPulse for the first time, two things appear:
+
+### Welcome Banner
+
+A personalized greeting based on the time of day -- "Good morning," "Good afternoon," or "Good evening" -- followed by your first name and "Welcome to ChairPulse." The banner includes:
+
+- A prompt to complete the setup checklist or explore the dashboard
+- A **Watch Tutorial** button that opens a tutorial video modal
+- A dismiss button (X) to close the banner
+
+The welcome banner only appears on your very first dashboard visit and does not return after dismissal.
+
+### Getting Started Checklist
+
+An onboarding checklist widget appears in the sidebar (below the navigation items) and guides you through initial setup. The checklist is titled **"Get started"** and tracks progress with a completion counter (e.g., "3/7") and a progress bar.
+
+The checklist items are:
+
+| Step | Label | Action |
+|------|-------|--------|
+| 1 | Watch the tutorial | Opens the tutorial video modal |
+| 2 | Set up your office | Opens the quick room setup wizard |
+| 3 | Set up your team | Opens the team setup wizard |
+| 4 | Add your first equipment | Navigates to the add equipment page |
+| 5 | Create an SOP | Navigates to the SOP creation page |
+| 6 | Complete compliance check | Navigates to the Compliance page |
+| 7 | Add a service technician | Navigates to Office Settings (technicians tab) |
+
+Completed items show a checkmark and strikethrough text. You can collapse the checklist, or dismiss it entirely with the X button. Once all items are completed, the checklist automatically hides.
+
+<Callout kind="tip" title="Resume onboarding anytime">
+  If you dismissed the checklist early, you can resume it from the **Help & Resources** panel in the sidebar footer. Select **Resume onboarding** to restore the checklist.
+</Callout>
+
+---
+
+## Quick Stats Row
+
+Four metric cards appear in a row (2x2 grid on mobile, 4 columns on desktop) providing key numbers at a glance. Each card is clickable and navigates to the relevant section.
+
+| Card | What it shows | Navigates to |
+|------|---------------|--------------|
+| **Completion** | 30-day task completion rate as a percentage, with a circular progress ring. Ring color: green (90%+), amber (70-89%), red (below 70%). | [Maintenance](/maintenance/overview) schedules tab |
+| **Overdue** | Count of maintenance tasks past their due date. Shows "All clear" when zero. | [Maintenance](/maintenance/overview) |
+| **Due Today** | Count of maintenance tasks scheduled for today. | [Maintenance](/maintenance/overview) |
+| **Compliance** | Count of compliance tasks that are overdue or due today. | [Compliance](/compliance/overview) |
+
+Each card includes a hover tooltip with a description of the metric. For example, the Completion card tooltip reads: "Percentage of scheduled tasks completed on time over the last 30 days."
+
+<!-- Screenshot needed: Quick Stats Row showing all four cards with sample data -->
+
+---
+
+## Alert Bars
+
+Below the quick stats, two color-coded alert bars appear when there are items requiring attention:
+
+### Issues Alert Bar
+
+A red-tinted banner that reads **"X active issues need attention"** with a breakdown showing how many are "awaiting tech" and how many are "open." Clicking the bar or the **View Issues** link navigates to the [Issues](/issues/overview) page.
+
+### Compliance Alert Bar
+
+A blue-tinted banner that reads **"X compliance tasks due"** with a breakdown showing how many are "overdue" and how many are due "today." Clicking the bar or the **View Compliance** link navigates to the [Compliance](/compliance/overview) page.
+
+Both alert bars are hidden when their respective counts are zero.
+
+---
+
+## Invoice Review Alert
+
+When invoices are pending reconciliation, an amber-bordered card appears with the heading **"X invoices awaiting your review."** It shows up to three invoices with:
+
+- Vendor name
+- Associated equipment or issue title
+- Invoice amount
+- A **Review** button for each invoice
+
+A **Review All** link at the top navigates to the Invoice Analytics page. This section is hidden when no invoices are pending.
+
+---
+
+## Pending SOPs Indicator
+
+This section notifies you about AI-generated SOPs in three possible states:
+
+- **Generating** -- a spinning indicator with "X SOPs generating..." and the message "We're creating your procedures." Clicking navigates to the SOP Hub.
+- **Ready** -- a card reading "Your SOP is ready!" (or "X new SOPs ready!") with a "New" badge. Clicking navigates directly to the SOP or to the SOP Hub.
+- **Failed** -- a red card reading "SOP failed to generate." Clicking navigates to the failed SOP for retry or review.
+
+This indicator polls every 10 seconds and auto-dismisses once you click through to view the SOP.
+
+---
+
+## AI Diagnostic Feedback Prompt
+
+If you recently used the AI Diagnostic Assistant for an unresolved issue, a feedback card may appear asking **"How was your AI Diagnostic experience?"** It references the specific issue title and offers two response buttons:
+
+- **It was helpful** -- submits positive feedback immediately
+- **Could be better** -- reveals a text field for optional improvement suggestions, with a **Submit Feedback** button
+
+The prompt only appears for conversations within the last 24 hours that have not yet received feedback.
+
+---
+
+## Today's Tasks (Maintenance Section)
+
+The largest section on the dashboard is **Today's Tasks**, which shows maintenance tasks organized by room. This section has its own header with:
+
+- The title **"Today's Tasks"**
+- A **pending** badge showing the count of overdue + due-today tasks
+- The current date (e.g., "Wed, Mar 12")
+- A **View All** link to the full [Maintenance](/maintenance/overview) page
+
+Tasks are displayed in a **room card grid** where each card represents a room (e.g., "Operatory 1," "Sterilization Room") and lists the tasks due for that room. You can:
+
+- Filter tasks by assignee using staff member tabs
+- Complete tasks individually or in batches by selecting a staff member
+- Reschedule tasks to a future date
+
+### Adaptive States
+
+The Today's Tasks section adapts based on your practice's data:
+
+<Tabs>
+  <Tab title="No equipment yet">
+    If you have no equipment and no maintenance schedules, the section shows an onboarding prompt encouraging you to **Add Equipment** to get started.
+  </Tab>
+  <Tab title="No schedules yet">
+    If you have equipment but no maintenance schedules configured, the section prompts you to set up schedules from the Equipment page.
+  </Tab>
+  <Tab title="All caught up">
+    When no tasks are scheduled for today and none are overdue, you see a green checkmark with "All caught up!" and the message "No tasks scheduled for today."
+  </Tab>
+  <Tab title="Tasks available">
+    The full room card grid displays with pending counts, assignee filters, and batch completion controls.
+  </Tab>
+</Tabs>
+
+---
+
+## How the Dashboard Adapts to Your Practice
+
+The dashboard dynamically reflects the state of your practice data:
+
+- **Office scoping** -- all counts and lists filter to your selected office. Switch offices using the [office switcher](/dashboard/navigating-the-interface) in the sidebar.
+- **Empty states** -- sections like Invoice Review Alert, Active Issues, Pending SOPs, and AI Feedback only appear when there is relevant data. The dashboard never shows empty placeholder cards.
+- **First-time experience** -- new users see the welcome banner and tutorial modal on their first visit, plus the onboarding checklist in the sidebar until all setup steps are complete.
+- **Real-time updates** -- the dashboard uses live data queries that refresh automatically. The maintenance section re-evaluates task windows every 5 minutes to unlock time-of-day tasks as they become due.
+
+---
+
+## Related Pages
+
+- [Alerts & Notifications](/dashboard/alerts-and-notifications) -- deep dive into notification types and how to act on them
+- [Navigating the Interface](/dashboard/navigating-the-interface) -- sidebar, office switcher, user menu, and help panel
+- [Maintenance Overview](/maintenance/overview) -- full details on maintenance schedules and task management
+- [Compliance Overview](/compliance/overview) -- compliance tracking and task completion
+- [Issues Overview](/issues/overview) -- creating and managing equipment issues

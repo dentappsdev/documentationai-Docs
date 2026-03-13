@@ -1,0 +1,107 @@
+---
+title: "Requirement Review"
+description: "How to review, confirm, and dismiss generated compliance requirements after the setup wizard completes."
+---
+
+## Overview
+
+After the [setup wizard](/compliance/setup-wizard) generates your compliance plan, you enter **Requirement Review** mode. This is a mandatory step where you review each generated requirement and either confirm it (activate it for tracking) or dismiss it (exclude it from your plan).
+
+The review process ensures that only relevant requirements are tracked for your practice. The compliance dashboard does not activate until the review is complete.
+
+## Category-Based Navigation
+
+The review screen organizes requirements by compliance category. The main view shows a **Category Card Grid** with cards grouped into three sections:
+
+- **Continue reviewing** (amber dot) -- Categories you have started reviewing but not finished
+- **Needs review** (blue dot) -- Categories you have not started yet
+- **Completed** (green dot) -- Categories where all tasks have been addressed
+
+Each category card shows:
+- The category name and icon
+- The number of tasks reviewed out of the total
+- A progress indicator
+
+Click a category card to enter the stepped review wizard for that category.
+
+## Review Progress
+
+A progress bar at the top of the review screen tracks your overall progress across all categories. The header shows the number of completed categories out of the total (e.g., "3 of 6 categories").
+
+## Stepped Review Wizard
+
+Within each category, requirements are presented one at a time in a stepped wizard. The wizard handles three types of steps:
+
+### Auto-Compliant Steps
+
+Tasks that are automatically managed by connected equipment are shown first. You simply acknowledge them -- no configuration needed. These tasks are auto-confirmed.
+
+### Group Steps
+
+When multiple equipment units share the same requirement (e.g., weekly spore test applied to 3 autoclaves), they appear as a group. You can confirm or dismiss the entire group at once.
+
+### Individual Steps
+
+Standard requirements are shown one at a time with full details.
+
+For each step, you can:
+
+- View the regulatory body (e.g., CDC, state dental board)
+- Read the requirement description
+- Click **View guide** if a detailed compliance guide is available
+- Click **Ask AI** for AI-powered compliance guidance
+
+## Review Actions
+
+### Confirming a Task
+
+When you confirm a task, a modal appears where you set:
+
+- **Start date** -- When the first instance of this task should be due
+- **Assignee** -- Which staff member is responsible
+- **Frequency** -- The recurrence schedule (may be pre-set based on the requirement)
+
+Click **Confirm** to activate the task. The task moves to "confirmed" status and will appear on the compliance dashboard.
+
+### Dismissing a Task
+
+When you dismiss a task, a popover appears where you select a reason:
+
+| Reason | Description |
+|---|---|
+| **Tracked elsewhere** | You track this requirement in another system |
+| **Not applicable** | This requirement does not apply to your practice |
+| **Third party** | A third-party service handles this requirement |
+| **Other** | Any other reason (free-text note) |
+
+You can optionally add a note explaining the dismissal. Click **Dismiss** to remove the task from your active plan.
+
+### Undoing a Review Decision
+
+If you navigate back to a previously reviewed step, you can undo a confirmation or dismissal, returning the task to "pending_review" status.
+
+## Review Statuses
+
+Each generated task has one of three review statuses:
+
+| Status | Meaning |
+|---|---|
+| `pending_review` | Not yet reviewed -- awaiting your decision |
+| `confirmed` | Confirmed and activated for compliance tracking |
+| `dismissed` | Excluded from your compliance plan |
+
+## Completing the Review
+
+When all tasks across all categories have been addressed (confirmed or dismissed), a celebration screen appears showing:
+
+- Number of tasks confirmed
+- Number of tasks dismissed
+- Number of auto-handled tasks
+
+Click **Go to Compliance Dashboard** to finalize the review and activate your compliance plan. The setup status changes from "review_pending" to "completed" and the full [compliance dashboard](/compliance/compliance-dashboard) becomes available.
+
+## Starting Over
+
+If you want to discard all generated tasks and restart the wizard, click **Start over with a new plan** at the bottom of the category grid. This requires confirmation and will delete all generated tasks.
+
+<!-- Screenshot needed: Category card grid showing review progress across compliance categories -->

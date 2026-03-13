@@ -1,0 +1,92 @@
+---
+title: Room View
+description: View your maintenance schedules organized by room and room category, with shared task detection and room-level assignment.
+---
+
+## See maintenance by location
+
+The **Room view** (labeled **Rooms** in the view toggle) organizes all maintenance schedules by the room where their associated equipment is located. This gives your team a location-first perspective -- useful for morning walkthroughs, room audits, or assigning responsibilities by area.
+
+Navigate to **Maintenance** and select **Rooms** from the view toggle in the Active Schedules card header. This is the default view.
+
+<!-- Screenshot needed: Room view showing room category groups with room cards containing task rows -->
+
+## How rooms are grouped
+
+Rooms are organized into **category groups** based on room type. Each group has:
+
+- A **category label** in uppercase (e.g., "OPERATORIES", "STERILIZATION", "MECHANICAL ROOMS")
+- A **room count badge** showing how many rooms are in the group
+- A horizontal divider line
+
+Within each group, individual **room cards** are displayed vertically.
+
+The grouping follows the same room category configuration used elsewhere in ChairPulse. Rooms with no assigned category appear under a general group.
+
+## Room cards
+
+Each room card displays:
+
+- **Room name** as the card header (e.g., "Op 1", "Sterilization Room")
+- **Room type icon** -- a visual indicator based on the room type
+- **Today's assignee** -- if a team member is assigned to this room for today via the room assignment schedule, their first name appears on the card
+- **Task list** -- up to 4 maintenance tasks visible directly on the card
+
+### Task rows
+
+Each task row within a room card shows:
+
+- An **icon** indicating task type (wrench icon for equipment tasks, checklist icon for checklist tasks)
+- The **task description** (e.g., "Run weekly spore test on autoclave and log results")
+- The **frequency label** in small uppercase text (e.g., "WEEKLY", "DAILY")
+
+Click any task row to open the schedule editing dialog for that task.
+
+<Callout kind="info">
+If a room has more than 4 tasks, a **"View all"** option appears to expand and see the complete list of tasks in a slide-out sheet with full task cards including status badges and action buttons.
+</Callout>
+
+## Shared tasks
+
+When multiple rooms in the same category group share identical maintenance tasks (tasks with the same description applied to equipment in every room of the group), ChairPulse detects this automatically and displays a **shared task card** at the top of the group.
+
+The shared task card shows:
+
+- A label like "Shared across all 4 Operatories"
+- The list of tasks that are common to all rooms in the group
+- The room names where these shared tasks apply
+
+Room-specific tasks that are not shared continue to appear on each individual room card. If all of a room's tasks are shared, that room card is hidden to reduce visual clutter.
+
+## Filtering in Room view
+
+The Room view uses a simplified **frequency pill filter** instead of the full filter bar:
+
+| Pill | What it shows |
+|---|---|
+| **All** | All maintenance schedules |
+| **Daily** | Only daily schedules |
+| **Weekly** | Only weekly schedules |
+| **Monthly** | Only monthly schedules |
+| **Other** | Bi-weekly, quarterly, semi-annual, annual, custom, and one-time schedules |
+
+Select a pill to filter all room cards to show only schedules matching that frequency. Select **All** to reset.
+
+<Callout kind="tip">
+The Room view automatically resets the search, room, status, and assignee filters when you switch to it. This is because the room grouping already organizes schedules spatially, making those filters redundant.
+</Callout>
+
+## Empty state
+
+If no schedules exist or no schedules match the active frequency filter, the Room view shows a centered message: "No schedules to display".
+
+## Editing schedules from Room view
+
+Click any task row in a room card to open the **Edit Maintenance Schedule** dialog. From there you can change the task description, frequency, assignee, linked SOP, and other settings.
+
+## Related pages
+
+- [Maintenance Overview](/maintenance/overview) -- Full overview of the Maintenance module
+- [Calendar View](/maintenance/calendar-view) -- Day, Week, and Month calendar views
+- [Rooms and Locations](/rooms-and-locations/overview) -- Managing the rooms your equipment is assigned to
+- [Completing Maintenance Tasks](/maintenance/completing-maintenance-tasks) -- Marking tasks complete and managing status

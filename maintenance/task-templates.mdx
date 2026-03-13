@@ -1,0 +1,141 @@
+---
+title: Task Templates
+description: Use the Task Template Library to quickly set up pre-built maintenance tasks from ChairPulse's curated collection of dental office task templates.
+---
+
+## Quickly set up maintenance with pre-built templates
+
+The **Task Template Library** provides a curated collection of maintenance task templates designed specifically for dental practices. Instead of building every maintenance schedule from scratch, you can browse templates by category, select the ones relevant to your practice, and have the task description, frequency, and time-of-day pre-filled automatically.
+
+Select the **Templates** button in the Maintenance page header to open the library.
+
+<!-- Screenshot needed: Task Template Library dialog showing category pills, search bar, and template cards organized by category -->
+
+## Opening the Template Library
+
+There are two ways to access the Task Template Library:
+
+- Select the **Templates** button (with a book icon) in the Maintenance page header
+- The library also reopens automatically after you save a template-based task, so you can quickly add multiple templates in succession
+
+## Browsing templates
+
+The template library dialog contains:
+
+### Search bar
+
+Type in the **Search templates...** field at the top to filter templates by title or description. Results update instantly as you type. If no templates match your search, a message reads "No templates match [your query]".
+
+### Category filter pills
+
+Below the search bar, a row of category pills lets you filter templates by category. Select **All** to see every template, or select a specific category to narrow the list. Each pill shows the category icon and label.
+
+The available categories are:
+
+| Category | Icon | Examples |
+|---|---|---|
+| **Equipment Maintenance** | Wrench | Autoclave Spore Test, Drain Air Compressor, Lubricate Handpieces |
+| **Sterilization / Infection Control** | Shield | Daily Autoclave Cycle Log, Operatory Surface Disinfection, Biological Monitor Test |
+| **Facility / Cleaning** | Building | Deep Clean Operatories, Waiting Room Tidy, HVAC Filter Check |
+| **Supply Management** | Package | Supply Inventory Check, Expiry Date Audit, Restock PPE Stations |
+| **Safety / Compliance** | Alert Triangle | Eyewash Station Test, Fire Extinguisher Inspection, OSHA Compliance Log Review |
+| **Opening / Closing** | Door | Turn On Computers & Monitors, End-of-Day Shutdown, Lock Up & Set Alarm |
+| **Patient Experience** | Heart | Set Up Waiting Area Amenities, Verify Entertainment Systems, Review Patient Satisfaction Feedback |
+| **Staff & Admin** | Users | Morning Team Huddle, Process Insurance Claims & Follow-Ups, Update Team Communication Board |
+| **Lab & Cases** | Flask | Check Incoming Lab Case Deliveries, Verify Lab Cases Match Schedule, Prepare Outgoing Lab Shipments |
+| **Technology / IT** | Monitor | Check for Software Updates, Verify Data Backup, Network & Internet Check |
+
+Each category header shows a **count badge** indicating how many templates are in that category.
+
+### Template cards
+
+Templates are displayed in a 2-column grid within each category. Each template card shows:
+
+- **Title** -- The template name (e.g., "Autoclave Spore Test")
+- **Description** -- A brief explanation of the task (e.g., "Run weekly spore test on autoclave and log results")
+- **Frequency** -- The recommended frequency (Daily, Weekly, Monthly, Quarterly)
+- **Time of day** -- When the task should be performed (Start of Day, Morning, Midday, End of Day), if applicable
+- **Equipment badge** -- An "Equipment" badge appears if the template requires linking to a specific piece of equipment
+- **Plus icon** -- Click anywhere on the card to select the template
+
+## Selecting a template
+
+<Steps>
+<Step title="Browse or search for a template">
+Use the category pills or search bar to find the template you want. Each category is color-coded for easy visual scanning.
+</Step>
+<Step title="Click the template card">
+Select a template card to close the library and open the **Add Maintenance Schedule** dialog with the template's values pre-filled: description, frequency, and time of day.
+</Step>
+<Step title="Complete the schedule setup">
+The Add Maintenance Schedule dialog opens with the template data already populated. You still need to:
+
+- Select the **equipment** this task applies to
+- Set the **first due date**
+- Optionally assign a **team member**
+- Optionally link a **Standard Operating Procedure (SOP)**
+- Adjust the frequency or description if needed
+
+Select **Save** to create the schedule.
+</Step>
+<Step title="Continue adding templates">
+After saving, the Task Template Library automatically reopens so you can select another template without navigating back manually.
+</Step>
+</Steps>
+
+## Equipment vs. general tasks
+
+Templates are classified as either:
+
+- **Equipment tasks** -- These require linking to a specific piece of equipment (e.g., "Autoclave Spore Test" must be linked to an autoclave). These templates show an "Equipment" badge on the card.
+- **General tasks** -- These are office-wide tasks not tied to specific equipment (e.g., "Restroom Check", "Morning Team Huddle"). These do not show an Equipment badge.
+
+When you open the template library from the Maintenance page, it shows templates filtered to the appropriate type based on context.
+
+## Customizing frequency
+
+When you select a template, the pre-filled frequency is a recommendation. You can change it during schedule setup using the **Frequency** selector, which offers these options:
+
+| Frequency | Configuration |
+|---|---|
+| **One-time** | No recurrence |
+| **Daily** | Select which days of the week (toggle individual days; defaults to Mon--Fri) |
+| **Weekly** | Select which day of the week |
+| **Bi-weekly** | Select which day of the week (repeats every 2 weeks) |
+| **Monthly** | Day of month is derived from first due date |
+| **Quarterly** | Day is derived from first due date |
+| **Semi-annually** | Day is derived from first due date |
+| **Annually** | Day is derived from first due date |
+| **Custom** | Enter a number of days between 1 and 365 |
+
+<Callout kind="info">
+For daily frequency, you can select specific days of the week. By default, Mon--Fri (weekdays) are selected. Tasks will only be flagged on the selected days. This is useful for tasks that do not apply on weekends when the office is closed.
+</Callout>
+
+## Creating custom maintenance tasks
+
+If no template matches your needs, you can create a fully custom maintenance task:
+
+<Steps>
+<Step title="Open the Add Maintenance Schedule dialog">
+Select the **Add Maintenance Task** button in the Maintenance page header. This opens the schedule creation dialog without any pre-filled values.
+</Step>
+<Step title="Fill in the task details">
+Enter the task description, select the equipment (or leave blank for a general task), choose a frequency, set the first due date, and optionally assign a team member and link an SOP.
+</Step>
+<Step title="Save the schedule">
+Select **Save** to create the custom maintenance schedule. It will immediately appear in your calendar and room views.
+</Step>
+</Steps>
+
+## Bulk reassignment
+
+To reassign multiple maintenance tasks to a different team member:
+
+Select the **Reassign** button in the Maintenance page header to open the **Bulk Reassign** dialog. From there, you can filter and select schedules to reassign in bulk.
+
+## Related pages
+
+- [Maintenance Overview](/maintenance/overview) -- Full overview of the Maintenance module
+- [Calendar View](/maintenance/calendar-view) -- Viewing schedules on Day, Week, and Month calendars
+- [Completing Maintenance Tasks](/maintenance/completing-maintenance-tasks) -- How to mark tasks as complete

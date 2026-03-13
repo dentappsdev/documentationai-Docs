@@ -1,0 +1,94 @@
+---
+title: Creating an Issue
+description: Report a new equipment issue with photos, priority level, and description -- then choose whether to start AI diagnosis or schedule a technician.
+---
+
+## Report an equipment issue
+
+When a piece of equipment has a problem, the first step is to report it as an issue. You can create an issue from two places:
+
+- **From the Issues page** -- Click the **Report Issue** button in the top-right corner.
+- **From an equipment detail page** -- Navigate to a specific piece of equipment and use the report issue action.
+
+Both paths open the same two-step reporting form.
+
+<!-- Screenshot needed: Report an Equipment Issue form showing Step 1 with the equipment selector, title field, and priority options -->
+
+## The reporting flow
+
+Creating an issue is a two-step process: describe the problem, then choose what to do next.
+
+<Steps>
+  <Step title="Describe the problem">
+    Fill out the issue reporting form with the details of the equipment problem. The form header reads **Report an Equipment Issue** with the subtitle "Step 1 of 2: Describe the Problem".
+
+    Complete the following fields:
+
+    - **Which equipment has the problem?** (required) -- Select the equipment from a dropdown list. The dropdown shows each item's name, type, and room or location. A **Recently Used** section below the dropdown offers quick-select buttons for your last three equipment items. If no equipment has been added yet, you will see a prompt to either add equipment or describe it manually.
+    - **What's happening?** (required) -- Enter a brief description of the problem. Examples: "Chair won't go up or down", "Error code E-15 showing", "Strange noise when compressor runs".
+    - **Tell us more** (optional) -- Provide additional detail such as when the problem started, what you were doing, or any error codes or messages.
+    - **What have you already tried?** (optional) -- Describe any troubleshooting steps you have already attempted. This helps AI diagnostics avoid suggesting steps you have already taken.
+    - **Add Photos** (optional but recommended) -- Upload photos of error codes, damage, or symptoms. Photos help AI diagnose faster. You can upload multiple photos.
+    - **How urgent is this?** (required) -- Select a priority level (see below).
+    - **Does this affect the equipment's availability?** -- Update the equipment's operational status if the issue impacts its usability.
+    - **How would you like to proceed?** -- Choose between **Generate AI Diagnostic Report** (recommended) or **Just log the issue**.
+
+    Click **Continue** to proceed to step 2.
+  </Step>
+  <Step title="Choose your path">
+    After the issue is saved, you see the **Choose Your Path** screen with three options:
+
+    - **Get AI Help** (recommended) -- The AI will analyze your issue and create a personalized diagnostic plan. The card highlights: "Analyzes your photos and description", "Creates step-by-step troubleshooting plan", and "Can escalate to technician anytime". Click **Start AI Diagnosis** to begin.
+    - **Call a Technician** -- Skip diagnosis and schedule a service call. ChairPulse prepares a summary for your technician. Click **Schedule Service** to open the [service scheduling dialog](/issues/resolving-issues).
+    - **Just Log It** -- Track the issue and come back to it later. You can start diagnosis or call a tech anytime from the [issue detail page](/issues/issue-detail-page). Click **Save and View Issue** to go to the issue detail.
+
+    If you selected **Generate AI Diagnostic Report** in step 1, the system skips this screen and takes you directly to the [diagnostic report page](/issues/diagnostic-reports).
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+If you selected "Generate AI Diagnostic Report" during issue creation, the system automatically generates a report and navigates you to the report page. You can always access the Choose Your Path options later from the issue detail page.
+</Callout>
+
+## Priority levels explained
+
+Priority determines how the issue appears in the issues list and how urgently it needs attention. Choose the level that best matches the impact on your practice:
+
+| Priority | Label | When to use |
+|---|---|---|
+| **Critical** | Equipment unusable, stops patient care | The equipment cannot be used at all, and patients are directly affected. Example: dental chair hydraulics completely failed mid-appointment. |
+| **High** | Significant impact, need fix soon | The equipment has a serious problem but is not completely down. Example: autoclave cycle times are much longer than normal. |
+| **Medium** | Can work around it temporarily | The issue is noticeable but does not prevent using the equipment. Example: curing light battery drains faster than usual. This is the default selection. |
+| **Low** | Minor issue, fix when convenient | A cosmetic or minor functional issue that can be addressed during scheduled downtime. Example: minor scuff on chair upholstery. |
+
+<Callout kind="info">
+Critical issues display a pulsing red indicator in the issues table to draw immediate attention from your team.
+</Callout>
+
+## Photo guidance
+
+Adding photos significantly improves the accuracy of AI diagnostics. When uploading photos, focus on:
+
+- **Error codes or messages** displayed on the equipment screen
+- **Visible damage** such as cracks, leaks, or discoloration
+- **Symptoms** like unusual positioning, blinking lights, or foreign objects
+- **Labels and model numbers** if relevant to the problem
+
+Photos are stored with the issue and are accessible from the [issue detail page](/issues/issue-detail-page).
+
+## Equipment status update
+
+When reporting an issue, you can update the equipment's availability status to inform the rest of your team. For example, if a dental chair is completely non-functional, change its status to reflect that it is under repair. This status change appears on the [Equipment page](/equipment/overview) and helps with scheduling.
+
+## Pre-filled equipment
+
+When you navigate to issue creation from an equipment detail page, the equipment field is automatically pre-filled with that piece of equipment. You can still change the selection if needed.
+
+## What happens after creation
+
+Once the issue is created:
+
+- It appears in the [Issues list](/issues/overview) with an **Open** status.
+- If you chose AI diagnosis, you are taken to the [diagnostic report](/issues/diagnostic-reports) or [AI diagnostic chat](/issues/ai-diagnostic-chat).
+- If you chose to call a technician, the [Schedule a Service Call dialog](/issues/resolving-issues) opens.
+- If you chose to just log it, you are taken to the [issue detail page](/issues/issue-detail-page) where you can take action later.

@@ -1,0 +1,176 @@
+---
+title: Calendar View
+description: Navigate your maintenance schedules using Day, Week, and Month calendar views with color-coded task status indicators.
+---
+
+## Visualize your maintenance schedule on a calendar
+
+The calendar views give your team a time-based perspective on upcoming, current, and overdue maintenance tasks. You can switch between **Day**, **Week**, and **Month** views using the segmented control at the top of the Active Schedules card.
+
+Navigate to **Maintenance**, then select **Day**, **Week**, or **Month** from the view toggle.
+
+<!-- Screenshot needed: Month view showing a calendar grid with colored task dots and a few task previews -->
+
+## Three calendar modes
+
+<Tabs>
+<Tab title="Month View">
+
+The Month view displays a full calendar grid for the selected month, with weekday headers (Sun through Sat) across the top.
+
+### Layout
+
+- Each day cell shows the **date number** in the top-left corner. Today's date is highlighted with a filled circle using the primary brand color.
+- Days outside the current month appear dimmed.
+- Up to **2 task previews** are shown in each cell. If a day has more than 2 tasks, a "+N more" label appears below the previews.
+
+### Task previews
+
+Each task preview inside a day cell shows:
+
+- A **colored dot** indicating status (red for overdue, amber for due today/due soon, green for on track)
+- The **task description** or equipment name
+- The **assigned team member** name (abbreviated as "First L.")
+
+### Navigating months
+
+Use the **left and right chevron buttons** at the top of the calendar to move to the previous or next month. The current month and year (e.g., "March 2026") are displayed between the arrows.
+
+To jump back to the current date, select the **Today** button in the card header.
+
+### Clicking a day
+
+Click any day cell to open the **Day Details Sheet** -- a slide-out panel on the right side of the screen that lists all tasks for that day. See the [Day Details Sheet](#day-details-sheet) section below.
+
+<!-- Screenshot needed: Month view with the Day Details Sheet open showing a list of tasks for a selected date -->
+
+</Tab>
+<Tab title="Week View">
+
+The Week view shows a 7-day horizontal grid spanning Sunday through Saturday for the selected week.
+
+### Layout
+
+- Each day column has a **header** displaying the abbreviated day name (e.g., "MON") and date number. Today's column is highlighted with a primary-color border and ring.
+- Below each header, **task cards** are listed vertically. If a day has no tasks, the column shows "No tasks".
+
+### Task cards
+
+Each task card in the Week view uses a compact format:
+
+- A **colored dot** (red, amber, or green) for task status
+- **Equipment name** in bold
+- **Task description** below the name
+- **Assigned team member** abbreviation
+
+The card background changes based on status:
+- **Overdue** tasks have a light red background
+- **Due today / Due soon** tasks have a light amber background
+- **On track** tasks have a neutral muted background
+
+### Navigating weeks
+
+Use the **left and right chevron buttons** to move to the previous or next week. The header displays the date range (e.g., "Mar 1 -- Mar 7, 2026") between the arrows.
+
+### Clicking a day header
+
+Click the day header in any column to open the Day Details Sheet for that date.
+
+<!-- Screenshot needed: Week view showing 7 columns with task cards in several days -->
+
+</Tab>
+<Tab title="Day View">
+
+The Day view focuses on a single day and shows all tasks due on that date in a detailed list.
+
+### Layout
+
+The header displays the full day name (e.g., "Wednesday") and the full date (e.g., "March 12, 2026").
+
+If no tasks are due, the view shows an empty state with a calendar icon and the message "No tasks scheduled -- There are no maintenance tasks due on this day."
+
+### Task cards
+
+Each task in the Day view uses the full (non-compact) card format:
+
+- **Equipment name** (or "General Task" for non-equipment tasks) as the card title
+- **Task description** below the title
+- **Status badge** (Overdue, Due today, On track) on the right
+- **Settings icon** to edit the schedule
+- **Metadata row** showing frequency, equipment type, room location, and assigned team member
+- **Reassign** button to change the assignee for this specific date without changing the default assignment
+- **Assign across dates** button to assign this task for a range of dates
+- **Mark Complete** button in green to complete the task
+- **View SOP** link if the task has a linked Standard Operating Procedure
+
+### Navigating days
+
+Use the **left and right chevron buttons** to move to the previous or next day.
+
+### Reassigning tasks for a specific date
+
+In the Day view, each task card has a **Reassign** button (or **Assign** if no one is assigned). Clicking it opens a popover where you can select a team member. This creates a **date-specific override** -- the assignee changes only for this particular date, not for all future occurrences.
+
+If a task has been reassigned for the current date, the assignee badge appears in an amber highlight with the label "(this date)" to distinguish it from the default assignment. A **Revert to default** button appears to undo the override.
+
+<!-- Screenshot needed: Day view with several task cards, showing the Reassign popover open on one task -->
+
+</Tab>
+</Tabs>
+
+## Color coding for task status
+
+All three calendar views use consistent color coding:
+
+| Status | Dot / Background Color | Badge Color |
+|---|---|---|
+| **Overdue** | Red dot / Light red background | Red destructive badge |
+| **Due today** | Amber dot / Light amber background | Amber badge |
+| **Due soon** (within 7 days) | Amber dot / Light amber background | Amber badge |
+| **On track** | Green dot / Neutral background | Green outline badge |
+| **No history** | Green dot / Neutral background | Gray outline badge |
+
+## Day Details Sheet
+
+The Day Details Sheet is a slide-out panel that appears when you click a day in the Month or Week view. It provides a focused list of all tasks for the selected date.
+
+### What it shows
+
+- **Title** -- The full date (e.g., "Wednesday, March 12, 2026")
+- **Subtitle** -- The number of tasks scheduled (e.g., "3 maintenance tasks scheduled")
+- **Task list** -- Each task is displayed as a full task card with status, frequency, room, assignee, and action buttons
+
+### Available actions
+
+From the Day Details Sheet, you can:
+
+- **Mark Complete** -- Complete a task directly from the sheet
+- **Edit schedule** -- Open the schedule editing dialog via the settings icon
+- **Reassign** -- Change the assignee for the selected date
+- **View SOP** -- Navigate to the linked SOP if one exists
+
+<Callout kind="tip">
+The Day Details Sheet is especially useful in Month view, where day cells only show 2 task previews. Click any day to see the full list of tasks with all details and actions.
+</Callout>
+
+## Selection mode and batch assignment
+
+When you need to reassign multiple tasks at once:
+
+<Steps>
+<Step title="Enter selection mode">
+Selection mode is activated from the batch assign flow. When active, checkboxes appear on each task card and on each day header (in Month and Week views).
+</Step>
+<Step title="Select tasks">
+Click individual task checkboxes to select specific tasks, or click the day-level checkbox to select all tasks for a given date.
+</Step>
+<Step title="Apply assignment">
+The **Batch Assign Bar** appears at the bottom of the screen showing how many tasks are selected. Choose a team member from the dropdown, select whether to **Set as default assignee** or **Assign for these specific dates only**, then select **Apply**.
+</Step>
+</Steps>
+
+## Related pages
+
+- [Maintenance Overview](/maintenance/overview) -- Full overview of the Maintenance module
+- [Room View](/maintenance/room-view) -- View schedules organized by room
+- [Completing Maintenance Tasks](/maintenance/completing-maintenance-tasks) -- How to mark tasks complete and manage status

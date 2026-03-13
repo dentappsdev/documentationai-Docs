@@ -1,0 +1,201 @@
+---
+title: Adding Equipment
+description: Walk through the full equipment setup wizard to add new equipment from the master catalog or duplicate an existing piece of equipment.
+---
+
+## Add equipment to your practice
+
+ChairPulse provides a guided wizard to add new equipment to your inventory. You can either search the built-in equipment catalog to find your exact category, manufacturer, and model, or duplicate an existing piece of equipment into a different room.
+
+Navigate to **Equipment** and select the **Add Equipment** button to start the wizard.
+
+<!-- Screenshot needed: Path selection screen showing "Add New Equipment" and "Copy from Existing" options -->
+
+## Choose your path
+
+The first screen presents two options:
+
+| Path | Label | Description |
+|---|---|---|
+| **Add New Equipment** | Recommended | Search the master equipment catalog by category, manufacturer, and model. ChairPulse pre-fills details like expected lifespan and criticality from the catalog. |
+| **Copy from Existing** | Fastest | Select an existing piece of equipment in your inventory and duplicate its settings into a different room. Optionally copy maintenance schedules. |
+
+Below these options, the screen shows the automated next steps that ChairPulse handles after you add equipment: **Auto-Maintenance**, **Standard SOPs**, and **Lifecycle History**.
+
+---
+
+## Path 1: Add New Equipment
+
+This path walks you through selecting equipment from the master catalog and then filling in practice-specific details.
+
+<Steps>
+
+<Step title="Select your equipment from the catalog">
+
+The **Add New Equipment** screen presents three cascading dropdowns. Each selection narrows the next dropdown.
+
+1. **Category** (required) -- Select from the list of [equipment categories](/equipment/equipment-categories) (e.g., "Autoclaves & Sterilizers", "Dental Chairs & Delivery Units"). You can also type to search. If your category is not listed, select **Create** to add a custom category.
+
+2. **Manufacturer** (required) -- After selecting a category, choose the manufacturer (e.g., "Midmark", "A-Dec", "Tuttnauer"). The list is filtered to manufacturers that make equipment in your chosen category. You can create a custom manufacturer if yours is not listed.
+
+3. **Model** (required) -- After selecting a manufacturer, choose the specific model (e.g., "M11", "500"). You can create a custom model if yours is not listed.
+
+For **system equipment** (such as a dental chair delivery system that includes multiple components), a component selector appears after choosing the model. Select which sub-components are part of your system (e.g., Dental Chair, Delivery Unit, Operatory Light).
+
+Select **Continue** to proceed.
+
+<Callout kind="tip">
+When you select a model from the master catalog, ChairPulse automatically pre-fills the expected lifespan and criticality level. These values appear with an "Auto-filled" badge on the next screen and can be adjusted.
+</Callout>
+
+</Step>
+
+<Step title="Review and complete equipment details">
+
+The **Equipment Details** screen has two sections:
+
+### Equipment Information (required fields)
+
+These fields are pre-populated from the catalog selection. Fields with an **Auto-filled** badge were sourced from the master catalog.
+
+| Field | Required | Description |
+|---|---|---|
+| **Equipment Name** | Yes | The display name (e.g., "Midmark M11"). Auto-generated from manufacturer and model. |
+| **Category** | Yes | The equipment category. Read-only, set from catalog selection. |
+| **Manufacturer** | No | The manufacturer name. |
+| **Model** | No | The model name or number. |
+| **Type / Model Name** | Yes | The equipment type descriptor. |
+| **Room / Location** | Yes | The room where this equipment is located. Select from existing rooms or select **Add New Room** to create one inline. |
+| **Expected Lifespan** | No | The expected useful life (e.g., "15-20 years"). |
+| **Criticality** | No | Priority level: Low, Medium, High, or Critical. |
+| **Notes** | No | Free-text notes (up to 2,000 characters). |
+
+<Callout kind="alert">
+**Room is required.** You must assign the equipment to a room before saving. If you have not created rooms yet, use the **Add New Room** option in the room dropdown to create one without leaving the wizard.
+</Callout>
+
+### Additional Details (optional)
+
+These fields can be filled in now or completed later from the equipment detail page. A progress indicator shows how many of these optional fields you have completed.
+
+| Field | Description |
+|---|---|
+| **Serial Number** | The unique serial number from the manufacturer. |
+| **Acquisition Date** | The date the equipment was purchased or received. |
+| **Warranty Expiry** | The warranty expiration date. |
+| **Status** | Initial status: OK, Warning, Critical, or Maintenance Due. Defaults to OK. |
+| **Service Contact** | Phone number or contact info for service (e.g., "1-800-555-1234"). |
+| **Sales Rep** | Name of your equipment sales representative. |
+
+Select **Save Equipment** to create the equipment record.
+
+</Step>
+
+<Step title="Completion">
+
+After the equipment is saved, a success screen confirms:
+
+- The equipment has been added to your inventory.
+- If the equipment type is compliance-relevant, ChairPulse automatically creates compliance tasks and lists the associated compliance requirements.
+
+The completion screen presents several next steps:
+
+- **Set Up Maintenance Tasks** -- Go directly to the Maintenance tab to configure recommended or custom maintenance schedules.
+- **View Equipment Details** -- Open the full equipment detail page.
+- **Add Another Equipment** -- Start the wizard again to add more equipment.
+- **Back to Equipment List** -- Return to the main equipment list.
+
+<Callout kind="info">
+If ChairPulse has maintenance task recommendations for your equipment model, a blue info card reads "We have maintenance task recommendations ready for this model. Configure them on the equipment page." For custom models without recommendations, it reads "You can create custom maintenance tasks on the equipment page."
+</Callout>
+
+</Step>
+
+</Steps>
+
+---
+
+## Path 2: Copy from Existing
+
+Use this path when you have the same type of equipment in multiple rooms (e.g., three identical dental chairs in different operatories).
+
+<Steps>
+
+<Step title="Select source equipment">
+
+The **Copy from Existing** screen displays all equipment in your inventory, grouped by category.
+
+- Use the **Search equipment...** field to filter by name, manufacturer, model, or category.
+- Each equipment card shows the name, manufacturer, model, current room assignment, and how many maintenance schedules are configured.
+- Select the equipment you want to use as a template.
+
+</Step>
+
+<Step title="Fill in details for the new unit">
+
+After selecting a source, the screen shows two sections:
+
+### Copied fields (read-only)
+
+These fields are automatically copied from the source equipment:
+- Manufacturer, Model, Category, Type, Criticality, and Expected Lifespan.
+
+A "Copied from [equipment name]" banner confirms the source. Select **Change** to pick a different source.
+
+### Fields to fill in for this unit
+
+| Field | Required | Description |
+|---|---|---|
+| **Room** | Yes | Select the room for this new unit. Must be different from or the same as the source (a warning appears if you select the same room). |
+| **Serial Number** | No | The unique serial number for this specific unit. |
+| **Acquisition Date** | No | The purchase or delivery date for this unit. |
+| **Warranty Expiry** | No | The warranty expiration date for this unit. |
+
+### Copy maintenance schedules
+
+If the source equipment has maintenance schedules configured, a toggle appears:
+
+- **Copy maintenance schedules** (on by default) -- When enabled, all maintenance schedules from the source equipment are duplicated to the new equipment. The number of schedules is shown (e.g., "3 schedules will be duplicated").
+
+<Callout kind="tip">
+If you enable **Copy maintenance schedules** and the source has schedules, the next step lets you set specific start dates for each copied schedule.
+</Callout>
+
+</Step>
+
+<Step title="Configure schedule start dates (if copying maintenance)">
+
+If the source equipment has maintenance schedules and you chose to copy them, this step lets you set the **start date** for each schedule on the new equipment.
+
+Each schedule is listed with its description and frequency. Set the first due date for each, then select **Confirm** to create the equipment with the copied schedules.
+
+</Step>
+
+<Step title="Completion">
+
+The success screen confirms:
+- The equipment has been added to your inventory.
+- The number of maintenance schedules copied (if applicable).
+- Any compliance tasks that were automatically created.
+
+The same next-step options are available as in the "Add New Equipment" path.
+
+</Step>
+
+</Steps>
+
+---
+
+## Navigation guard
+
+If you are partway through the wizard (past the path selection step but before completion), ChairPulse prevents accidental navigation:
+
+- Closing the browser tab or refreshing the page triggers a confirmation dialog: "You have unsaved equipment setup in progress. Leave anyway?"
+- Using the browser back button also triggers this confirmation.
+
+## Related pages
+
+- [Equipment Overview](/equipment/overview) -- The main equipment list page
+- [Equipment Detail Page](/equipment/equipment-detail-page) -- What you see after adding equipment
+- [Equipment Categories](/equipment/equipment-categories) -- Full list of categories in the master catalog
+- [Rooms and Locations](/rooms-and-locations/overview) -- Managing rooms for equipment assignment

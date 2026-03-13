@@ -1,0 +1,185 @@
+---
+title: Creating Training Paths
+description: Create structured training paths, add SOPs in sequence, organize with categories, and assign paths to your team.
+---
+
+## Build structured training for your team
+
+Training paths let you organize SOPs into curated learning sequences for onboarding, skill development, and compliance training. This page covers how to create a new training path, add SOPs, and organize the content.
+
+<Callout kind="alert">
+Creating and managing training paths is a **Professional** tier feature. Essential tier users can view existing training paths but cannot create or edit them.
+</Callout>
+
+## Creating a new training path
+
+<Steps>
+  <Step title="Open the Create Path dialog">
+    Navigate to **Knowledge** > **Training Paths** tab and select **Create Path** in the page header. The **Create Training Path** dialog opens.
+
+    Alternatively, if you have existing paths, you can select **Browse Templates** to start from a pre-built template that pre-fills the dialog fields.
+  </Step>
+  <Step title="Enter path details">
+    Fill in the following fields:
+
+    - **Name** (required) -- Give your training path a descriptive name (e.g., "New Hire Orientation", "Sterilization Room Protocols").
+    - **Category** (optional) -- Assign the path to a category for organization. Select an existing category, or select **+ Create new category...** to create one inline.
+    - **Description** (optional) -- A brief summary of what the training path covers.
+    - **Goals** (optional) -- What trainees will achieve after completing the path (e.g., "Understand all sterilization protocols and pass the competency check").
+    - **Target Audience** (optional) -- Who the path is designed for (e.g., "New dental assistants").
+    - **Difficulty Level** (optional) -- Select **Beginner**, **Intermediate**, or **Advanced**.
+    - **Icon** -- Choose from 11 available icons to visually identify the path. Options include book, graduation cap, star, shield, heart, alert, wrench, clipboard, timer, monitor, and growth.
+    - **Required for all staff** -- Toggle this switch on to mark the path as mandatory training.
+
+    <!-- Screenshot needed: Create Training Path dialog showing all fields filled in -->
+  </Step>
+  <Step title="Add SOPs to the path (optional)">
+    In the **Add SOPs** section at the bottom of the dialog, you can include existing SOPs in the training path at creation time.
+
+    Use the search field labeled **Search SOPs...** to find specific procedures. Select the checkbox next to each SOP you want to include.
+
+    Selected SOPs appear in a **Selected SOPs** list above the search. Each selected SOP shows:
+
+    - Its position number in the sequence
+    - The SOP title
+    - **Up/down arrows** to reorder
+    - An **x** button to remove it
+
+    <Callout kind="tip">
+      You can always add more SOPs after creating the path. It is fine to create an empty path first and add SOPs later.
+    </Callout>
+  </Step>
+  <Step title="Create the path">
+    Select **Create Path** to save. The dialog closes and your new training path appears in the list.
+  </Step>
+</Steps>
+
+## Adding SOPs to a training path
+
+After creating a training path, you can add SOPs from the training path detail page. Select **Add SOP** to open the Add SOP page, which offers four methods:
+
+<Tabs>
+  <Tab title="Link Existing SOPs">
+    Browse your SOP library and add procedures you have already created.
+
+    Select **Link Existing SOPs** to open a dialog where you can search and select from your existing SOPs. SOPs already in the training path are excluded from the list.
+
+    **Estimated time:** about 1 minute.
+  </Tab>
+  <Tab title="AI-Assisted Generation">
+    **Recommended.** Generate new SOPs with AI, automatically linked to the training path.
+
+    Select **AI-Assisted Generation** to open an inline wizard. The wizard uses the training path's goals, target audience, and difficulty level as context to produce more relevant SOPs. The generated SOPs are automatically added to the training path.
+
+    **Estimated time:** 5-10 minutes.
+
+    See [AI SOP Generation](/knowledge/ai-sop-generation) for the full wizard walkthrough.
+  </Tab>
+  <Tab title="Upload Document">
+    Upload a PDF or Word document to convert into an SOP and add to the path.
+
+    Select **Upload Document** to open the upload wizard. The new SOP is automatically linked to the training path on save.
+
+    **Estimated time:** 2-5 minutes.
+  </Tab>
+  <Tab title="Write Manually">
+    Start from scratch and build an SOP in the guided form editor.
+
+    Select **Write Manually** to open the SOP editor. The new SOP is automatically linked to the training path on save.
+
+    **Estimated time:** varies.
+  </Tab>
+</Tabs>
+
+<!-- Screenshot needed: Add SOP to training path page showing the four method cards -->
+
+## Ordering and organizing SOPs
+
+SOPs in a training path are presented in a specific order that defines the learning sequence. You can manage this order from the training path detail page.
+
+<Steps>
+  <Step title="Enter edit mode">
+    On the training path detail page, select **Edit** to enable edit mode.
+  </Step>
+  <Step title="Reorder SOPs">
+    In edit mode, drag and drop SOPs to rearrange their order in the sequence. SOPs are numbered to indicate their position.
+  </Step>
+  <Step title="Remove SOPs">
+    In edit mode, select the remove action on any SOP to remove it from the training path. This does not delete the SOP itself -- it only removes it from this path.
+  </Step>
+  <Step title="Exit edit mode">
+    Select **Done** to save your changes and exit edit mode.
+  </Step>
+</Steps>
+
+## Editing path details
+
+To update the training path's metadata after creation:
+
+<Steps>
+  <Step title="Enter edit mode">
+    On the training path detail page, select **Edit**.
+  </Step>
+  <Step title="Open the Edit Details dialog">
+    Select **Edit Details** to open the editing dialog.
+  </Step>
+  <Step title="Update fields">
+    Modify any of the path fields: name, description, icon, goals, target audience, difficulty level, required status, or category.
+  </Step>
+  <Step title="Save changes">
+    Select **Save** to apply your updates.
+  </Step>
+</Steps>
+
+## Managing categories
+
+Categories help organize your training paths into logical groups. You can manage categories from the Training Paths page.
+
+### Creating a category
+
+There are two ways to create a category:
+
+- Select **Create Category** from the Training Paths page header.
+- Select the **Create Category** button at the bottom of the category list.
+
+Either method opens an inline form where you enter:
+
+- **Category name** (required) -- e.g., "Foundational Training"
+- **Icon** -- Choose from 12 available icons
+- **Description** (optional) -- A brief subtitle for the category
+
+### Editing a category
+
+Hover over a category header and select the pencil icon. An inline editor appears where you can change the name, icon, description, and featured path (the path displayed as the hero card).
+
+### Deleting a category
+
+Hover over a category header and select the trash icon (admin only). A confirmation dialog warns that training paths in the category will become uncategorized. Select **Delete** to confirm.
+
+## Deleting a training path
+
+To delete a training path:
+
+<Steps>
+  <Step title="Open the training path detail page">
+    Navigate to the training path you want to delete.
+  </Step>
+  <Step title="Select the delete button">
+    Select the trash icon in the header actions area.
+  </Step>
+  <Step title="Confirm deletion">
+    A dialog asks you to confirm: "This will permanently delete [path name]. This action cannot be undone." Select **Delete** to confirm, or **Cancel** to keep the path.
+  </Step>
+</Steps>
+
+<Callout kind="danger">
+Deleting a training path is permanent and cannot be undone. The SOPs within the path are not deleted -- only the training path container and its ordering are removed.
+</Callout>
+
+## Related pages
+
+- [Training Paths](/knowledge/training-paths) -- Browse and view training paths
+- [Creating SOPs](/knowledge/creating-sops) -- Create SOPs to add to training paths
+- [AI SOP Generation](/knowledge/ai-sop-generation) -- Generate SOPs with AI
+- [SOP Library](/knowledge/sop-library) -- Browse your SOP library
+- [Knowledge & Training Overview](/knowledge/overview) -- The central Knowledge hub

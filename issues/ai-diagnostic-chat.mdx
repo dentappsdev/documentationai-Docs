@@ -1,0 +1,181 @@
+---
+title: AI Diagnostic Chat
+description: Use ChairPulse's AI-powered diagnostic chat to troubleshoot equipment issues interactively with step-by-step guidance, photo analysis, and real-time escalation to a technician.
+---
+
+## Interactive AI troubleshooting
+
+The AI Diagnostic Chat provides a real-time, conversational troubleshooting experience for equipment issues. The AI analyzes your issue details, photos, and responses to guide you through diagnostic steps, suggest likely causes, and help you resolve problems without waiting for a technician.
+
+You can start a diagnostic chat from several places:
+
+- From the [Choose Your Path dialog](/issues/issue-detail-page) after creating an issue
+- From the **Diagnostics** tab on the issue detail page by clicking **New Chat** or **Start First Chat**
+- From the issues table by selecting **Start AI Diagnosis** or **Continue Diagnosis** in the action dropdown
+- From a [diagnostic report](/issues/diagnostic-reports) by clicking **Chat with AI** or **Continue Chat**
+
+<!-- Screenshot needed: AI Diagnostic Chat page showing conversation with step card, quick reply buttons, and progress bar at top -->
+
+## Chat interface
+
+The diagnostic chat opens in a full-page view with:
+
+- **Back button** in the top-left to return to the issue detail page
+- **Issue title and equipment name** displayed at the top for context
+- **Diagnostic progress indicator** showing the current troubleshooting stage
+- **Message thread** in the center with your messages and AI responses
+- **Message input area** at the bottom with text field, photo upload buttons, and send button
+
+## Diagnostic progress indicator
+
+A row of stage pills at the top of the chat shows how far along the diagnosis has progressed:
+
+| Stage | When active |
+|---|---|
+| **Basics** | Initial conversation, gathering information (messages 0--2) |
+| **Connections** | Checking connections and basic setup (messages 3--4) |
+| **Components** | Testing specific components (messages 5--6) |
+| **Diagnosis** | Forming a diagnosis based on findings (messages 7--8) |
+| **Resolution** | Working toward a resolution (messages 9+) |
+
+Completed stages appear in green, the current stage is highlighted in dark, and future stages are gray. The progress automatically advances as the conversation grows.
+
+## How the conversation works
+
+When you start a new diagnostic chat, the AI automatically generates a personalized introduction based on:
+
+- The equipment type, manufacturer, and model
+- The issue title and description
+- Any photos you uploaded
+- Prior troubleshooting attempts you described
+
+The AI provides an **Initial Assessment** with its early hypothesis, followed by a first troubleshooting step to try.
+
+### Sending messages
+
+Type your response in the text area at the bottom and press **Send** (or hit Enter). Messages stream in real time, so you see the AI's response appear character by character as it generates.
+
+### Quick reply buttons
+
+After each AI message, clickable action buttons appear below the response. These provide one-tap replies for common responses, saving you from typing. Examples include:
+
+- "I'll try this" / "Done, what's next?"
+- "Didn't help" / "That didn't work"
+- "It worked!" / "This resolved it"
+- "Need clarification"
+- "Upload a photo"
+- "There's an error message" / "No error visible"
+
+Click any button to send that response instantly. Some buttons (like "Upload a photo" or "There's an error message") open a text input pre-filled with a helpful prompt.
+
+## Step cards
+
+When the AI suggests a specific troubleshooting action, it appears as a structured **Step Card** with:
+
+- **Step number** (e.g., "Step 1 of ~3")
+- **Title** -- What you need to do
+- **Instructions** -- Detailed guidance for completing the step
+- **Safety badge** -- Either "Safe for your team" (green checkmark) or "Technician Required" (amber warning) with an explanation
+
+Each step card includes action buttons:
+- **Done** -- Mark the step as completed and continue
+- **Didn't work** -- Tell the AI the step did not resolve the issue
+
+<Callout kind="info">
+Steps marked "Technician Required" indicate actions that should only be performed by a qualified service technician due to safety concerns, specialized tools, or warranty requirements.
+</Callout>
+
+## Photo upload during chat
+
+You can upload photos at any point during the conversation using two buttons next to the text input:
+
+- **Camera button** -- Opens your device camera to take a photo (especially useful on mobile)
+- **Image upload button** -- Opens a file picker to select an existing photo
+
+Photos help the AI better understand the current state of the equipment. For example, you might photograph an error code that appeared after a troubleshooting step, or show the AI the result of an inspection.
+
+<Callout kind="alert">
+Photos must be JPG, PNG, or WebP format and under 10 MB. HEIC files are not supported -- use your camera to take a new photo instead. You can attach up to 5 photos per message.
+</Callout>
+
+## Confidence badges
+
+The AI attaches a confidence level to its responses, displayed as a small badge beneath the message:
+
+| Confidence | Indicator | Meaning |
+|---|---|---|
+| **High** | Green dot | The AI is confident in its assessment based on clear symptoms and known patterns |
+| **Medium** | Amber dot | The AI has a reasonable assessment but some uncertainty remains |
+| **Low** | Orange dot | The AI needs more information to narrow down the diagnosis |
+
+The confidence level helps you gauge how much to rely on the AI's suggestions versus seeking professional help.
+
+## Technician warning
+
+When the AI detects that an issue likely requires professional service -- due to safety risks, specialized tools, or the complexity of the repair -- a **Technician Warning** banner appears in the message. This alerts you that continuing without a qualified technician may be inadvisable.
+
+## Need a Tech? banner
+
+A persistent amber banner may appear at the top of the chat area reading "Need a technician?" with a **Call a Tech** button. This provides a quick escape hatch to schedule professional service at any point during the conversation without losing your diagnostic progress.
+
+Clicking **Call a Tech** opens the [Schedule a Service Call dialog](/issues/resolving-issues).
+
+## Inline escalation
+
+If the AI determines that the issue cannot be resolved through self-diagnosis, an **inline escalation** panel appears within the chat. It displays:
+
+- A message: "Still having issues? Get help from a certified technician."
+- A **Contact Technician** button that opens the service scheduling flow.
+
+This is different from the top banner -- it appears contextually within the conversation when the AI reaches the limits of what can be done remotely.
+
+## Resolution celebration
+
+When the AI determines that the issue has been resolved (either because you confirmed a step worked or explicitly said the problem is fixed), a celebration animation triggers with confetti and a success message. The issue status is automatically updated to **Resolved**.
+
+## Resource cards
+
+The AI may include helpful resources in its messages, such as:
+
+- **Video tutorials** -- YouTube or manufacturer training videos relevant to the equipment and issue
+- **Articles** -- Technical documentation or community guides
+- **Documentation** -- Official manufacturer manuals or service bulletins
+
+Each resource card shows the title, source, type, and duration (for videos), with a link to open the resource.
+
+## Escalation summary
+
+If the issue is escalated to a technician from within the chat, an **Escalation Summary** appears showing the AI's findings, steps already taken, and the diagnosis summary. This information is automatically included when you schedule service, so the technician arrives informed.
+
+## Diagnostic report generation
+
+The AI diagnostic chat feeds into the broader diagnostic system. Conversation data, including symptoms identified, steps completed, and photos shared, can contribute to a [diagnostic report](/issues/diagnostic-reports) that provides a structured summary of the troubleshooting process.
+
+## Tier limits
+
+<Callout kind="alert" title="Plan limits apply">
+AI diagnostic chats are subject to monthly usage limits based on your subscription tier:
+
+- **Essential plan** -- 15 diagnostic chats per month
+- **Professional plan** -- Unlimited diagnostic chats
+- **Trial** -- Same limits as Professional
+
+When you reach your monthly limit, a modal appears explaining the limit and when it resets. You can upgrade your plan from **Settings > Organization > Billing** to get more chats.
+</Callout>
+
+## Tips for effective diagnosis
+
+<ExpandableGroup>
+  <Expandable title="How do I get the best results from AI diagnosis?">
+    Provide as much detail as possible when creating the issue -- include error codes, photos of the problem, and a description of when it started. During the chat, answer questions specifically and upload photos when asked. The more context the AI has, the more accurate its diagnosis will be.
+  </Expandable>
+  <Expandable title="Can I return to a chat later?">
+    Yes. Active diagnostic conversations are saved automatically. Return to the issue detail page and open the **Diagnostics** tab to see all conversations. Click any active conversation to continue where you left off.
+  </Expandable>
+  <Expandable title="What if the AI cannot solve my problem?">
+    If the AI reaches the limits of what it can diagnose remotely, it will suggest escalating to a technician. You can click the **Contact Technician** button in the inline escalation panel or the **Call a Tech** banner to schedule professional service. All diagnostic findings are carried over to the service summary.
+  </Expandable>
+  <Expandable title="Can I have multiple diagnostic chats for the same issue?">
+    Yes. You can start multiple diagnostic conversations for the same issue. This is useful if the problem changes or if you want a fresh perspective. All conversations are listed in the **Diagnostics** tab of the issue detail page.
+  </Expandable>
+</ExpandableGroup>

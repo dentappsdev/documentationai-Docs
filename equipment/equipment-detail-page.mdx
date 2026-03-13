@@ -1,0 +1,173 @@
+---
+title: Equipment Detail Page
+description: Explore all eight tabs on the equipment detail page, from health overview and maintenance schedules to compliance tasks, SOPs, and documents.
+---
+
+## Everything about a single piece of equipment
+
+The equipment detail page is your comprehensive view of an individual piece of equipment. It shows the equipment name, type, current status, and provides eight tabs covering every aspect of equipment management.
+
+Navigate to any equipment detail page by selecting a row on the [Equipment list](/equipment/overview) or by visiting `/equipment/{id}` directly.
+
+<!-- Screenshot needed: Equipment detail page header showing equipment name, status badge, and action buttons -->
+
+## Page header
+
+The header displays:
+
+- **Equipment name** in large text (e.g., "Midmark M11")
+- **Equipment type** below the name
+- **Action buttons** on the right side (available buttons depend on your role and equipment status)
+
+### Action buttons
+
+| Button | Who sees it | When visible | Action |
+|---|---|---|---|
+| **Edit** | Admin only | Always | Opens a dialog to edit all equipment fields |
+| **Archive** | Admin only | When equipment is not already archived | Archives the equipment (removes it from active use) |
+| **Log Maintenance** | All roles | When equipment is not archived | Opens the smart maintenance logging dialog |
+| **Report Issue** | All roles | When equipment is not archived | Navigates to the issue creation form with this equipment pre-selected |
+
+## Tabs
+
+The detail page has eight tabs. Select any tab to view its content. The active tab is reflected in the URL (e.g., `?tab=maintenance`), so you can bookmark or share links to specific tabs.
+
+### Overview
+
+The Overview tab provides a dashboard-style summary of the equipment's current state.
+
+**Status conflict warning** -- If the equipment is marked as "Operational" but has open issues, a yellow banner appears: "This equipment is marked as Operational but has X open issues." An **Update Status** button lets admins correct the status.
+
+**Active alerts** -- Displays any overdue maintenance tasks or open issues that need attention.
+
+**Status strip** -- Four mini stat cards showing:
+- **Status** -- Current operational status (Operational, Warning, Critical, Maintenance Due)
+- **Open Issues** -- Number of unresolved issues
+- **Last Maintenance** -- Days since the last maintenance event (or "Today" if done today)
+- **Health Score** -- A percentage score calculated from maintenance compliance, issue history, and schedule adherence
+
+**Equipment details card** -- A compact grid showing manufacturer, model, category, equipment age, serial number, and location. Clicking this card navigates to the Details tab.
+
+**Health Score and Service History** -- Two side-by-side cards showing the health score breakdown (with contributing factors) and a summary of service history.
+
+**Maintenance cards** -- Two side-by-side cards:
+- **Last Maintenance** -- Date, performer name, and notes from the most recent maintenance event.
+- **Next Due** -- The next upcoming maintenance task with a due date badge. Color-coded: red for overdue, yellow for due within 7 days, green for later. If no schedule exists, a link to add one is shown.
+
+**SOPs and Tips preview** -- Preview cards showing linked SOPs and available tips/warnings for this equipment model.
+
+**Warranty status** -- If warranty information exists, a card shows the expiry date with an Active, Expiring Soon, or Expired badge.
+
+### Details
+
+The Details tab shows all recorded information about the equipment in organized sections:
+
+- **Manufacturer Information** -- Manufacturer, Model, Serial Number, Equipment Type, and Category.
+- **Location** -- The assigned room or location.
+- **Criticality** -- The criticality level with a description (e.g., "High priority" for Critical/High, "Standard priority" for Medium/Low).
+- **Important Dates** -- Acquisition Date and the date the equipment was added to ChairPulse.
+- **Warranty** -- Warranty expiry date with Active/Expired badge and days remaining.
+- **Service & Contact** -- Expected Lifespan, Service Contact phone number, and Sales Rep name (shown only if any of these fields have values).
+- **Notes** -- Any free-text notes entered for this equipment.
+
+### Maintenance
+
+The Maintenance tab is your hub for managing preventive maintenance schedules and viewing maintenance history.
+
+**Suggested Maintenance Tasks** -- If ChairPulse has recommendations from the master catalog for your equipment's manufacturer and model, a collapsible panel appears with suggested tasks. Each suggestion shows the task name, frequency (e.g., Monthly, Quarterly), priority, and whether it should be performed by staff or a technician. Tasks can be expanded to view detailed instructions. Select **Add** to create a schedule from a suggestion.
+
+**Maintenance Schedules** -- Lists all active recurring maintenance schedules. Each schedule shows its description, frequency label (Daily, Weekly, Bi-weekly, Monthly, Quarterly, Semi-annually, Annually, or a custom interval), and an "Active" badge. Select any schedule to edit it. Use the **Add** button to create a new schedule.
+
+**Bulk apply** -- If you have multiple pieces of the same model and some do not have maintenance schedules, an **Apply to X others** button appears, letting admins and managers copy schedules to sibling equipment.
+
+**Sibling detection banner** -- If another piece of the same model already has maintenance tasks configured, a banner offers to copy those tasks to this equipment.
+
+**Maintenance History** -- Lists all completed maintenance events with the date, performer name, notes, and a "Completed" badge.
+
+**Available Recommendations** -- If recommendations were saved during the equipment setup wizard, they appear here with **Add** and dismiss options.
+
+### Service History
+
+The Service History tab tracks all reported issues for this equipment.
+
+**Reported Issues** -- Each issue shows:
+- Priority indicator (colored dot: red for high, yellow for medium, gray for low)
+- Issue title and creation date
+- Status badge (Open, In Progress, or Resolved)
+- Number of tech visits (if any), with the vendor name
+- **AI Diagnose** button for unresolved issues, which starts an AI diagnostic conversation
+
+If no issues have been reported, a green "No Issues Reported" message appears with the text "This equipment has no reported issues."
+
+### SOPs
+
+The SOPs tab manages Standard Operating Procedures linked to this equipment.
+
+**Suggested SOPs** -- If the master catalog has SOP suggestions for your equipment model, a collapsible panel lists them. Select **Create** to generate an AI-powered SOP from a suggestion.
+
+**Standard Operating Procedures** -- Lists all SOPs linked to this equipment. Each SOP shows its title, source badge (AI, Uploaded, or Manual), and last updated date. Select any SOP to view its full content.
+
+Use the **Create SOP** button to create a new SOP linked to this equipment, either from scratch or using AI generation.
+
+**Available Recommendations** -- Saved SOP recommendations from the setup wizard appear here with **Add** and dismiss options.
+
+<Callout kind="tip">
+When creating SOPs, link them to specific equipment or equipment types so they appear in this tab for easy access.
+</Callout>
+
+### Documents
+
+The Documents tab lets you upload and manage files associated with this equipment. See [Documents and Photos](/equipment/documents-and-photos) for detailed information.
+
+### Compliance
+
+The Compliance tab shows all compliance tasks automatically generated for this equipment based on its category and your jurisdiction's regulatory requirements.
+
+Each task displays:
+- **Task title** (with the equipment name stripped for cleaner display)
+- **Frequency badge** (e.g., Monthly, Annually)
+- **Category** (e.g., Sterilization Equipment, Radiation Equipment)
+- **Status badge**:
+  - **Auto** (green) -- Automatically tracked, no manual action needed
+  - **Done** (green) -- Task has been completed
+  - **Overdue** (red) -- Task is past its due date
+  - **Due [date]** -- Task is pending with the next due date shown
+
+Selecting a compliance task navigates to the corresponding compliance requirement detail page.
+
+<Callout kind="info">
+Compliance tasks are automatically created when you add equipment in a compliance-relevant category (e.g., Autoclaves & Sterilizers, X-Ray & Imaging). If no tasks appear, the equipment category may not have associated compliance requirements for your jurisdiction.
+</Callout>
+
+### Tips & Warnings
+
+The Tips & Warnings tab displays model-specific tips, warnings, and best practices pulled from ChairPulse's knowledge base for the equipment's manufacturer and model.
+
+Tips are organized into three priority levels:
+- **Critical** -- Must-know information about safety or regulatory requirements
+- **Recommended** -- Best practices for optimal equipment performance
+- **Optional** -- Nice-to-know information and advanced tips
+
+<Callout kind="info">
+Tips and warnings require both the manufacturer and model fields to be populated. If either is missing, a message reads "Manufacturer and model information is required to display tips and warnings."
+</Callout>
+
+## Editing equipment
+
+Admins can select the **Edit** button to modify any equipment field. The edit dialog allows changes to all fields including name, manufacturer, model, serial number, status, criticality, room assignment, warranty information, service contact, and notes.
+
+## Archiving equipment
+
+Admins can select the **Archive** button to retire a piece of equipment. Archiving:
+- Changes the equipment status to "Archived"
+- Disables the **Log Maintenance** and **Report Issue** buttons
+- Shows an "Archived" badge on the equipment header
+
+After archiving, you are redirected to the equipment list.
+
+## Related pages
+
+- [Equipment Overview](/equipment/overview) -- The main equipment list
+- [Adding Equipment](/equipment/adding-equipment) -- Adding new equipment to your inventory
+- [Documents and Photos](/equipment/documents-and-photos) -- Managing uploaded files
+- [Equipment Categories](/equipment/equipment-categories) -- Understanding equipment categorization

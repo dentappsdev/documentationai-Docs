@@ -1,0 +1,116 @@
+---
+title: Equipment Categories
+description: Reference list of all 30 equipment categories in ChairPulse, including sub-categories for dental chair and delivery unit systems.
+---
+
+## How equipment categories work
+
+Every piece of equipment in ChairPulse is assigned to one of 30 categories. Categories determine:
+
+- Which maintenance task recommendations ChairPulse suggests from the master catalog
+- Which compliance requirements are automatically applied based on your jurisdiction
+- How equipment is grouped in filter dropdowns on the [Equipment list](/equipment/overview)
+- Which SOP suggestions are available for the equipment model
+
+When you [add equipment](/equipment/adding-equipment), the category is the first selection you make in the wizard. ChairPulse then filters manufacturers and models based on your chosen category.
+
+## All equipment categories
+
+ChairPulse includes the following 30 categories in its master catalog:
+
+| # | Category |
+|---|---|
+| 1 | 3D Printers |
+| 2 | Air Polishers |
+| 3 | Amalgam Separators |
+| 4 | Amalgamators |
+| 5 | Apex Locators |
+| 6 | Autoclaves & Sterilizers |
+| 7 | Compressors |
+| 8 | Curing Lights |
+| 9 | Dental Chairs & Delivery Units |
+| 10 | Dental Lasers |
+| 11 | Dental Microscopes |
+| 12 | Digital Scanners & CAD/CAM |
+| 13 | Electric Handpiece Motors |
+| 14 | Electrosurgery Units |
+| 15 | Endodontic Equipment |
+| 16 | Handpieces |
+| 17 | Implant Motors |
+| 18 | Intraoral Cameras |
+| 19 | Lab Equipment |
+| 20 | Mixing Machines |
+| 21 | Nitrous Oxide Systems |
+| 22 | Operatory Lights |
+| 23 | Patient Monitors |
+| 24 | Prophy Jets |
+| 25 | Suction Units |
+| 26 | Ultrasonic Cleaners |
+| 27 | Ultrasonic Scalers |
+| 28 | Vacuum Systems |
+| 29 | X-Ray & Imaging |
+| 30 | Other |
+
+<Callout kind="tip">
+If your equipment does not fit any of the standard categories, select **Other**. You can also create a custom category during the [equipment setup wizard](/equipment/adding-equipment) by typing a category name and selecting **Create**.
+</Callout>
+
+## Sub-categories: Dental Chairs & Delivery Units
+
+The **Dental Chairs & Delivery Units** category is unique because it supports sub-categories. A dental operatory often consists of a system with multiple components. ChairPulse lets you register these as a combined system or as individual components.
+
+| Sub-category | Value | Description |
+|---|---|---|
+| **Dental Chair** | `dental_chair` | The patient seating unit, including hydraulic or electric positioning mechanisms. |
+| **Delivery Unit** | `delivery_unit` | The instrument delivery system, including handpiece connections, syringes, and controls. |
+| **Chair & Delivery Unit (Combined)** | `combo_chair_delivery` | A combined unit where the chair and delivery system are integrated as one piece of equipment. |
+| **Operatory Light** | `operatory_light` | The overhead examination light mounted on the chair or ceiling. |
+| **Assistant's Instrumentation** | `assistant_instrumentation` | The assistant-side instrument panel, including suction, air/water syringe, and curing light holder. |
+
+### System equipment
+
+When you select a model in the **Dental Chairs & Delivery Units** category that is marked as a "system" in the master catalog, ChairPulse displays a component selector. This lets you specify which sub-components are part of your particular installation.
+
+For example, an A-Dec 500 system might include:
+- Dental Chair
+- Delivery Unit
+- Operatory Light
+
+Registering equipment as a system allows ChairPulse to scope maintenance tasks to specific components (e.g., "Lubricate chair hydraulics" targets the Dental Chair component, while "Clean fiber optic bundles" targets the Delivery Unit).
+
+### Maintenance component types
+
+When maintenance tasks are created for system equipment, they can be scoped to a specific component:
+
+| Component Type | Label |
+|---|---|
+| `system_general` | General / Whole System |
+| `dental_chair` | Dental Chair |
+| `delivery_unit` | Delivery Unit |
+| `operatory_light` | Operatory Light |
+
+This scoping ensures maintenance checklists are specific and actionable for the technician performing the work.
+
+## Compliance-relevant categories
+
+Certain equipment categories trigger automatic compliance task creation when equipment is added. These tasks are based on your practice's jurisdiction and the applicable regulatory requirements. For example:
+
+- **Autoclaves & Sterilizers** may generate spore testing and sterilization monitoring tasks.
+- **X-Ray & Imaging** may generate radiation safety inspection and registration tasks.
+- **Nitrous Oxide Systems** may generate sedation equipment inspection tasks.
+
+See the [Compliance](/compliance) section for more details on how compliance tasks are managed.
+
+## Custom categories
+
+If your practice uses equipment that does not fit any of the 30 standard categories, you can create a custom category during the equipment setup wizard. Custom categories:
+
+- Appear in filter dropdowns alongside standard categories
+- Do not have pre-built maintenance recommendations from the master catalog (you will need to create custom maintenance schedules)
+- Do not trigger automatic compliance task creation
+
+## Related pages
+
+- [Adding Equipment](/equipment/adding-equipment) -- How to use categories during equipment setup
+- [Equipment Overview](/equipment/overview) -- Filtering equipment by category
+- [Equipment Detail Page](/equipment/equipment-detail-page) -- Viewing an equipment record's category and details
