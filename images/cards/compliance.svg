@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D1FAE5;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6EE7B7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000015"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)" rx="12"/>
+  <circle cx="250" cy="500" r="180" fill="#ffffff08"/>
+  <circle cx="950" cy="100" r="200" fill="#ffffff10"/>
+  <circle cx="600" cy="300" r="60" fill="#ffffff20" filter="url(#shadow)"/>
+  <!-- Clipboard with checkmark -->
+  <g transform="translate(568, 248)" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="8" width="56" height="72" rx="6" fill="#ffffffCC"/>
+    <rect x="18" y="0" width="28" height="16" rx="4" fill="#10B981" stroke="#ffffff"/>
+    <polyline points="20,44 30,54 48,36" stroke-width="5"/>
+  </g>
+</svg>

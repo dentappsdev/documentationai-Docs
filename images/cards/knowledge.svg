@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D1FAF0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#6EE7C8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000015"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)" rx="12"/>
+  <circle cx="200" cy="150" r="170" fill="#ffffff08"/>
+  <circle cx="1000" cy="450" r="200" fill="#ffffff10"/>
+  <circle cx="600" cy="300" r="60" fill="#ffffff20" filter="url(#shadow)"/>
+  <!-- Open book icon -->
+  <g transform="translate(564, 256)" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M36 16 C36 16 20 8 4 12 L4 68 C20 64 36 72 36 72 C36 72 52 64 68 68 L68 12 C52 8 36 16 36 16Z" fill="#ffffffCC"/>
+    <line x1="36" y1="16" x2="36" y2="72"/>
+    <!-- Page lines left -->
+    <line x1="14" y1="28" x2="28" y2="26" stroke="#059669" stroke-width="2.5"/>
+    <line x1="14" y1="38" x2="28" y2="36" stroke="#059669" stroke-width="2.5"/>
+    <line x1="14" y1="48" x2="28" y2="46" stroke="#059669" stroke-width="2.5"/>
+    <!-- Page lines right -->
+    <line x1="44" y1="26" x2="58" y2="28" stroke="#059669" stroke-width="2.5"/>
+    <line x1="44" y1="36" x2="58" y2="38" stroke="#059669" stroke-width="2.5"/>
+    <line x1="44" y1="46" x2="58" y2="48" stroke="#059669" stroke-width="2.5"/>
+  </g>
+</svg>

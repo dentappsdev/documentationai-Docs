@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FCD34D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00000015"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)" rx="12"/>
+  <circle cx="300" cy="480" r="200" fill="#ffffff08"/>
+  <circle cx="900" cy="120" r="180" fill="#ffffff10"/>
+  <circle cx="600" cy="300" r="60" fill="#ffffff20" filter="url(#shadow)"/>
+  <!-- Alert circle with AI sparkle -->
+  <g transform="translate(564, 252)" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="36" cy="40" r="32" fill="#ffffffCC"/>
+    <line x1="36" y1="26" x2="36" y2="44" stroke="#F59E0B" stroke-width="5"/>
+    <circle cx="36" cy="54" r="3" fill="#F59E0B"/>
+    <!-- AI sparkle -->
+    <path d="M62 8 L64 14 L70 16 L64 18 L62 24 L60 18 L54 16 L60 14Z" fill="#ffffff" stroke="none"/>
+    <path d="M8 64 L10 68 L14 70 L10 72 L8 76 L6 72 L2 70 L6 68Z" fill="#ffffffCC" stroke="none"/>
+  </g>
+</svg>
