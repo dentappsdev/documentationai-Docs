@@ -144,6 +144,7 @@
               { "title": "Office Settings", "path": "settings/office-settings" },
               { "title": "Organization Settings", "path": "settings/organization-settings" },
               { "title": "Team Management", "path": "settings/team-management" },
+              { "title": "Room Assignments", "path": "settings/room-assignments" },
               { "title": "Service Providers", "path": "settings/service-providers" },
               { "title": "Operating Days", "path": "settings/operating-days" },
               { "title": "Billing & Subscription", "path": "settings/billing-and-subscription" }

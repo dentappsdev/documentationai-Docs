@@ -1,0 +1,76 @@
+---
+title: Room Assignments
+description: Assign staff members to rooms on a per-day-of-week basis so maintenance tasks automatically inherit the correct assignee.
+---
+
+## Assign staff to rooms by day of week
+
+**Room Assignments** let you define which team member is responsible for each room on each day your office operates. When a staff member is assigned to a room, all maintenance tasks for equipment in that room automatically inherit that assignment -- no need to set assignees task by task.
+
+This is especially useful for practices where different staff rotate through operatories, sterilization areas, or lab rooms on different days.
+
+Navigate to **Settings > Office Settings**, then select the **Assignments** tab.
+
+{/* Screenshot needed: Assignments tab showing the room assignment grid with rows of rooms and columns for each operating day */}
+
+## The assignment grid
+
+The Assignments tab displays a grid where:
+
+- **Rows** represent each room in your office
+- **Columns** represent your office's operating days (e.g., Monday through Friday)
+- **Cells** contain a dropdown to select a staff member
+
+Only days configured as operating days in your [Operating Days](/settings/operating-days) settings appear as columns.
+
+## Assigning a staff member
+
+<Steps>
+  <Step title="Select the dropdown">
+    Click the dropdown in the cell where the target room row meets the desired day column.
+  </Step>
+  <Step title="Pick a team member">
+    Select a team member from the list. The cell updates immediately and any pending or overdue maintenance tasks with room-level assignment for equipment in that room on matching dates are automatically updated to the selected assignee.
+  </Step>
+</Steps>
+
+## "All days" shortcut
+
+Each room row has an **All days** button. Click it to assign the same staff member to every operating day for that room in one action. This is useful when one person is responsible for a room all week.
+
+## Removing an assignment
+
+To remove a staff member from a room on a specific day, open the dropdown for that cell and select the empty (blank) option. Any maintenance tasks that inherited their assignment from this room assignment revert to unassigned.
+
+## How task inheritance works
+
+ChairPulse uses a three-tier assignment hierarchy for maintenance tasks:
+
+| Priority | Source | Description |
+|---|---|---|
+| Lowest | **Room-level** | Inherited from the room assignment grid based on the task's day of week |
+| Medium | **Schedule-level** | Set directly on the maintenance schedule template |
+| Highest | **Instance-level** | Set directly on a specific task instance |
+
+Higher-priority assignments always override lower ones. Room assignments serve as the default baseline.
+
+<Callout kind="info" title="Room assignments are the default, not the final word">
+If a schedule-level or instance-level assignee is set on a task, it takes precedence over the room assignment. Room assignments only apply to tasks where the assignment source is "room" -- meaning no override has been set at a higher level.
+</Callout>
+
+## What gets updated automatically
+
+When you assign or remove a staff member in the grid:
+
+- All **pending** and **overdue** maintenance tasks with a room-level assignment source for equipment in that room are updated immediately
+- Tasks on dates matching the assigned day of week receive the new assignee
+- Completed or skipped tasks are not affected
+- Tasks with a schedule-level or instance-level override are not affected
+
+## Related pages
+
+- [Office Settings](/settings/office-settings) -- The Assignments tab lives within Office Settings
+- [Room View](/maintenance/room-view) -- See today's room assignee on each room card in the maintenance view
+- [Team Management](/settings/team-management) -- Manage the team members available for assignment
+- [Operating Days](/settings/operating-days) -- Configure which days appear as columns in the assignment grid
+- [Rooms & Locations](/rooms-and-locations/overview) -- Manage the rooms that appear as rows in the grid
