@@ -1,0 +1,21 @@
+name: Update Documentation Embeddings
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.mdx'
+      - 'documentation.json'
+  workflow_dispatch: # Manual trigger
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger documentation ingestion
+        run: |
+          curl -s -X POST \
+            "${{ secrets.SUPABASE_URL }}/functions/v1/ingest-docs" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{}' | jq .
