@@ -25,11 +25,19 @@ The page header includes three action buttons:
 
 - **Reassign** -- Opens the bulk reassign dialog to change task assignments across multiple schedules at once.
 - **Templates** -- Opens the [Task Template Library](/maintenance/task-templates) to quickly add pre-built maintenance tasks.
-- **Add Maintenance Task** -- Opens the schedule creation dialog where you choose equipment, set frequency, assign a team member, and optionally link an SOP.
+- **Add Maintenance Task** -- Opens the schedule creation dialog where you choose equipment, set frequency, assign a team member, and optionally link an SOP. If other equipment of the same model exists, a scope selector lets you create a [shared maintenance task](/maintenance/shared-maintenance-tasks) across all matching units at once.
 
 <Callout kind="info">
 To complete daily tasks, head to the **Dashboard**. The Maintenance page is for viewing and editing your schedules, not for day-to-day task completion.
 </Callout>
+
+## Shared maintenance tasks
+
+When your practice has multiple pieces of the same equipment (e.g., 3 X-ray sensors or 7 dental chairs), you can create a **shared maintenance task** that applies to all of them at once. Shared tasks are managed centrally -- any changes to the schedule, frequency, or SOP update across all linked equipment -- while still allowing per-equipment assignment overrides.
+
+In the Room view, shared tasks appear in a dedicated card at the top of the room category group with an emerald badge showing coverage (e.g., "All 7 operatories").
+
+See [Shared Maintenance Tasks](/maintenance/shared-maintenance-tasks) for the full guide on creating, editing, and managing shared tasks.
 
 ## Viewing your schedules
 
@@ -95,6 +103,9 @@ Select **Clear filters** to reset all filters at once.
 ## Related pages
 
 <Columns>
+  <Card title="Shared Maintenance Tasks" icon="share-2" href="/maintenance/shared-maintenance-tasks">
+    Create tasks that apply to multiple equipment of the same model.
+  </Card>
   <Card title="Calendar View" icon="calendar" href="/maintenance/calendar-view">
     Navigate tasks with Day, Week, and Month calendar views.
   </Card>

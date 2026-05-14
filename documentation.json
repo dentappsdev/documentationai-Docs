@@ -83,6 +83,7 @@
             "icon": "calendar",
             "pages": [
               { "title": "Overview", "path": "maintenance/overview" },
+              { "title": "Shared Maintenance Tasks", "path": "maintenance/shared-maintenance-tasks" },
               { "title": "Calendar View", "path": "maintenance/calendar-view" },
               { "title": "Room View", "path": "maintenance/room-view" },
               { "title": "Task Templates", "path": "maintenance/task-templates" },
@@ -127,7 +128,8 @@
             "group": "Checklists",
             "icon": "list-checks",
             "pages": [
-              { "title": "Overview", "path": "checklists/overview" }
+              { "title": "Overview", "path": "checklists/overview" },
+              { "title": "Shared Checklists", "path": "checklists/shared-checklists" }
             ]
           },
           {

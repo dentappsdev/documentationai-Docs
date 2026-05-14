@@ -48,15 +48,26 @@ If a room has more than 4 tasks, a **"View all"** option appears to expand and s
 
 ## Shared tasks
 
-When multiple rooms in the same category group share identical maintenance tasks (tasks with the same description applied to equipment in every room of the group), ChairPulse detects this automatically and displays a **shared task card** at the top of the group.
+When you create a [shared maintenance task](/maintenance/shared-maintenance-tasks) that spans multiple pieces of the same equipment, the Room view displays it in a dedicated **shared task card** at the top of the room category group.
 
 The shared task card shows:
 
-- A label like "Shared across all 4 Operatories"
-- The list of tasks that are common to all rooms in the group
-- The room names where these shared tasks apply
+- A **"Shared Tasks"** header label
+- An **emerald coverage badge** indicating how many rooms are covered (e.g., "All 7 operatories" or "3 operatories")
+- Each shared task with its description, frequency, linked SOP indicator, evidence requirements, and assigned staff avatars
+
+### Interacting with shared tasks
+
+- **Click the shared task card** to open the **Shared Task Detail Sheet**, where you can see per-equipment status, change per-equipment assignees, assign staff to specific dates, and access the full edit dialog
+- **Click "Edit shared task"** in the detail sheet to open the Edit Maintenance Schedule dialog with two tabs: **Details** (schedule settings) and **Operatories** (linked equipment management)
 
 Room-specific tasks that are not shared continue to appear on each individual room card. If all of a room's tasks are shared, that room card is hidden to reduce visual clutter.
+
+<Callout kind="tip">
+Shared tasks let you manage per-equipment assignment overrides without leaving the Room view. Click into the shared task detail sheet, then click the pencil icon on any equipment row to change its assignee independently.
+</Callout>
+
+For the full guide on creating, editing, and managing shared tasks, see [Shared Maintenance Tasks](/maintenance/shared-maintenance-tasks).
 
 ## Filtering in Room view
 

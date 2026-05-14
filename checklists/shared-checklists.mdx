@@ -1,0 +1,221 @@
+---
+title: Shared Checklists
+description: Create and manage checklist tasks that apply to multiple rooms of the same type, with per-room assignment overrides and centralized editing.
+---
+
+## What are shared checklists?
+
+A **shared checklist** is a single checklist schedule that applies to multiple rooms of the same type across your practice. Instead of creating the same task individually for each operatory, you create it once and ChairPulse links it to all matching rooms automatically.
+
+For example, if your office has 7 operatories, you can create a "Wipe down and disinfect all surfaces" checklist once and have it apply to all 7 rooms. Any changes to the task -- frequency, description, SOP link -- update everywhere at once, while still allowing per-room assignment overrides.
+
+<Callout kind="info">
+Shared checklists are room-based. For equipment-based shared tasks, see [Shared Maintenance Tasks](/maintenance/shared-maintenance-tasks).
+</Callout>
+
+## Creating a shared checklist
+
+When you create a checklist and select a room that has other rooms of the same type in your practice (e.g., multiple operatories), ChairPulse offers a **scope selector** so you can apply the task across all matching rooms at once.
+
+<Steps>
+  <Step title="Open the Add Checklist dialog">
+    From the **Checklists** page, click the **Add Checklist** button in the header.
+  </Step>
+  <Step title="Enter the task description">
+    Describe what needs to be done, e.g., "Wipe down and disinfect all surfaces" or "Check suction lines and flush."
+  </Step>
+  <Step title="Select a room">
+    Choose a room from the dropdown. For example, select "Op 1".
+  </Step>
+  <Step title="Choose your scope">
+    If other rooms of the same type exist (e.g., other operatories), a **scope selector** appears with two options:
+
+    - **All N rooms** (default) -- Creates a shared checklist linked to every matching room (e.g., "All 7 operatories")
+    - **This room only** -- Creates a standard single-room checklist
+
+    Select **All N rooms** to create a shared checklist.
+  </Step>
+  <Step title="Fill in task details">
+    Choose a category, set the frequency, first due date, time of day, and optionally assign a default team member and link an SOP. Configure evidence requirements (notes and/or photos) if needed. These settings apply to all linked rooms.
+  </Step>
+  <Step title="Save">
+    Click **Create Checklist** to create the shared schedule. A confirmation toast shows how many rooms the checklist was created for.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+The scope selector only appears for users with the **admin** or **manager** role, and only when other rooms of the same type exist in your practice.
+</Callout>
+
+## How shared checklists appear in Room view
+
+In the [Room view](/checklists/overview), shared checklists are displayed in a dedicated **shared task card** at the top of each room category group (e.g., Operatories).
+
+The shared task card shows:
+
+- A **"Shared Tasks"** header label
+- An **emerald badge** indicating coverage (e.g., "All 7 operatories" or "3 operatories")
+- A list of all shared checklists in the group, each showing:
+  - Task description
+  - Frequency label
+  - Linked SOP indicator (if applicable)
+  - Evidence requirements (photo or notes icons)
+  - Assigned staff members (up to 3 avatars, then "+N" for additional)
+
+Checklists that are **not** shared continue to appear on individual room cards below. If all of a room's tasks are shared, that room's individual card is hidden to reduce clutter.
+
+{/* Screenshot needed: Shared checklist card in Room view showing emerald coverage badge and task list */}
+
+## Viewing shared checklist details
+
+Click a shared task card to open the **Shared Task Detail Sheet** -- a slide-out panel that shows comprehensive information about the shared schedule and all its linked rooms.
+
+### What the detail sheet shows
+
+- **Task name** and frequency at the top
+- **Type indicator** -- "Checklist" for room-based tasks
+- **Coverage badge** -- "Shared across N operatories" with a collapsible list of all linked rooms
+- **Edit shared task** button to modify the schedule
+
+### Per-room rows
+
+Below the header, each linked room is listed as a separate row showing:
+
+- **Room name** (e.g., "Op 1", "Op 2")
+- **Status badge** (Overdue, Due today, Due soon, On track)
+- **Assigned staff member** with an inline edit button (pencil icon)
+
+{/* Screenshot needed: Shared Checklist Detail Sheet showing per-room rows with assignment overrides */}
+
+## Per-room assignment overrides
+
+Shared checklists have a **default assignee** set at the schedule level, but you can override the assignment for individual rooms. This is useful when different team members are responsible for different operatories or areas.
+
+### Changing a per-room assignee
+
+<Steps>
+  <Step title="Open the shared task detail sheet">
+    Click the shared task card in Room view to open the detail sheet.
+  </Step>
+  <Step title="Click the pencil icon on a room row">
+    Find the room you want to reassign and click the edit (pencil) icon next to the current assignee.
+  </Step>
+  <Step title="Select a team member">
+    Choose a team member from the dropdown. This override applies to all future instances for this specific room only -- other rooms in the shared schedule keep their own assignment.
+  </Step>
+</Steps>
+
+The assignment follows a priority chain:
+
+1. **Per-date override** (highest priority) -- Set from the calendar Day view for a specific date
+2. **Per-room override** -- Set in the shared task detail sheet (stored on the room link)
+3. **Schedule default** -- The default assignee set on the shared schedule itself
+4. **Room assignment** -- The staff member assigned to the room for that day of the week via [Room Assignments](/settings/room-assignments)
+
+<Callout kind="info">
+When you change a per-room assignee, all pending and upcoming task instances for that room are automatically updated. Instances that already have a per-date override are not affected.
+</Callout>
+
+### Assigning across specific dates
+
+For more granular control, you can assign a team member to specific dates for one room:
+
+<Steps>
+  <Step title="Expand a room row">
+    In the shared task detail sheet, click on a room row to expand it.
+  </Step>
+  <Step title="Select dates">
+    Use the quick date buttons (**This week**, **This month**, or **All dates**) or pick individual dates to target.
+  </Step>
+  <Step title="Choose an assignee">
+    Select the team member who should handle this room on the selected dates.
+  </Step>
+</Steps>
+
+These date-specific overrides take the highest priority and will not be changed by any other assignment updates.
+
+## Editing a shared checklist
+
+Click the **Edit shared task** button in the shared task detail sheet to open the **Edit Schedule** dialog. This dialog has two tabs:
+
+### Details tab
+
+Change settings that apply to the entire shared schedule:
+
+- Task description
+- Category
+- Frequency and time of day
+- Default assignee
+- Linked SOP
+- Evidence requirements (notes, photos)
+
+Changes made here update the schedule for **all linked rooms** at once.
+
+### Rooms tab
+
+Manage which rooms are linked to the shared schedule:
+
+- View all currently linked rooms with their per-room assigned staff
+- **Unlink** a room from the shared schedule (the room will no longer have this checklist)
+- If only one room remains after unlinking, the schedule automatically converts from a shared schedule to a standard single-room checklist
+
+{/* Screenshot needed: Edit Schedule dialog showing the Rooms tab with linked room list */}
+
+## Deleting shared checklists
+
+From the edit dialog, you have three options for removing shared checklists:
+
+| Option | What it does |
+|---|---|
+| **Remove from this room** | Unlinks one room from the shared schedule. The schedule continues for the remaining rooms. |
+| **Remove from all rooms** | Deactivates the schedule for all linked rooms. No room retains this checklist. |
+| **Delete schedule** | Permanently removes the schedule and all its instances. |
+
+<Callout kind="alert">
+Removing a checklist from all rooms or deleting the schedule cannot be undone. Completed task history is preserved, but all future instances are removed.
+</Callout>
+
+## Adding rooms to an existing shared checklist
+
+If you add a new room of the same type to your practice after a shared checklist already exists:
+
+<Steps>
+  <Step title="Create a checklist for the new room">
+    Open the Add Checklist dialog and select the new room.
+  </Step>
+  <Step title="ChairPulse detects the existing shared schedule">
+    The scope selector recognizes that a shared checklist already covers other rooms of this type.
+  </Step>
+  <Step title="The new room is added to the existing schedule">
+    Instead of creating a duplicate, the new room is linked to the existing shared schedule. All settings (frequency, SOP, evidence requirements) are inherited automatically.
+  </Step>
+</Steps>
+
+## Shared checklists vs. shared maintenance tasks
+
+| Aspect | Shared Checklists | Shared Maintenance Tasks |
+|---|---|---|
+| **Linked to** | Multiple rooms of the same type | Multiple equipment of the same model |
+| **Example** | "Disinfect surfaces" across all operatories | "Spore test" across all autoclaves |
+| **Per-item override** | Per-room assignee | Per-equipment assignee |
+| **Created from** | Checklists page | Maintenance page or Equipment detail page |
+| **Scope selector** | Appears when multiple rooms of same type exist | Appears when multiple equipment of same model exist |
+
+Both types share the same underlying architecture and provide the same management capabilities -- centralized editing, per-item assignment overrides, date-specific assignments, and the ability to link or unlink individual items.
+
+## Related pages
+
+<Columns>
+  <Card title="Checklists Overview" icon="list-checks" href="/checklists/overview">
+    Full overview of the Checklists module.
+  </Card>
+  <Card title="Shared Maintenance Tasks" icon="wrench" href="/maintenance/shared-maintenance-tasks">
+    Equipment-based shared tasks.
+  </Card>
+  <Card title="Room Assignments" icon="users" href="/settings/room-assignments">
+    Configure default staff assignments by room and day.
+  </Card>
+  <Card title="Completing Tasks" icon="check-circle" href="/maintenance/completing-maintenance-tasks">
+    Mark shared task instances as complete.
+  </Card>
+</Columns>

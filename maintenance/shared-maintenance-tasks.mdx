@@ -1,0 +1,205 @@
+---
+title: Shared Maintenance Tasks
+description: Create and manage maintenance tasks that apply to multiple pieces of the same equipment across your practice, with per-equipment assignment overrides and centralized editing.
+---
+
+## What are shared maintenance tasks?
+
+A **shared maintenance task** is a single maintenance schedule that applies to multiple pieces of the same type of equipment across your practice. Instead of creating the same task separately for each unit, you create it once and ChairPulse links it to all matching equipment automatically.
+
+For example, if your office has 7 operatories that each have a dental chair, you can create a "Wipe down and disinfect chair surfaces" task once and have it apply to all 7 chairs. Any changes to the task -- frequency, description, SOP link -- update everywhere at once, while still allowing per-equipment assignment overrides.
+
+<Callout kind="info">
+Shared maintenance tasks are equipment-based. For room-based shared tasks, see [Shared Checklists](/checklists/shared-checklists).
+</Callout>
+
+## Creating a shared maintenance task
+
+When you create a maintenance task and select a piece of equipment that has other units of the same model in your practice, ChairPulse offers a **scope selector** so you can apply the task across all matching equipment at once.
+
+<Steps>
+  <Step title="Open the Add Maintenance Task dialog">
+    From the **Maintenance** page, click the **Add Maintenance Task** button in the header. You can also access this from an equipment detail page.
+  </Step>
+  <Step title="Select your equipment">
+    Choose the equipment from the dropdown. For example, select "X-Ray Sensor - Op 1".
+  </Step>
+  <Step title="Choose your scope">
+    If other equipment of the same model exists in your practice, a **scope selector** appears with two options:
+
+    - **All N units** (default) -- Creates a shared task linked to every matching unit (e.g., "All 3 X-Ray Sensors")
+    - **This unit only** -- Creates a standard single-equipment task
+
+    Select **All N units** to create a shared task.
+  </Step>
+  <Step title="Fill in task details">
+    Enter the task description, frequency, first due date, time of day, and optionally assign a default team member and link an SOP. These settings apply to all linked equipment.
+  </Step>
+  <Step title="Save">
+    Click **Save** to create the shared schedule. A confirmation toast shows how many units the task was created for (e.g., "Maintenance created for 3 units").
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+If some of the matching equipment already has this task, ChairPulse will add only the missing units to the existing shared schedule rather than creating a duplicate.
+</Callout>
+
+## How shared tasks appear in Room view
+
+In the [Room view](/maintenance/room-view), shared maintenance tasks are displayed in a dedicated **shared task card** at the top of each room category group (e.g., Operatories).
+
+The shared task card shows:
+
+- A **"Shared Tasks"** header label
+- An **emerald badge** indicating coverage (e.g., "All 7 operatories" or "3 operatories")
+- A list of all shared tasks in the group, each showing:
+  - Task description
+  - Frequency label
+  - Linked SOP indicator (if applicable)
+  - Evidence requirements (photo or notes icons)
+  - Assigned staff members (up to 3 avatars, then "+N" for additional)
+
+Tasks that are **not** shared continue to appear on individual room cards below.
+
+{/* Screenshot needed: Shared task card in Room view showing emerald coverage badge and task list */}
+
+## Viewing shared task details
+
+Click a shared task card to open the **Shared Task Detail Sheet** -- a slide-out panel that shows comprehensive information about the shared schedule and all its linked equipment.
+
+### What the detail sheet shows
+
+- **Task name** and frequency at the top
+- **Type indicator** -- "Equipment" for maintenance tasks
+- **Coverage badge** -- "Shared across N operatories" with a collapsible list of all linked rooms
+- **Edit shared task** button to modify the schedule
+
+### Per-equipment rows
+
+Below the header, each linked piece of equipment is listed as a separate row showing:
+
+- **Equipment name** and the room it is located in
+- **Status badge** (Overdue, Due today, Due soon, On track)
+- **Assigned staff member** with an inline edit button (pencil icon)
+
+{/* Screenshot needed: Shared Task Detail Sheet showing per-equipment rows with assignment overrides */}
+
+## Per-equipment assignment overrides
+
+Shared tasks have a **default assignee** set at the schedule level, but you can override the assignment for individual pieces of equipment. This is useful when different team members are responsible for different rooms.
+
+### Changing a per-equipment assignee
+
+<Steps>
+  <Step title="Open the shared task detail sheet">
+    Click the shared task card in Room view to open the detail sheet.
+  </Step>
+  <Step title="Click the pencil icon on an equipment row">
+    Find the equipment you want to reassign and click the edit (pencil) icon next to the current assignee.
+  </Step>
+  <Step title="Select a team member">
+    Choose a team member from the dropdown. This override applies to all future instances for this specific equipment only -- other equipment in the shared schedule keeps its own assignment.
+  </Step>
+</Steps>
+
+The assignment follows a priority chain:
+
+1. **Per-date override** (highest priority) -- Set from the calendar Day view for a specific date
+2. **Per-equipment override** -- Set in the shared task detail sheet (stored on the equipment link)
+3. **Schedule default** -- The default assignee set on the shared schedule itself
+4. **Room assignment** -- The staff member assigned to the equipment's room for that day of the week
+
+<Callout kind="info">
+When you change a per-equipment assignee, all pending and upcoming task instances for that equipment are automatically updated. Instances that already have a per-date override are not affected.
+</Callout>
+
+### Assigning across specific dates
+
+For more granular control, you can assign a team member to specific dates for one piece of equipment:
+
+<Steps>
+  <Step title="Expand an equipment row">
+    In the shared task detail sheet, click on an equipment row to expand it.
+  </Step>
+  <Step title="Select dates">
+    Use the quick date buttons (**This week**, **This month**, or **All dates**) or pick individual dates to target.
+  </Step>
+  <Step title="Choose an assignee">
+    Select the team member who should handle this equipment on the selected dates.
+  </Step>
+</Steps>
+
+These date-specific overrides take the highest priority and will not be changed by any other assignment updates.
+
+## Editing a shared maintenance task
+
+Click the **Edit shared task** button in the shared task detail sheet to open the **Edit Maintenance Schedule** dialog. This dialog has two tabs:
+
+### Details tab
+
+Change settings that apply to the entire shared schedule:
+
+- Task description
+- Frequency and time of day
+- Default assignee
+- Linked SOP
+- Evidence requirements (notes, photos)
+
+Changes made here update the schedule for **all linked equipment** at once.
+
+### Operatories tab
+
+Manage which equipment is linked to the shared schedule:
+
+- View all currently linked equipment with their per-equipment assigned staff
+- **Unlink** a piece of equipment from the shared schedule (it will revert to having no schedule for this task)
+- If only one piece of equipment remains after unlinking, the schedule automatically converts from a shared schedule to a standard single-equipment schedule
+
+{/* Screenshot needed: Edit Maintenance Schedule dialog showing the Operatories tab with linked equipment list */}
+
+## Deleting shared maintenance tasks
+
+From the edit dialog, you have three options for removing shared tasks:
+
+| Option | What it does |
+|---|---|
+| **Remove from this equipment** | Unlinks one piece of equipment from the shared schedule. The schedule continues for the remaining equipment. |
+| **Remove from all equipment** | Deactivates the schedule for all linked equipment. No equipment retains this task. |
+| **Delete schedule** | Permanently removes the schedule and all its instances. |
+
+<Callout kind="alert">
+Removing a task from all equipment or deleting the schedule cannot be undone. Completed task history is preserved, but all future instances are removed.
+</Callout>
+
+## Adding equipment to an existing shared task
+
+If you add new equipment of the same model to your practice after a shared task already exists, ChairPulse handles this automatically:
+
+<Steps>
+  <Step title="Create a maintenance task for the new equipment">
+    Open the Add Maintenance Task dialog and select the new equipment.
+  </Step>
+  <Step title="ChairPulse detects the existing shared schedule">
+    The scope selector recognizes that a shared schedule already covers other units of this model.
+  </Step>
+  <Step title="The new equipment is added to the existing schedule">
+    Instead of creating a duplicate schedule, the new equipment is linked to the existing shared schedule. All settings (frequency, SOP, evidence requirements) are inherited automatically.
+  </Step>
+</Steps>
+
+## Related pages
+
+<Columns>
+  <Card title="Room View" icon="layout-grid" href="/maintenance/room-view">
+    See shared tasks displayed by room category.
+  </Card>
+  <Card title="Maintenance Overview" icon="calendar" href="/maintenance/overview">
+    Full overview of the Maintenance module.
+  </Card>
+  <Card title="Shared Checklists" icon="list-checks" href="/checklists/shared-checklists">
+    Room-based shared tasks for office routines.
+  </Card>
+  <Card title="Completing Tasks" icon="check-circle" href="/maintenance/completing-maintenance-tasks">
+    Mark shared task instances as complete.
+  </Card>
+</Columns>
