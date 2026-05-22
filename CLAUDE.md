@@ -18,10 +18,11 @@ The ChairPulse application codebase is located at `/Users/prabesh/projects/chair
 - Admins and DSO admins see Organization Settings
 - Super admins get a separate admin sidebar
 
-**Subscription Tiers:**
-- Essential ($99/mo, $82/mo annual): 15 diagnostic chats/mo, 5 reports/mo, 25 SOP generations/mo, max 5 team members. No compliance wizard, no learning paths, no invoice uploads.
-- Professional ($139/mo, $115/mo annual): Unlimited diagnostic chats, 30 reports/mo, unlimited SOP generation, max 25 team members. Full access to compliance wizard, learning paths, detailed SOPs, invoice uploads.
-- Trial: Same limits as Professional.
+**Subscription Plan:**
+- Single unified plan: **ChairPulse** at **$159/month per office**
+- All features included for all subscribers (compliance wizard, learning paths, invoice uploads, etc.)
+- AI usage limits: 30 diagnostic chats/mo, 100 detailed SOPs/mo, unlimited standard SOP generation, up to 25 team members
+- Trial: Full access to all features
 
 **Equipment Categories (30):** 3D Printers, Air Polishers, Amalgam Separators, Amalgamators, Apex Locators, Autoclaves & Sterilizers, Compressors, Curing Lights, Dental Chairs & Delivery Units, Dental Lasers, Dental Microscopes, Digital Scanners & CAD/CAM, Electric Handpiece Motors, Electrosurgery Units, Endodontic Equipment, Handpieces, Implant Motors, Intraoral Cameras, Lab Equipment, Mixing Machines, Nitrous Oxide Systems, Operatory Lights, Patient Monitors, Prophy Jets, Suction Units, Ultrasonic Cleaners, Ultrasonic Scalers, Vacuum Systems, X-Ray & Imaging, Other.
 
@@ -49,7 +50,7 @@ The ChairPulse application codebase is located at `/Users/prabesh/projects/chair
 - Use exact UI labels from the codebase (button text, field names, menu items)
 - Use dental-specific examples (autoclave spore testing, X-ray registration, OSHA training)
 - Always include expected outcomes after action steps
-- Note tier restrictions with a Callout when a feature is Professional-only
+- Note AI usage limits with a Callout where relevant (single plan — no tier restrictions)
 - Cross-link aggressively between related pages
 - Add `<!-- REVIEW: description -->` comments where uncertain about UI details
 
