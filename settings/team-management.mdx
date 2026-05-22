@@ -1,38 +1,59 @@
 ---
 title: Team Management
-description: Invite team members, assign roles, manage office access, and control who can do what in your ChairPulse account.
+description: Add team members, staff members, and workstation accounts to your ChairPulse organization — and understand when to use each approach.
 ---
 
 ## Managing your team
 
-Team Management lets you invite colleagues to your ChairPulse organization, assign them roles, control which offices they can access, and remove members when needed. It is accessed from the **Team** tab in [Office Settings](/settings/office-settings).
+ChairPulse offers three ways to add people to your organization, depending on how your practice operates. All options are accessed from the **Team** tab in [Office Settings](/settings/office-settings).
 
-{/* Screenshot needed: Team Management table showing active members and a pending invitation */}
+{/* Screenshot needed: Team tab in Office Settings showing the team members table and staff members section */}
 
-## Team member limits
+## Three ways to add people
 
-The number of team members you can have depends on your subscription tier:
+| Method | What it does | Best for |
+|---|---|---|
+| **Team Members** (email invitation) | Each person gets their own login and account | Larger teams where individual accountability matters |
+| **Staff Members** (direct add, no login) | Added by name only — appear in task assignment dropdowns | Practices using a shared login where you still want to track who performs each task |
+| **Workstations** (shared computer accounts) | A shared login for a specific computer | Operatory or front desk computers used by multiple people |
 
-<Tabs>
-  <Tab title="Essential Plan">
-    **Up to 5 team members** (including the account owner).
+<Callout kind="tip" title="Not sure which to choose?">
+Most small practices use **Staff Members** combined with a **Workstation** account on each shared computer. Larger practices with individual computers tend to use **Team Members** with email invitations.
+</Callout>
 
-    If you need more than 5 team members, upgrade to the Professional plan.
-  </Tab>
-  <Tab title="Professional Plan">
-    **Up to 25 team members** (including the account owner).
+## Team Setup Wizard
 
-    For organizations that need more than 25 members, contact support at hello@chairpulse.com.
-  </Tab>
-</Tabs>
+When you first set up your team, ChairPulse walks you through the **Team Setup Wizard** where you choose your approach:
 
-## Roles and permissions
+<Steps>
+  <Step title="Choose your access model">
+    The wizard presents two options:
 
-ChairPulse has three team roles, each with different levels of access:
+    - **Separate logins for each person** -- Each team member gets their own email invite to create an account and track their own work. Best for larger teams and individual accountability.
+    - **Shared login, track by name** -- Your practice uses one shared account. Add team member names so you can track who performed each task. Best for smaller teams and centralized management.
+  </Step>
+  <Step title="Add your team">
+    Depending on which option you chose:
+
+    - **Separate logins**: Enter email addresses for each team member. Invitations are sent immediately.
+    - **Shared login**: Enter each person's name and optional role (e.g., Hygienist, Dental Assistant). You are automatically added as the first entry.
+  </Step>
+  <Step title="Done">
+    Your team members now appear in task assignment dropdowns throughout ChairPulse. You can add more people anytime from Office Settings.
+  </Step>
+</Steps>
+
+## Team Members (email invitations)
+
+Team Members are people who get their own login credentials and can sign in to ChairPulse independently.
+
+Your organization supports **up to 25 team members**. For organizations that need more, contact support at hello@chairpulse.com.
+
+### Roles and permissions
 
 | Role | Description |
 |---|---|
-| **Admin** | Full access to all features and settings. Can invite members with any role (admin, manager, or staff), manage billing, configure organization settings, and access all offices. |
+| **Admin** | Full access to all features and settings. Can invite members with any role, manage billing, configure organization settings, and access all offices. |
 | **Manager** | Can manage day-to-day operations. Can invite staff members, complete and manage tasks, and access assigned offices. Cannot manage billing or organization-level settings. |
 | **Staff** | Standard access for daily work. Can complete tasks, log issues, and view equipment. Cannot invite other members or change settings. |
 
@@ -40,7 +61,7 @@ ChairPulse has three team roles, each with different levels of access:
 Admins can assign any role when inviting new members. Managers can only invite users with the **Staff** role.
 </Callout>
 
-## Inviting a team member
+### Inviting a team member
 
 <Steps>
   <Step title="Click Invite Member">
@@ -69,7 +90,7 @@ Admins can assign any role when inviting new members. Managers can only invite u
 Invitations expire after 7 days. If a member has not accepted, you can resend the invitation from the team table.
 </Callout>
 
-## The team table
+### The team table
 
 The team table shows all active members and pending invitations in a single view:
 
@@ -81,22 +102,14 @@ The team table shows all active members and pending invitations in a single view
 | **Status** | **Active** (green badge) for accepted members, or **Pending** (amber badge with clock icon) for outstanding invitations. |
 | **Actions** | A three-dot menu for managing the member (see below). |
 
-### Filtering the team table
+Use the controls above the table to filter by **search** (name or email), **role**, or **location**.
 
-Use the controls above the table to narrow the list:
-
-- **Search** -- Filter by name or email address.
-- **Role filter** -- Show All Roles, Admin, Manager, or Staff.
-- **Location filter** -- Show All Locations or a specific office.
-
-A summary line shows the total member count and number of pending invitations (e.g., "8 members total, 2 pending").
-
-## Editing a team member
+### Editing a team member
 
 Click the three-dot menu on a member's row and select **Change Role** to open the Edit Team Member dialog. From here you can:
 
 - **Change their role** -- Select a new role from the dropdown.
-- **Update office access** -- Check or uncheck offices to control which locations they can access. Use **Select All** or **Clear All** for bulk changes.
+- **Update office access** -- Check or uncheck offices to control which locations they can access.
 
 Click **Save Changes** to apply. Role and office access updates take effect immediately.
 
@@ -104,7 +117,7 @@ Click **Save Changes** to apply. Role and office access updates take effect imme
 You cannot edit your own role or remove yourself from the organization.
 </Callout>
 
-## Removing a team member
+### Removing a team member
 
 <Steps>
   <Step title="Open the actions menu">
@@ -118,15 +131,54 @@ You cannot edit your own role or remove yourself from the organization.
   </Step>
 </Steps>
 
-## Managing pending invitations
+### Managing pending invitations
 
 For invitations that have not been accepted, the actions menu offers:
 
-- **Resend Invitation** -- Generates a new invitation token and extends the expiration by another 7 days. The resend count is tracked.
-- **Cancel Invitation** -- Permanently removes the invitation. A confirmation dialog asks you to confirm.
+- **Resend Invitation** -- Generates a new invitation token and extends the expiration by another 7 days.
+- **Cancel Invitation** -- Permanently removes the invitation.
+
+## Staff Members (direct add, no login)
+
+Staff Members are people added by name only. They do not receive an email invite and do not have their own login. Instead, they appear in task assignment dropdowns so you can track who performed each task — even when everyone shares a single login or workstation account.
+
+### Adding a staff member
+
+<Steps>
+  <Step title="Click Add Member">
+    In the **Team Members** card within Office Settings, click **Add Member**.
+  </Step>
+  <Step title="Enter their name">
+    Type the person's full name (e.g., "Sarah Johnson").
+  </Step>
+  <Step title="Enter a role (optional)">
+    Optionally add a role like "Hygienist", "Dental Assistant", or "Front Desk". Role suggestions are provided as you type.
+  </Step>
+  <Step title="Save">
+    Click **Add Member**. The person immediately appears in assignment dropdowns throughout ChairPulse.
+  </Step>
+</Steps>
+
+### Managing staff members
+
+Each staff member row shows their name, role, and status. You can:
+
+- **Edit** -- Click the pencil icon to update their name or role.
+- **Deactivate** -- Click the deactivate icon to remove them from assignment dropdowns. Deactivated members appear in a separate "Inactive Members" section and can be reactivated at any time.
+- **Reactivate** -- Click the reactivate icon on an inactive member to restore them to active status.
+
+<Callout kind="info">
+Staff members are used for task assignment tracking in [Room Assignments](/settings/room-assignments), maintenance tasks, and checklists. They are separate from team member login accounts.
+</Callout>
+
+## Workstations (shared computer accounts)
+
+Workstations are shared login accounts designed for computers in operatories and front desks. See [Workstations](/settings/workstations) for full details.
 
 ## Related pages
 
 - [Office Settings](/settings/office-settings) -- The parent page where Team Management lives.
 - [Organization Settings](/settings/organization-settings) -- Organization-level admin management.
-- [Billing & Subscription](/settings/billing-and-subscription) -- View team member limits for your plan.
+- [Workstations](/settings/workstations) -- Set up shared computer logins.
+- [Room Assignments](/settings/room-assignments) -- Assign staff members to rooms by day of week.
+- [Billing & Subscription](/settings/billing-and-subscription) -- View your plan and manage billing.

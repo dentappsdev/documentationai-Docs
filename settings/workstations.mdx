@@ -1,0 +1,85 @@
+---
+title: Workstations
+description: Set up shared login accounts for operatory and front desk computers so staff can complete tasks without individual logins.
+---
+
+## What are workstations?
+
+Workstations are shared login accounts designed for computers in operatories, front desks, or other shared areas of your practice. Instead of each staff member signing in with their own credentials, a workstation account stays logged in on a shared computer. When completing tasks, staff select their name from a dropdown to track who performed the work.
+
+This is ideal for practices where:
+
+- Multiple staff rotate through the same computer during the day
+- You want to keep a computer permanently logged in at a station
+- Staff do not need individual email-based accounts
+
+{/* Screenshot needed: Workstation Accounts section in Office Settings showing the list of workstations and New Workstation button */}
+
+## Creating a workstation
+
+Workstation accounts are managed from **Office Settings**. You need the **TEAM_INVITE_STAFF** permission (available to admins and managers).
+
+<Steps>
+  <Step title="Open Office Settings">
+    Navigate to **Settings > Office Settings** and scroll to the **Workstation Accounts** section.
+  </Step>
+  <Step title="Click New Workstation">
+    Click the **New Workstation** button to open the Create Workstation Account dialog.
+  </Step>
+  <Step title="Enter a label (optional)">
+    Type a friendly name to identify this workstation, such as "Operatory 1" or "Front Desk". If you leave this blank, the label defaults to your office name followed by "Workstation".
+  </Step>
+  <Step title="Click Create Account">
+    Click **Create Account**. ChairPulse generates a unique email and password for this workstation.
+  </Step>
+  <Step title="Save the credentials">
+    A credentials dialog appears showing the auto-generated **email** and **password**. Copy these immediately — the password is only shown once and cannot be retrieved later.
+
+    Use the copy buttons next to each field, or click **Copy All Credentials** to copy the label, email, and password together.
+  </Step>
+  <Step title="Log in on the shared computer">
+    On the workstation computer, open ChairPulse and sign in using the generated email and password. The computer is now ready for shared use.
+  </Step>
+</Steps>
+
+<Callout kind="alert" title="Save credentials immediately">
+The workstation password is displayed only once when the account is created. If you lose it, you will need to deactivate the workstation and create a new one.
+</Callout>
+
+## Managing workstations
+
+The Workstation Accounts section lists all workstation accounts for the current office. Each entry shows:
+
+- The workstation label (e.g., "Operatory 1" or "Workstation")
+- The auto-generated email address
+- A **Staff** role badge
+
+## Deactivating a workstation
+
+If a workstation is no longer needed — for example, if a room is decommissioned or you are replacing the account — you can deactivate it:
+
+<Steps>
+  <Step title="Click the delete icon">
+    Click the trash icon on the workstation's row.
+  </Step>
+  <Step title="Confirm deactivation">
+    A confirmation dialog explains that the account will be removed and will no longer be able to log in. Click **Deactivate** to proceed.
+  </Step>
+</Steps>
+
+The workstation is removed immediately and any sessions on that account are invalidated.
+
+## How workstations relate to staff members
+
+Workstations and [Staff Members](/settings/team-management#staff-members-direct-add-no-login) work together:
+
+- The **workstation account** provides the shared login on a computer.
+- **Staff members** (added by name in Team Management) appear in the task assignment dropdown when completing tasks on the workstation.
+
+This means the workstation handles authentication, while staff member names handle accountability — you always know who performed each task even on a shared computer.
+
+## Related pages
+
+- [Team Management](/settings/team-management) -- Add staff members and team members.
+- [Office Settings](/settings/office-settings) -- The parent page where Workstation Accounts live.
+- [Room Assignments](/settings/room-assignments) -- Assign staff members to rooms for task defaults.

@@ -1,76 +1,161 @@
 ---
 title: Room Assignments
-description: Assign staff members to rooms on a per-day-of-week basis so maintenance tasks automatically inherit the correct assignee.
+description: Assign staff to rooms by day of week for maintenance and checklist tasks, manage overrides, and bulk-reassign tasks between staff.
 ---
 
-## Assign staff to rooms by day of week
+## Overview
 
-**Room Assignments** let you define which team member is responsible for each room on each day your office operates. When a staff member is assigned to a room, all maintenance tasks for equipment in that room automatically inherit that assignment -- no need to set assignees task by task.
+The **Assignments** page lets you control who is responsible for tasks in each room on each day your office operates. It is accessed from **Settings > Office Settings**, then selecting the **Assignments** tab.
 
-This is especially useful for practices where different staff rotate through operatories, sterilization areas, or lab rooms on different days.
+Assignments are configured per office. If you are viewing all offices, you will be prompted to select a specific office first.
 
-Navigate to **Settings > Office Settings**, then select the **Assignments** tab.
+The page has four tabs:
 
-{/* Screenshot needed: Assignments tab showing the room assignment grid with rows of rooms and columns for each operating day */}
+- **Maintenance Rooms** -- Assign staff to rooms for maintenance tasks
+- **Checklist Rooms** -- Assign staff to rooms for checklist tasks
+- **Overrides** -- View and manage schedule-level and equipment-level overrides
+- **Reassign** -- Bulk-reassign pending tasks from one person to another
 
-## The assignment grid
+{/* Screenshot needed: Assignments page showing the four tabs with the Maintenance Rooms tab active and the room assignment matrix visible */}
 
-The Assignments tab displays a grid where:
+## Maintenance Rooms tab
 
-- **Rows** represent each room in your office
-- **Columns** represent your office's operating days (e.g., Monday through Friday)
+This tab shows a matrix where you assign a default staff member to each room for each operating day of the week. These assignments apply to **maintenance tasks** only.
+
+### The assignment matrix
+
+- **Rows** represent each room in your office (sorted alphabetically)
+- **Columns** represent your office's operating days (e.g., Monday through Saturday, based on your [Operating Days](/settings/operating-days) settings)
 - **Cells** contain a dropdown to select a staff member
 
-Only days configured as operating days in your [Operating Days](/settings/operating-days) settings appear as columns.
-
-## Assigning a staff member
+### Assigning a staff member
 
 <Steps>
   <Step title="Select the dropdown">
     Click the dropdown in the cell where the target room row meets the desired day column.
   </Step>
-  <Step title="Pick a team member">
-    Select a team member from the list. The cell updates immediately and any pending or overdue maintenance tasks with room-level assignment for equipment in that room on matching dates are automatically updated to the selected assignee.
+  <Step title="Pick a staff member">
+    Select a staff member from the list. The cell updates immediately and all pending or overdue maintenance tasks for equipment in that room on matching dates are automatically updated to the new assignee.
   </Step>
 </Steps>
 
-## "All days" shortcut
+### "All days" shortcut
 
-Each room row has an **All days** button. Click it to assign the same staff member to every operating day for that room in one action. This is useful when one person is responsible for a room all week.
+Each room row has an **All days** button. Click it to open a popover where you select a staff member, then click **Apply** to assign that person to every operating day for that room in one action. This is useful when one person is responsible for a room all week.
 
-## Removing an assignment
+### Removing an assignment
 
-To remove a staff member from a room on a specific day, open the dropdown for that cell and select the empty (blank) option. Any maintenance tasks that inherited their assignment from this room assignment revert to unassigned.
+Open the dropdown for a cell and select the empty (blank) option. Any maintenance tasks that inherited their assignment from this room assignment revert to unassigned.
 
-## How task inheritance works
+## Checklist Rooms tab
 
-ChairPulse uses a three-tier assignment hierarchy for maintenance tasks:
+This tab works identically to the Maintenance Rooms tab, but assignments apply to **checklist tasks** instead of maintenance tasks.
+
+<Callout kind="info" title="Independent from maintenance assignments">
+Checklist room assignments are completely separate from maintenance room assignments. A room can have different staff assigned for maintenance vs. checklists. For example, a hygienist might handle the daily operatory checklist, while a dental assistant handles equipment maintenance in the same room.
+</Callout>
+
+## Copy Assignments
+
+Both the Maintenance Rooms and Checklist Rooms tabs include a **Copy from** button that lets you copy all assignments from the other tab.
+
+<Steps>
+  <Step title="Click the Copy button">
+    On the Maintenance Rooms tab, click **Copy from Checklists** (or on the Checklist Rooms tab, click **Copy from Maintenance**).
+  </Step>
+  <Step title="Review the preview">
+    A dialog shows how many assignments will be copied and how many existing assignments will be overwritten.
+  </Step>
+  <Step title="Confirm">
+    Click **Copy** to proceed. Assignments are merged — conflicts are overwritten, but non-conflicting existing assignments are preserved.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+Use Copy Assignments when the same staff handle both maintenance and checklists for a room. Set up one tab fully, then copy to the other.
+</Callout>
+
+## Overrides tab
+
+Overrides are schedule-level and equipment-level assignments that take priority over room defaults. They are typically set when editing individual maintenance schedules or shared schedule equipment assignments — not directly on this page.
+
+This tab provides a read-only view (with inline editing) of all active overrides across your office.
+
+### Override table columns
+
+| Column | Description |
+|---|---|
+| **Schedule** | The name of the maintenance or checklist schedule |
+| **Type** | **Schedule** (applies to all equipment in the schedule) or **Equipment** (applies to a specific piece of equipment) |
+| **Equipment** | The specific equipment name, if this is an equipment-level override |
+| **Room** | The room where the equipment is located |
+| **Task Type** | Maintenance or Checklist |
+| **Assigned To** | The staff member assigned — can be changed inline via dropdown |
+
+You can filter overrides by task type, room, or search by schedule/equipment/staff name. To remove an override, click the **X** button on the row or clear the assignee dropdown.
+
+### Assignment priority hierarchy
+
+ChairPulse uses a three-tier assignment hierarchy:
 
 | Priority | Source | Description |
 |---|---|---|
-| Lowest | **Room-level** | Inherited from the room assignment grid based on the task's day of week |
-| Medium | **Schedule-level** | Set directly on the maintenance schedule template |
-| Highest | **Instance-level** | Set directly on a specific task instance |
+| Lowest | **Room default** | Inherited from the room assignment matrix based on the task's day of week |
+| Medium | **Schedule override** | Set on the maintenance/checklist schedule template |
+| Highest | **Equipment override** | Set on a specific piece of equipment within a schedule |
 
 Higher-priority assignments always override lower ones. Room assignments serve as the default baseline.
 
 <Callout kind="info" title="Room assignments are the default, not the final word">
-If a schedule-level or instance-level assignee is set on a task, it takes precedence over the room assignment. Room assignments only apply to tasks where the assignment source is "room" -- meaning no override has been set at a higher level.
+If a schedule-level or equipment-level override exists for a task, it takes precedence over the room assignment. Room assignments only apply when no override has been set at a higher level.
+</Callout>
+
+## Reassign tab
+
+The Reassign tab lets you bulk-move all pending tasks from one staff member to another within a date range. This is useful when someone is out sick, on vacation, or has left the practice.
+
+<Steps>
+  <Step title="Select the source staff member">
+    In the **From** dropdown, select the person whose tasks you want to reassign.
+  </Step>
+  <Step title="Select the destination staff member">
+    In the **To** dropdown, select the person who will take over the tasks.
+  </Step>
+  <Step title="Choose which tasks">
+    Select a task type scope:
+
+    - **All tasks** -- Both maintenance and checklist tasks
+    - **Maintenance** -- Only equipment maintenance tasks
+    - **Checklists** -- Only room checklist tasks
+  </Step>
+  <Step title="Set the date range">
+    Use the **Start date** and **End date** pickers to define which period of tasks to reassign. The default range is today through 14 days out.
+  </Step>
+  <Step title="Review the preview">
+    A preview shows the number of pending tasks that will be reassigned. This count updates automatically as you change the inputs.
+  </Step>
+  <Step title="Confirm the reassignment">
+    Click **Reassign Tasks**, then confirm when prompted. The selected tasks are immediately updated to the new assignee.
+  </Step>
+</Steps>
+
+<Callout kind="alert">
+Reassignment is immediate and affects all pending and overdue tasks matching your criteria. Completed or skipped tasks are never affected.
 </Callout>
 
 ## What gets updated automatically
 
-When you assign or remove a staff member in the grid:
+When you assign or remove a staff member in the room assignment matrix (Maintenance Rooms or Checklist Rooms):
 
-- All **pending** and **overdue** maintenance tasks with a room-level assignment source for equipment in that room are updated immediately
+- All **pending** and **overdue** tasks with a room-level assignment source for equipment in that room are updated immediately
 - Tasks on dates matching the assigned day of week receive the new assignee
-- Completed or skipped tasks are not affected
-- Tasks with a schedule-level or instance-level override are not affected
+- **Completed** or **skipped** tasks are not affected
+- Tasks with a schedule-level or equipment-level override are not affected
 
 ## Related pages
 
 - [Office Settings](/settings/office-settings) -- The Assignments tab lives within Office Settings
 - [Room View](/maintenance/room-view) -- See today's room assignee on each room card in the maintenance view
-- [Team Management](/settings/team-management) -- Manage the team members available for assignment
+- [Team Management](/settings/team-management) -- Manage the staff members available for assignment
 - [Operating Days](/settings/operating-days) -- Configure which days appear as columns in the assignment grid
 - [Rooms & Locations](/rooms-and-locations/overview) -- Manage the rooms that appear as rows in the grid
